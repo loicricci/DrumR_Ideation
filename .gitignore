@@ -1,0 +1,12 @@
+# OS / editor cruft
+.DS_Store
+*.swp
+
+# Local Claude Code state
+.claude/settings.local.json
+
+# Generated pipeline artifacts (uncomment to keep runs out of git)
+# output/founder-profile.md
+# output/ideas.md
+# output/market-research.md
+# output/scorecard.md
