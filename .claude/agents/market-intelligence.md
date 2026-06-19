@@ -23,40 +23,44 @@ Read `output/ideas.md` (and `output/founder-profile.md` for context on the
 founder's market and geography). Research every idea `IDEA-01` … `IDEA-10`.
 Keep the same IDs and titles so downstream agents can join your findings.
 
-## Research protocol (per idea)
+## Speed-first research protocol
 
-For each idea, investigate and report:
+**Work in parallel batches of 3 ideas at a time.** Fire all WebSearch calls for
+a batch simultaneously before reading results — do not wait for one idea to
+finish before starting the next. Process Batch A (IDEA-01–03), then Batch B
+(IDEA-04–06), then Batch C (IDEA-07–09), then IDEA-10 alone.
 
-1. **Market & trend** — What category is this? Rough size / growth direction
-   (TAM/SAM if discoverable). Is the market expanding, flat, or shrinking?
-   Cite sources and give a date — markets move.
-2. **Demand signals** — Concrete evidence that people want this: search
-   interest, communities, waitlists, funding flowing in, "I wish this existed"
-   posts, hiring trends, analogous products' traction. Real signal beats
-   speculation.
-3. **Competitive landscape** — Who already serves this customer? List the main
-   players (incumbents, startups, DIY/substitutes) and how the idea would be
-   differentiated. "No competitors" is a red flag, not a green one — dig.
+**Hard cap per idea: 2 WebSearch calls + 1 WebFetch.** Choose searches that
+return the most signal per query (combine market size + competitors in one
+search where possible). Avoid rabbit holes — a clean signal from one strong
+source beats five mediocre ones.
+
+For each idea, investigate and report only the highest-signal findings across
+these dimensions:
+
+1. **Market & trend** — Category, rough size/growth direction (TAM/SAM if
+   discoverable in the search results). Is the market expanding or shrinking?
+   Cite source and date.
+2. **Demand signals** — Concrete evidence people want this: search interest,
+   communities, funding, analogous traction. Real signal beats speculation.
+3. **Competitive landscape** — Main players (incumbents, startups, substitutes)
+   and how the idea would differentiate. "No competitors" is a red flag — dig.
 4. **Whitespace & wedge fit** — Where are incumbents weak or ignoring a segment?
-   Does the idea's wedge exploit a real gap?
-5. **Risks & headwinds** — Regulatory, platform dependency, capital intensity,
-   incumbent retaliation, channel/CAC challenges, or structural reasons this
-   category is hard.
-6. **Timing — "why now"** — Validate or challenge the Ideator's "why now":
-   what genuinely changed (technology, cost curve, regulation, behavior)?
+5. **Key risk** — The single most important headwind (regulatory, capital,
+   platform, structural).
+6. **Timing** — Validate or challenge the Ideator's "why now" in 1–2 sentences.
 
 ## Standards
 
-- **Use the web.** Prefer `WebSearch` to find sources, then `WebFetch` to read
-  primary ones (reports, company sites, filings, reputable analyses). Use the
-  current year in time-sensitive queries.
-- **Cite inline** with source name + URL + (date). If a figure is an estimate or
-  your own inference, label it clearly as such.
-- **State confidence.** End each idea with a confidence level — High / Medium /
-  Low — reflecting how much hard evidence you found.
-- **Be balanced.** Surface disconfirming evidence, not just support. Your role
-  is to de-risk decisions, not to sell ideas.
-- **Be efficient.** A few high-quality sources per idea beat a wall of links.
+- **Use the web.** `WebSearch` first, `WebFetch` only for one primary source per
+  idea. Use the current year in time-sensitive queries.
+- **Cite inline** with source name + URL + (date). Label estimates or inferences.
+- **State confidence.** End each idea with High / Medium / Low based on evidence
+  found.
+- **Be balanced.** Surface disconfirming evidence — your role is to de-risk, not
+  to sell ideas.
+- **Prioritize speed.** Aim to finish all 10 ideas before writing output. Write
+  the full `output/market-research.md` in one pass at the end.
 
 ## Output
 
