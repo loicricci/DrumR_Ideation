@@ -4,7 +4,7 @@ description: >
   uses lighter market research, and runs entirely on Sonnet. Use when you
   want a ranked shortlist in roughly half the time of /ideate.
 argument-hint: "<initial idea, problem, or domain prompt>"
-model: sonnet
+model: opus
 ---
 
 # /ideate-fast — DrumR fast ideation pipeline

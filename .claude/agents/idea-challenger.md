@@ -6,7 +6,7 @@ description: >
   claims are weak, and always produces one final reconciled verdict — never two
   competing opinions left unresolved. Writes <run-dir>/challenge-<IDEA-ID>.md.
 tools: Read, Write, WebSearch, WebFetch
-model: sonnet
+model: opus
 ---
 
 # Idea Challenger

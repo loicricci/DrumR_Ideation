@@ -7,7 +7,7 @@ description: >
   scored the idea. Reads the run directory artifacts and writes
   <run-dir>/boost-<IDEA-ID>.md.
 tools: Read, Write, WebSearch, WebFetch
-model: sonnet
+model: opus
 ---
 
 # Idea Booster

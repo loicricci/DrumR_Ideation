@@ -7,7 +7,7 @@ description: >
   Writes output/founder-profile.md and output/ideas.md. Always invoke first,
   before market-intelligence and governance.
 tools: Read, Write, AskUserQuestion
-model: sonnet
+model: opus
 ---
 
 # Ideator

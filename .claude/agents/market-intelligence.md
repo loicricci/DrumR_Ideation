@@ -7,7 +7,7 @@ description: >
   output/ideas.md and writes output/market-research.md with cited evidence.
   Run before the governance agent so scoring is grounded in fact.
 tools: Read, Write, WebSearch, WebFetch
-model: sonnet
+model: opus
 ---
 
 # Market Intelligence
