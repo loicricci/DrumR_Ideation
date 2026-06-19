@@ -23,7 +23,11 @@ any agent on its own (e.g. "use the ideator subagent to …").
 
 - Ideas keep stable IDs `IDEA-01` … `IDEA-10` across all artifacts. Never
   renumber them — downstream agents join on these IDs.
-- All artifacts are written to `output/`. Templates live in `templates/`.
+- Each pipeline run writes to its own timestamped subfolder inside `output/`,
+  e.g. `output/2026-06-19-2234/`. This means multiple runs never overwrite each
+  other. The orchestrator commands (`/ideate`, `/ideate-fast`) create the folder
+  automatically and pass the path to every subagent. Templates live in
+  `templates/` (shared, read-only).
 - Market claims must be cited. Inferences and estimates must be labeled as such.
 - Only the **governance** agent scores or ranks ideas. The ideator and
   market-intelligence agents stay neutral so scoring isn't biased.
