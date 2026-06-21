@@ -19,6 +19,14 @@ one consumes:
 Run the whole thing with the `/ideate "<your prompt>"` slash command, or invoke
 any agent on its own (e.g. "use the ideator subagent to …").
 
+### Optional packaging step
+
+- **`reporter`** — on demand, consolidates a finished run's four artifacts into a
+  single print-ready `summary.html` the founder saves as a PDF. Run with
+  `/report` (optionally `/report <run-id>`). It only reformats existing
+  artifacts — it never re-scores or re-researches.
+  → `output/<run-id>/summary.html`
+
 ## Conventions
 
 - Ideas keep stable IDs `IDEA-01` … `IDEA-10` across all artifacts. Never

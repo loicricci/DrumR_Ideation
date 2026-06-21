@@ -7,9 +7,10 @@ It deploys three specialist subagents that run as a pipeline:
 
 | # | Agent | What it does | Output |
 |---|-------|--------------|--------|
-| 1 | **Ideator** | Interviews you (the founder/team) for your background, edge, and constraints, then generates **exactly 10** product ideas from your prompt | `output/founder-profile.md`, `output/ideas.md` |
+| 1 | **Ideator** | Interviews you (the founder/team) across **5 rounds** for background, problem proximity, edge, motivation, and constraints, then generates **exactly 10** product ideas from your prompt | `output/founder-profile.md`, `output/ideas.md` |
 | 2 | **Market Intelligence** | Researches each idea on the open web — market size, trends, competitors, demand signals, risks — with citations | `output/market-research.md` |
 | 3 | **Governance** | Scores every idea on **Desirability, Viability, Feasibility**, ranks them, and gives each a gate decision (Advance / Iterate / Park) | `output/scorecard.md` |
+| ★ | **Reporter** *(on demand)* | Packages a finished run into one polished, print-ready HTML summary you save as a PDF (`/report`) | `output/summary.html` |
 
 It mirrors the first stage of the [DrumR](https://drumr.ai) innovation platform:
 **Idea → Problem–Solution Fit → Product–Market Fit.**
@@ -48,6 +49,18 @@ That single command will:
 Everything lands in the `output/` folder as Markdown you can keep, share, or
 feed into the next stage.
 
+### 4. (Optional) Export a PDF summary
+Once a run looks good, package it into a single printable report:
+
+```text
+/report
+```
+
+This writes `output/<run-id>/summary.html` — a self-contained, styled document.
+Open it in any browser and **Cmd/Ctrl + P → Save as PDF** (enable "Background
+graphics" so the colored gate badges print). Pass a run ID to summarize an older
+run, e.g. `/report 2026-06-19-2234`.
+
 > **Tip:** You can also run any agent on its own, e.g.
 > *"Use the ideator subagent to brainstorm around on-device health AI"* — or
 > re-run just `governance` after tweaking the scoring weights.
@@ -76,9 +89,11 @@ drumr-ideation-kit/
 │   ├── agents/
 │   │   ├── ideator.md              # 1. founder intake + 10 ideas
 │   │   ├── market-intelligence.md  # 2. web research per idea
-│   │   └── governance.md           # 3. scoring + ranking + gate
+│   │   ├── governance.md           # 3. scoring + ranking + gate
+│   │   └── reporter.md             # ★ printable HTML/PDF summary
 │   ├── commands/
-│   │   └── ideate.md               # /ideate orchestrator
+│   │   ├── ideate.md               # /ideate orchestrator
+│   │   └── report.md               # /report — export a PDF summary
 │   └── settings.json               # tool permissions
 ├── templates/                      # the shapes the agents fill
 │   ├── founder-profile.md
