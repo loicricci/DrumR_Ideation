@@ -3,11 +3,15 @@
 A downloadable [Claude Code](https://code.claude.com) agent kit that turns a
 one-line prompt into a **ranked, evidence-backed shortlist of product ideas**.
 
-It deploys three specialist subagents that run as a pipeline:
+The `/ideate` orchestrator first **interviews you** (the founder/team) across
+**5 rounds** — background, problem proximity, edge, motivation, and constraints
+— and saves the result to `output/<run>/founder-profile.md`. (The interview runs
+at the orchestrator level because Claude Code subagents are non-interactive and
+can't ask you questions.) It then runs three specialist subagents as a pipeline:
 
 | # | Agent | What it does | Output |
 |---|-------|--------------|--------|
-| 1 | **Ideator** | Interviews you (the founder/team) across **5 rounds** for background, problem proximity, edge, motivation, and constraints, then generates **exactly 10** product ideas from your prompt | `output/founder-profile.md`, `output/ideas.md` |
+| 1 | **Ideator** | Reads your founder profile and generates **exactly 10** product ideas grounded in your edge and constraints | `output/ideas.md` |
 | 2 | **Market Intelligence** | Researches each idea on the open web — market size, trends, competitors, demand signals, risks — with citations | `output/market-research.md` |
 | 3 | **Governance** | Scores every idea on **Desirability, Viability, Feasibility**, ranks them, and gives each a gate decision (Advance / Iterate / Park) | `output/scorecard.md` |
 | ★ | **Reporter** *(on demand)* | Packages a finished run into one polished, print-ready HTML summary you save as a PDF (`/report`) | `output/summary.html` |
@@ -74,6 +78,7 @@ To make the agents available everywhere, copy them into your user scope:
 ```bash
 cp .claude/agents/*.md ~/.claude/agents/
 cp .claude/commands/ideate.md ~/.claude/commands/
+cp .claude/founder-interview.md ~/.claude/
 ```
 
 Project-scoped files (`.claude/` in this repo) always take priority over the
@@ -87,13 +92,14 @@ global ones when you're inside the project.
 drumr-ideation-kit/
 ├── .claude/
 │   ├── agents/
-│   │   ├── ideator.md              # 1. founder intake + 10 ideas
+│   │   ├── ideator.md              # 1. reads profile -> 10 ideas
 │   │   ├── market-intelligence.md  # 2. web research per idea
 │   │   ├── governance.md           # 3. scoring + ranking + gate
 │   │   └── reporter.md             # ★ printable HTML/PDF summary
 │   ├── commands/
 │   │   ├── ideate.md               # /ideate orchestrator
 │   │   └── report.md               # /report — export a PDF summary
+│   ├── founder-interview.md        # interview spec (run by orchestrator)
 │   └── settings.json               # tool permissions
 ├── templates/                      # the shapes the agents fill
 │   ├── founder-profile.md
@@ -120,7 +126,7 @@ subagent format. Edit them freely to fit your taste.
   `governance` use `opus` for reasoning quality; `market-intelligence` uses
   `sonnet`. Drop them to `sonnet`/`haiku` to cut cost, or set `inherit` to use
   your session model.
-- **Intake questions** — tailor the interview in `.claude/agents/ideator.md`.
+- **Intake questions** — tailor the interview in `.claude/founder-interview.md`.
 
 ---
 

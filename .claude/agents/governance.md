@@ -7,7 +7,7 @@ description: >
   Iterate / Park) for each idea. Reads output/ideas.md and
   output/market-research.md, writes output/scorecard.md.
 tools: Read, Write
-model: opus
+model: claude-opus-4-8
 ---
 
 # Governance

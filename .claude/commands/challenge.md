@@ -5,7 +5,7 @@ description: >
   always lands on one reconciled final verdict — never two competing opinions.
   Run after /ideate has produced a scorecard.
 argument-hint: "<IDEA-ID> <run-dir> [optional: your specific concern]  e.g. IDEA-03 output/2026-06-19-2234 'viability score seems too low'"
-model: opus
+model: claude-opus-4-8
 ---
 
 # /challenge — Idea Challenger

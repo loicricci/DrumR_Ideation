@@ -6,18 +6,25 @@ DrumR innovation platform (Idea → Problem–Solution Fit → Product–Market 
 
 ## The pipeline
 
-Three specialist subagents run in sequence, each writing an artifact the next
-one consumes:
+The **orchestrator** (the top-level agent running `/ideate` or `/ideate-fast`)
+first conducts a structured founder interview, then runs three specialist
+subagents in sequence, each writing an artifact the next one consumes:
 
-1. **`ideator`** — interviews the founder/team, then generates exactly 10 ideas.
-   → `output/founder-profile.md`, `output/ideas.md`
+0. **Founder interview** — run by the orchestrator, *not* a subagent. Subagents
+   are non-interactive and cannot use `AskUserQuestion`, so the interview lives
+   at the orchestrator level (spec in `.claude/founder-interview.md`).
+   → `output/<run>/founder-profile.md`
+1. **`ideator`** — reads the founder profile and generates exactly 10 ideas.
+   → `output/<run>/ideas.md`
 2. **`market-intelligence`** — researches each idea with cited evidence.
-   → `output/market-research.md`
+   → `output/<run>/market-research.md`
 3. **`governance`** — scores each idea on Desirability / Viability / Feasibility,
-   ranks them, and assigns a gate decision. → `output/scorecard.md`
+   ranks them, and assigns a gate decision. → `output/<run>/scorecard.md`
 
-Run the whole thing with the `/ideate "<your prompt>"` slash command, or invoke
-any agent on its own (e.g. "use the ideator subagent to …").
+Run the whole thing with the `/ideate "<your prompt>"` slash command. You can
+invoke `ideator`, `market-intelligence`, or `governance` on their own too, but
+the `ideator` needs a `founder-profile.md` to exist first (run the interview via
+`/ideate`, or write the profile manually).
 
 ### Optional packaging step
 

@@ -5,7 +5,7 @@ description: >
   6-week PSF preparation plan. Run after /ideate or /ideate-fast has scored
   your ideas.
 argument-hint: "<IDEA-ID> <run-dir>  e.g. IDEA-03 output/2026-06-19-2234"
-model: opus
+model: claude-opus-4-8
 ---
 
 # /boost — Idea Booster
