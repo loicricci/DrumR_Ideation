@@ -15,6 +15,7 @@ can't ask you questions.) It then runs three specialist subagents as a pipeline:
 | 2 | **Market Intelligence** | Researches each idea on the open web — market size, trends, competitors, demand signals, risks — with citations | `output/market-research.md` |
 | 3 | **Governance** | Scores every idea on **Desirability, Viability, Feasibility**, ranks them, and gives each a gate decision (Advance / Iterate / Park) | `output/scorecard.md` |
 | ★ | **Reporter** *(on demand)* | Packages a finished run into one polished, print-ready HTML summary you save as a PDF (`/report`) | `output/summary.html` |
+| ★ | **Statement** *(on demand)* | Writes a one-page idea statement for one idea — persona, problem statement, triggers, value proposition, rough economics, scores, assumptions to test (`/statement`) | `output/statement-IDEA-NN.md` + `.json` |
 
 It mirrors the first stage of the [DrumR](https://drumr.ai) innovation platform:
 **Idea → Problem–Solution Fit → Product–Market Fit.**
@@ -65,6 +66,24 @@ Open it in any browser and **Cmd/Ctrl + P → Save as PDF** (enable "Background
 graphics" so the colored gate badges print). Pass a run ID to summarize an older
 run, e.g. `/report 2026-06-19-2234`.
 
+### 5. (Optional) Write an idea statement for P/S Fit
+Hand one idea to the next stage:
+
+```text
+/statement IDEA-03
+```
+
+This writes two files next to each other in the run folder:
+- `statement-IDEA-03.md` — for people: persona, problem statement, 2–3
+  triggers (when the pain peaks), value proposition, economics (expected price
+  and max acquisition cost, all marked as assumptions), evidence, scores, and
+  the assumptions to test next.
+- `statement-IDEA-03.json` — the same content, machine-readable, matching
+  `templates/statement.schema.json`, so P/S Fitter can import it directly.
+
+Use `/statement advance` to write one for every idea that reached the Advance
+gate, and add a run ID to target an older run (`/statement IDEA-03 2026-06-19-2234`).
+
 > **Tip:** You can also run any agent on its own, e.g.
 > *"Use the ideator subagent to brainstorm around on-device health AI"* — or
 > re-run just `governance` after tweaking the scoring weights.
@@ -95,16 +114,20 @@ drumr-ideation-kit/
 │   │   ├── ideator.md              # 1. reads profile -> 10 ideas
 │   │   ├── market-intelligence.md  # 2. web research per idea
 │   │   ├── governance.md           # 3. scoring + ranking + gate
-│   │   └── reporter.md             # ★ printable HTML/PDF summary
+│   │   ├── reporter.md             # ★ printable HTML/PDF summary
+│   │   └── statement.md            # ★ idea statement (md + json)
 │   ├── commands/
 │   │   ├── ideate.md               # /ideate orchestrator
-│   │   └── report.md               # /report — export a PDF summary
+│   │   ├── report.md               # /report — export a PDF summary
+│   │   └── statement.md            # /statement — idea statement for P/S Fit
 │   ├── founder-interview.md        # interview spec (run by orchestrator)
 │   └── settings.json               # tool permissions
 ├── templates/                      # the shapes the agents fill
 │   ├── founder-profile.md
 │   ├── idea.md
-│   └── scorecard.md
+│   ├── scorecard.md
+│   ├── statement.md
+│   └── statement.schema.json       # JSON contract for P/S Fitter import
 ├── output/                         # generated artifacts land here
 ├── CLAUDE.md                       # shared project context + config
 ├── LICENSE
