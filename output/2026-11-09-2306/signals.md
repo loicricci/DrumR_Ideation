@@ -239,3 +239,107 @@
 
 ## Coverage summary
 15 signals across ~8 distinct spaces: agent observability/evals (SIG-01), agent cost control (SIG-02, SIG-14), client-agent maintenance/reliability (SIG-03, SIG-04, SIG-15), agent monetization/distribution (SIG-05, SIG-06), deployment/credentials/hosting (SIG-07, SIG-08), SMB voice/support agents (SIG-09, SIG-10), and no-code/automation builder usability + pricing shifts (SIG-11, SIG-12, SIG-13). None overlap the consumer-social-agent concepts already in the idea bank.
+
+---
+
+## Refill round 3
+
+> Focus unchanged: agent-creation / agentic-platform tooling for freelancers &
+> small businesses, self-serve, no sales calls. Brief: find pain in spaces the
+> round-1/round-2 scorecard did **not** cover. Explicitly avoided the eight
+> already-covered spaces (observability/evals, token-cost control, client-agent
+> maintenance, agent monetization/distribution, deployment/OAuth/hosting, SMB
+> voice/support bots, no-code builder usability/lock-in, Zapier repricing).
+> New spaces opened this round: **MCP server building/publishing**, **agent
+> memory/context for solo operators**, **data-privacy as an SMB adoption
+> blocker**, **the agent/automation-template resale market (buyer trust)**, and
+> **browser/computer-use agents for SMB back-office**. Searches this round: 6;
+> fetches: 6 (one indiehackers.com post 403'd — substituted a first-person
+> DEV.to account + search corroboration). Same sourcing convention: **[fetched]**
+> = copied from a page I fetched directly; **[search-surfaced]** = from a search
+> summary, weaker, re-verify on the live page.
+
+## SIG-16 — Building an MCP server is a minefield of silent, production-only failures
+- **Persona:** Solo/indie developer or technical freelancer building an MCP server to connect an agent (or a client's agent) to a tool/API.
+- **Pain:** The protocol fails silently — logging the wrong way or returning the wrong error shape corrupts the JSON-RPC stream with no error message, and bugs only surface once everything is wired up in production.
+- **Trigger:** A `console.log` to stdout silently corrupts JSON-RPC framing, or a wrong error-response shape gets swallowed by the agent loop; the dev only notices when the connected agent misbehaves in production.
+- **Workaround today:** Logging to a file instead of stdout, adding SIGTERM handlers by hand, print-statement spelunking to find which client parsed a schema field more strictly; one dev reports keeping six servers running costs ~15 hours/week vs ~15 min to deploy.
+- **WTP evidence:** none found (explicit price) — the closest signals are founders *validating* demand ("would people pay for vetted MCP servers vs free GitHub repos?"; a 29-pain-point roundup asking "which one would you actually pay someone to fix"), i.e. interest, not a paid purchase.
+- **Why now:** MCP adoption exploded in 2025–26; the reference servers reportedly ship breaking changes frequently, so building/maintaining servers is a fresh, recurring chore for solo builders.
+- **Where they are:** r/mcp, r/MCPservers, r/ClaudeAI, MCP Discords, DEV Community.
+- **Evidence:**
+  - "console.log to stdout silently corrupts JSON-RPC framing. No error. Just silence." — Reddit r/mcp ("What's the most frustrating part of building MCP servers?"), posted ~Oct 7 2025, https://reddit.sentinel-team.org/posts/1su57sd/snapshots/2026-04-24T22%3A02%3A26.440341Z **[fetched]**
+  - "errors are silent, the protocol is unforgiving, and most issues only show up after you've connected everything" … "They're not beginner mistakes — they're invisible until production." — same thread **[fetched]**
+  - "You can't log error while working with stdio because of json-rpc." … "It fixed the issue but still a lot of pain." — commenter, same thread **[fetched]**
+  - "the cross-client testing situation is killing me" / "deploying an MCP server takes 15 minutes — but keeping it running takes 15 hours a week" — DEV Community / MCP posts surfaced via search, 2026, https://dev.to/nathanielc85523/we-tracked-29-mcp-pain-points-across-7-communities-which-one-would-you-actually-pay-to-fix-3feh **[search-surfaced]**
+- **Counter-signal:** Several commenters' answer is an open-source fix (a curated registry, logging to a file) rather than a paid tool — much of the pain is "learn the protocol's gotchas once," so it may be a docs/library problem, not a company. | noted
+- **Strength:** strong
+
+## SIG-17 — Solo operators spend every session re-briefing an agent that forgets everything
+- **Persona:** Solo operator / indie builder (often non-team) running an AI agent or coding assistant day to day on their own project or business.
+- **Pain:** The agent has no persistent memory across sessions, so the operator re-explains the same context every morning — "babysitting," not automation — and even a good system prompt doesn't capture "what happened yesterday."
+- **Trigger:** A new session starts; the agent "has no idea who I was," so the operator burns ~10 minutes re-briefing before any real work begins.
+- **Workaround today:** Hand-maintained context/state files (a plain-text doc updated at end of day; a weekly 15-min Friday update), long system prompts, rule files (CLAUDE.md). Vector DBs are rejected as "too much setup for a solo operator."
+- **WTP evidence:** none found (explicit price) — the cost is the daily ~10-min re-brief + weekly upkeep; no one names a price they'd pay.
+- **Why now:** Agents moved from single-shot prompts to multi-session, days-long work in 2025–26, so the lack of native cross-session memory became a daily productivity tax for solo users.
+- **Where they are:** Indie Hackers, DEV Community, r/AI_Agents, Product Hunt, AI coding Discords.
+- **Evidence:**
+  - "Every single morning, I had to re-explain everything." … "The agent was smart. It just had no idea who I was." — DEV Community ("I've Been Using AI Agents for 6 Months. The Memory Problem Is Killing My Productivity."), posted Mar 27, https://dev.to/grom_yang_6332ab8f4a9569d/ive-been-using-ai-agents-for-6-months-the-memory-problem-is-killing-my-productivity-34j0 **[fetched]**
+  - "I'm spending 10 minutes every session just getting the agent up to speed." … "That's not automation, that's babysitting." — same post; vector DBs are "Too much setup for a solo operator." **[fetched]**
+  - solo-dev framing "when you're alone, context lives in your head and dies with the session"; another spends "15 min updating [the] agent context file" every Friday — Indie Hackers / DEV posts surfaced via search, 2026, https://www.indiehackers.com/post/how-do-you-handle-the-fact-that-your-ai-forgets-everything-between-sessions-0cfa827515 **[search-surfaced]** (post page 403'd on direct fetch — re-verify)
+- **Counter-signal:** The author notes "Some tools are starting to solve this natively" (persistent-agent setups, Mem.ai, Notion), so native platform memory may close the gap before a standalone tool wins; and the cheap workaround (one CONTEXT.md file) is "good enough" for many. | noted
+- **Strength:** medium
+
+## SIG-18 — SMB clients stall agent projects over "you're asking for our most sensitive data"
+- **Persona:** Freelancer / solo agency selling an agent to an SMB — and the SMB owner on the other side of the deal — where the agent needs access to inboxes, chats, CRM or files.
+- **Pain:** The agent only works with access to private business/customer data, and that access is exactly what the client refuses to grant, so deals stall at the data-access step.
+- **Trigger:** The builder asks the client to connect their email/chat/CRM; the client balks because "that's not a small ask," and regulated clients "genuinely can't push data to OpenAI or Anthropic endpoints."
+- **Workaround today:** Self-hosting / local models ("all data stays on their boxes"), granular per-folder permissions, human-approval-before-send gates, SOC 2 / DPA paperwork, "process data in-transit, don't store it" — all extra plumbing the solo builder bolts on per deal.
+- **WTP evidence:** A managed self-hosted option "costs around $25/month" (promotional comment); a builder claims a VPC/on-prem deployment "converted ~40% of stalled SMB deals in regulated adjacent industries" (self-reported). Survey-level: data security/privacy is the top AI-adoption obstacle for SMBs at 33% (2026 Business Owner Success Survey). (indirect / promotional, no first-hand buyer price)
+- **Why now:** As agents moved from toys to tools touching real customer data in 2025–26, privacy/compliance became the live blocker — SMB privacy concern rose to 33% (up from 23% the prior year).
+- **Where they are:** r/AI_Agents, r/smallbusiness, agency Discords/Skool; survey data from SMB-AI reports.
+- **Evidence:**
+  - "your customers worry to share their email box / chats / whatever else with the AI agents due to privacy concerns" — Reddit r/AI_Agents (original post), ~early Aug 2025, https://reddit.sentinel-team.org/posts/1s1aa1n/snapshots/2026-03-28T03%3A16%3A21.658064Z **[fetched]**
+  - "you're asking businesses to give access to some of their most sensitive data. That's not a small ask." … "useful agents need context, and context is almost always someone's private data." … regulated SMBs "genuinely can't push data to OpenAI or Anthropic endpoints" — commenters, same thread **[fetched]**
+- **Counter-signal:** Several commenters are vendors pitching their own privacy/auth products (the $25/mo self-hosted tool, SOC 2 pitches), so the pain is partly talked up; and the recommended fixes (granular permissions, DPAs, local models) are architecture/process, not obviously a new standalone product. | noted
+- **Strength:** medium
+
+## SIG-19 — Buyers of resold agent/automation templates get non-delivery and templates that "don't work as stated"
+- **Persona:** Non-technical/semi-technical buyer purchasing a prebuilt agent/automation template (n8n workflow, "build and sell AI automations" pack) from a community creator.
+- **Pain:** They pay for a template and either receive nothing (no email, no files) or get one that doesn't work as the creator claimed — with no buyer protection because the sale is creator-to-buyer, not platform-backed.
+- **Trigger:** Checkout completes, then "no email, no instructions"; or the imported template "doesnt work as stated by it's creator."
+- **Workaround today:** Opening forum threads to chase the seller, contacting platform support (who disclaim: "not buying these from n8n but from other community members"), asking for refunds, reporting the seller.
+- **WTP evidence:** Buyers are *already paying* for templates (a "$29 'Build and Sell AI Automations' Template"), so demand to buy packaged agents/automations is real; the gap is trust/delivery/quality, not price appetite. (paid, self-serve)
+- **Why now:** A 2025–26 cottage industry of selling n8n/agent templates and "skill packs" on Gumroad / creator hubs sprang up faster than any trust, delivery or quality-verification layer — buyer complaints are clustering in 2025.
+- **Where they are:** n8n community forum, r/n8n, r/nocode, Gumroad, Product Hunt reviews.
+- **Evidence:**
+  - "I paid for a template and got nothing after payment, no email, no instructions." … "the way it was presented made me think I was safe since I assumed n8n handled the payments." — n8n community forum, May 20 2025, https://community.n8n.io/t/i-paid-for-a-template-and-got-nothing/117986 **[fetched]**
+  - thread titles from other buyers, same forum, 2025: "My $29 'Build and Sell AI Automations' Template Never Arrived!" (May 22 2025); "Purchased Community Template But Have Yet to Receive Email or Files" (May 16 2025); and "[a chatbot template] doesnt work as stated by it's creator!" — https://community.n8n.io/t/i-paid-for-a-template-and-got-nothing/117986 **[fetched]**
+- **Counter-signal:** Forum sellers argue "the template itself rarely carries much price on its own because buyers can't easily judge quality before purchase, so template-plus-setup offers sell better" — i.e. the market may resolve toward done-for-you setup rather than a pure trust/escrow product; and non-delivery is partly a payments-plumbing bug, not a standalone opportunity. | noted
+- **Strength:** medium
+
+## SIG-20 — Computer-use / browser agents are too brittle for SMB back-office work
+- **Persona:** Non-coder operator / small-business user trying to point a computer-use or browser agent at daily back-office tasks in tools without a clean API.
+- **Pain:** The agent looks impressive in a demo but "one UI change quietly breaks a workflow you depended on," and it gets brittle the moment the task has branching logic — so it can't be trusted to run unattended.
+- **Trigger:** A target site/app's UI changes, or the task hits conditional branching; the agent silently breaks the workflow the operator was relying on.
+- **Workaround today:** Falling back to an API with a token where one exists (sidestepping the UI entirely), heavily structuring the "initial setup and source of truth" so the agent is auditable, handing it steps narrow enough that failure is obvious, or keeping a human in the loop.
+- **WTP evidence:** none found (explicit price) — the only product mentions in-thread are promotional (a beta, a founder's own tool), not user purchase statements.
+- **Why now:** Computer-use/browser-agent models (Claude Computer Use, Codex-style agents) went mainstream in 2025–26 and non-coders are now trying them on real work, exposing the reliability gap on UI-driven, API-less SMB software.
+- **Where they are:** r/ChatGPTPro, r/AI_Agents, r/automation, computer-use/browser-agent Discords.
+- **Evidence:**
+  - "The hard part is reliability. Agents look impressive until one UI change quietly breaks a workflow you depended on." — Reddit r/ChatGPTPro ("How are non-coders actually using Codex / computer-use agents in daily work?"), ~Nov 2025, https://reddit.sentinel-team.org/posts/1t8zul4/snapshots/2026-05-11T15%3A14%3A03.893688Z **[fetched]**
+  - "but they get brittle when the task has conditonal branching." … "As long as you structure the initial setup and source of truth etc. well, it's extremely handy" — commenters, same thread **[fetched]**
+- **Counter-signal:** Practitioners report the agents work "surprisingly well" on well-defined, predictable, narrow browser tasks — so the usable wedge may be small/structured tasks rather than general back-office autonomy, and the reliability problem is hard enough that a solo founder faces the same wall the incumbents do. | noted
+- **Strength:** medium
+
+---
+
+## Refill round 3 — searches / fetches that found nothing (or failed)
+- `indiehackers.com` post page (the "how do you handle the fact that your ai forgets everything between sessions" thread) returned **403 Forbidden** on direct fetch — SIG-17's indie-hacker quote is search-surfaced and should be re-verified live; the first-person DEV.to account was used as the fetched anchor instead.
+- Searched for a dedicated Reddit thread of **small-business owners** (not builders) in their own words refusing an agent on privacy grounds — **no clean first-hand owner thread**; the best evidence (SIG-18) is a builder-side r/AI_Agents thread describing client worry, plus 2026 SMB survey data. First-hand *owner* language remains a gap.
+- Searched for a first-hand thread of a **non-technical founder** describing fear that their agent will break before launch (an "agent testing by non-devs" space) — surfaced only vendor blogs (LangWatch, Chronicle Labs, pctechmag) and one thin Reddit comment ("learn how to spot when an agent is actually doing what they asked vs just looking like it works — that's where most fail silently"); **too close to the already-covered observability/evals space and too thinly first-hand to stand up as its own signal** — not written up.
+- Searched for buyer complaints specifically on **Gumroad/Reddit** for agent "skill packs"/template resale — direct Reddit matches did not surface; the usable first-hand evidence (SIG-19) clustered on the **n8n community forum** instead.
+- Could not find a measured (non-anecdotal) source for the MCP "15 hours a week" upkeep figure — it rests on a single developer's self-report; treated as anecdote in SIG-16.
+
+## Refill round 3 — coverage summary
+5 new signals (SIG-16…20) across 5 distinct, previously-uncovered spaces: **MCP server building/publishing** (SIG-16, strong), **agent memory/context for solo operators** (SIG-17, medium), **data-privacy as an SMB agent-adoption blocker** (SIG-18, medium), **the agent/automation-template resale market & buyer trust** (SIG-19, medium), and **browser/computer-use agents for SMB back-office** (SIG-20, medium). None overlap the eight spaces the round-1/round-2 scorecard already covered, nor the consumer-social-agent concepts in the idea bank. Two spaces flagged in the brief were probed but not written up for lack of distinct first-hand evidence: *agent testing by non-devs* (overlaps observability/evals) and *multi-agent setup for one-person businesses* (no distinct first-hand pain surfaced beyond MCP/memory above).
