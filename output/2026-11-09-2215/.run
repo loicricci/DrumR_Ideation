@@ -2,4 +2,4 @@ focus=open
 country=US
 language=en
 scope=consumer+prosumer/SMB
-status=paused after signals: WebFetch could not reach any site (keeps pre-change network rules until restart); founder chose to restart in a new session
+status=signals verified on page 2026-11-09 (see signals-verification.md); ready for next stage
