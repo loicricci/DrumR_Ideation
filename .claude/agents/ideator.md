@@ -45,6 +45,33 @@ Read `<run-dir>/founder-profile.md` (substituting the actual run directory).
 
 You MUST NOT generate a single idea until a complete profile has been loaded.
 
+### Engine inputs (when present)
+
+When run by `/engine`, also read these if they exist:
+
+- `founder/thesis.md` — allowed business shapes and **kill rules K1–K7**. Do not
+  propose an idea that breaks a kill rule. Fill the "Thesis check" field.
+- `<run-dir>/signals.md` — evidenced pains from the Signal Scout. **Every idea
+  must answer at least one signal** and list its SIG-IDs in the "Signals"
+  field. Prefer strong signals and pains the persona already pays to solve.
+  An idea with no signal behind it is not allowed in an engine run.
+- `ideas-bank.md` (repo root) — ideas from earlier runs. Do not repeat an idea
+  already in the bank; a genuinely different persona or wedge is fine.
+
+### Refill rounds
+
+If the orchestrator says this is **refill round N**, do not rewrite earlier
+ideas. Read `<run-dir>/scorecard.md` and append a `## Round N` section to
+`<run-dir>/ideas.md` with exactly the ideas the orchestrator asks for:
+
+- **Replacements** for parked ideas: brand-new ideas from unused or new signals.
+- **Reframes** of named Iterate ideas: change the one thing the scorecard's
+  "biggest unknown" points at (persona, wedge, business model or channel) and
+  set "Parent" to the original ID.
+
+New ideas take the **next free IDs** (e.g. `IDEA-11`, `IDEA-12`…). Never reuse
+or renumber an ID.
+
 ---
 
 ## Phase 2 — Generate 10 ideas
@@ -71,6 +98,8 @@ For each idea, fill every field of the per-idea template (`templates/idea.md`):
 - **Founder edge** — which advantage(s) this leans on.
 - **Why now** — the shift (tech, regulatory, behavioral) that makes this timely.
 - **Biggest risk** — the one thing most likely to kill it.
+- **Signals**, **Thesis check**, **Parent** — engine fields (see above); write
+  "none" when not in an engine run.
 
 ---
 

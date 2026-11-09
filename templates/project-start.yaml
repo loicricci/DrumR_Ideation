@@ -1,0 +1,106 @@
+# P/S Fitter handoff — project-start-<IDEA-ID>.yaml (handoff requirements v1)
+# Same format as P/S Fitter's templates/project-start.yaml. Fields marked # R are required.
+# Quote every string value with double quotes. Quotes from customers stay verbatim,
+# in their original language; every other text field is in English.
+meta:
+  schema_version: "1"            # R
+  idea_id:                       # R  e.g. "IDEA-03"
+  run_id:                        # R  run folder name
+  generated_at:                  # R  ISO 8601, e.g. "2026-11-09T14:20:00Z"
+  generated_by:                  # R  "drumr-ideation-kit/handoff-v1"
+  parent_idea_id:
+  warnings: []
+
+source:
+  statement:                     # R  path to statement-<IDEA-ID>.md
+
+project:
+  name:                          # R  2–4 words, no brand claims
+  one_liner:                     # R  ≤ 25 words: persona + pain + offer
+  country:                       # R  ISO 3166-1 alpha-2, one country
+  language:                      # R  ISO 639-1
+
+persona:
+  name:                          # R  specific enough to find 10 of them this week
+  role:                          # R  a job, not an industry
+  context:                       # R  size, tools, constraints, budget authority
+  where_they_are: []             # named subreddits, forums, groups, newsletters, events
+  not_this_persona: []           # at least one close group excluded
+
+problem:
+  in_their_words:                # R  real quote or close paraphrase, no solution words
+  how_often:
+  what_it_costs_them:
+  severity_signals: []
+  evidence_ids: []
+
+triggers:                        # R  2–3 items: moments/events, each linked to evidence
+  - text:
+    evidence_ids: []
+
+alternatives:                    # R  include do_nothing
+  - name: "do nothing"
+    type: do_nothing
+    why_insufficient:
+    evidence_ids: []
+  - name:
+    type:                        # diy | competitor | service | do_nothing
+    why_insufficient:
+    price:                       # public price only — data, not a recommendation
+    url:
+    evidence_ids: []
+
+market:
+  conditions:
+    - text:
+      source:
+      date:
+  size_signal:                   # sourced count of people in the persona; no made-up TAM
+  timing:
+  known_competitors:
+    - name:
+      url:
+      positioning:
+      price:
+      target_persona:
+
+solution:
+  hypothesis:                    # R  1–2 sentences, outcome for the persona
+  wedge:                         # tied to a specific why_insufficient above
+  mvp_shape:
+  not_doing: []
+
+evidence:                        # R  ≥ 10 customer quotes from ≥ 3 sources
+  - id: E01
+    type:                        # customer_quote | paraphrase | competitor_ad | competitor_page | review | stat | article | regulation
+    quote:                       # verbatim, original language
+    translation:                 # English, if not English
+    source_name:                 # platform only, never a username
+    url:
+    date:
+    persona_match:               # yes | likely | unclear
+    supports:                    # problem | trigger:<n> | alternative:<name> | wtp | market | counter
+    strength:                    # strong | medium | weak
+    running_since:               # competitor ads only
+evidence_file:                   # path to evidence-<IDEA-ID>.json if > 20 items
+evidence_gaps: []                # searches that found nothing; sources that could not be accessed
+
+risks:                           # 3–7, riskiest first
+  - assumption:
+    category:                    # desirability | viability | feasibility
+    why_uncertain:
+    evidence_ids: []
+    how_to_test:
+
+ideation:
+  rank:
+  scores: {}
+  composite:
+  gate_decision:                 # "pass" — only passed ideas are exported
+  scored_by: "governance"
+
+notes:                           # optional opinions, not used as inputs
+
+experiment:
+  total_budget:                  # LEAVE EMPTY — set by the founder
+  currency:

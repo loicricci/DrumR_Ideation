@@ -1,0 +1,5 @@
+focus=open
+country=US
+language=en
+scope=consumer+prosumer/SMB
+status=paused after signals: WebFetch could not reach any site (keeps pre-change network rules until restart); founder chose to restart in a new session
