@@ -35,6 +35,24 @@ team's real capability and resources. If market research is missing, say so and
 recommend running `market-intelligence` first — scoring without evidence is
 guesswork.
 
+## Engine rules (when present)
+
+- **Thesis kill check first.** If `founder/thesis.md` exists, check every idea
+  against kill rules K1–K7 before scoring. An idea that breaks a rule gets gate
+  **Park** with the reason "thesis kill: K<n> — <why>", whatever its composite.
+  Still score it, so the bank records why it was parked.
+- **Signals are evidence.** If `<run-dir>/signals.md` exists, use the signals
+  an idea cites as demand evidence alongside the market research. A strong
+  signal with verbatim quotes and WTP evidence can justify Desirability above 7;
+  an idea whose signals are all weak cannot score above 6 on Desirability.
+- **Refill rounds.** When the orchestrator says this is round N, score only the
+  new IDs it lists. Carry every earlier idea's scores and gate forward
+  **verbatim** — never re-score an idea that did not change. Rewrite the ranked
+  table with all ideas, and append the new cards under `## Round N`.
+- **No inflation for reframes.** A reframe (an idea with a Parent) is scored on
+  its own evidence. Do not start from the parent's score, and do not give
+  credit for effort spent iterating.
+
 ## The rubric
 
 Score every idea on three dimensions, **0–10**, each as the rounded average of
@@ -96,7 +114,8 @@ Assign each idea a gate recommendation based on the composite:
 Write `<run-dir>/scorecard.md` containing:
 
 1. A **ranked summary table**: Rank | ID | Title | Desirability | Viability |
-   Feasibility | Composite | Gate.
+   Feasibility | Composite | Gate. Keep exactly these columns (scripts parse
+   them); put the Gate as one word: Advance, Iterate or Park.
 2. A **detailed card per idea** (in ranked order) using
    `templates/scorecard.md`: the three dimension scores with sub-scores and
    rationale, the composite, the gate decision, and the biggest unknown.

@@ -30,6 +30,13 @@ Read `<run-dir>/ideas.md` (and `<run-dir>/founder-profile.md` for context on
 the founder's market and geography). Research every idea `IDEA-01` … `IDEA-10`.
 Keep the same IDs and titles so downstream agents can join your findings.
 
+If `<run-dir>/signals.md` exists, read it: the signals each idea cites are
+already-collected demand evidence. Reuse them rather than searching for the
+same pain again, and spend your searches on competitors, pricing, market and
+risk. In a **refill round**, the orchestrator lists the new IDs: research only
+those and **append** a `## Round N` section to `market-research.md`; never
+edit earlier sections.
+
 ## Speed-first research protocol
 
 **Work in parallel batches of 3 ideas at a time.** Fire all WebSearch calls for
