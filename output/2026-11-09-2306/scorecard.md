@@ -29,20 +29,37 @@
 > *these* founders be trusted here"), but the motivation/energy mismatch is a real
 > drag on execution stamina and is flagged per idea where it bites.
 
+> **Round 2 (refill) note.** Scored IDEA-11…15 only; IDEA-01…10 scores and cards
+> are carried forward verbatim. All five new ideas pass the K1–K7 kill check (K6
+> watched per idea; none force-Parked). Reframes are scored on their own evidence,
+> not their parent's: **IDEA-11 Billback** ties Aftercare at 7.00 (it swaps the
+> "will they sell a report?" unknown for a new "will the client approve a paid
+> fix?" unknown), while **IDEA-12 Rehearse** scores *below* its parent AgentProbe
+> (6.65 → 5.90) because research found the exact PR surface it targets is already
+> occupied by a **free, OpenAI-owned promptfoo action** plus Braintrust's PR
+> action. The three new-signal plays (Eject, PlainFlow, SwapStep) land in
+> heavily venture-funded or platform-risk-capped territory. Net Round-2 result:
+> **1 Iterate (SwapStep, Billback) / 3 Park** new, with Billback the standout.
+
 ## Ranked summary
 
 | Rank | ID | Title | Desirability | Viability | Feasibility | Composite | Gate |
 |------|------|-----------|:---:|:---:|:---:|:---:|:-------|
 | 1 | IDEA-03 | Aftercare | 7 | 7 | 7 | 7.00 | Iterate |
-| 2 | IDEA-01 | AgentProbe | 7 | 6 | 7 | 6.65 | Iterate |
-| 3 | IDEA-07 | ProofKit | 7 | 6 | 7 | 6.65 | Iterate |
-| 4 | IDEA-04 | Hatch | 7 | 6 | 6 | 6.40 | Iterate |
-| 5 | IDEA-02 | BudgetWall | 7 | 5 | 7 | 6.30 | Iterate |
-| 6 | IDEA-10 | Checkpoint | 6 | 6 | 7 | 6.25 | Iterate |
-| 7 | IDEA-09 | GroundWire | 6 | 6 | 6 | 6.00 | Iterate |
-| 8 | IDEA-08 | MeterMark | 6 | 6 | 6 | 6.00 | Iterate |
-| 9 | IDEA-06 | ShipAgent | 6 | 5 | 7 | 5.90 | Park |
-| 10 | IDEA-05 | KeyRoom | 6 | 4 | 6 | 5.30 | Park |
+| 2 | IDEA-11 | Billback | 7 | 7 | 7 | 7.00 | Iterate |
+| 3 | IDEA-01 | AgentProbe | 7 | 6 | 7 | 6.65 | Iterate |
+| 4 | IDEA-07 | ProofKit | 7 | 6 | 7 | 6.65 | Iterate |
+| 5 | IDEA-04 | Hatch | 7 | 6 | 6 | 6.40 | Iterate |
+| 6 | IDEA-02 | BudgetWall | 7 | 5 | 7 | 6.30 | Iterate |
+| 7 | IDEA-10 | Checkpoint | 6 | 6 | 7 | 6.25 | Iterate |
+| 8 | IDEA-09 | GroundWire | 6 | 6 | 6 | 6.00 | Iterate |
+| 9 | IDEA-08 | MeterMark | 6 | 6 | 6 | 6.00 | Iterate |
+| 10 | IDEA-15 | SwapStep | 6 | 6 | 6 | 6.00 | Iterate |
+| 11 | IDEA-06 | ShipAgent | 6 | 5 | 7 | 5.90 | Park |
+| 12 | IDEA-12 | Rehearse | 6 | 5 | 7 | 5.90 | Park |
+| 13 | IDEA-13 | Eject | 6 | 5 | 6 | 5.65 | Park |
+| 14 | IDEA-14 | PlainFlow | 6 | 5 | 6 | 5.65 | Park |
+| 15 | IDEA-05 | KeyRoom | 6 | 4 | 6 | 5.30 | Park |
 
 ---
 
@@ -272,6 +289,34 @@
 
 ---
 
+### IDEA-15 — SwapStep  ·  Composite: 6.00  ·  Gate: Iterate
+
+**Desirability — 6**
+- Pain intensity: 6 — Dated, concrete cost pain: the June-15-2026 AI-by-Zapier repricing (AI steps default to the most expensive tier) means "bills are climbing… most teams haven't adjusted" (SIG-13) — real but more an annoyance than a bleeding wound.
+- Demand evidence: 5 — SIG-13's *trigger* is now first-hand confirmed on `help.zapier.com`, but the customer *quotes* are weak/competitor-blog and actual migration volume is unverified ("intent loud in content, thin in practice").
+- Willingness to pay: 6 — This persona already pays Zapier and is actively shopping Make/Pabbly/n8n (switching WTP), but Zapier's own "bring your own AI account at 1x" is a free substitute that blunts the savings pitch.
+- Founder–market resonance: 8 — Cheap, cost-efficient multi-model routing is the founder's single strongest edge; the free "audit your Zapier AI bill" tool is exactly the SEO/shareable growth loop the founder wants.
+
+**Viability — 6**
+- Market size & growth: 5 — Narrow, dated, time-boxed window (no-code AI-step cost optimization); the opportunity can close as fast as it opened via another re-price.
+- Monetization & unit economics: 6 — Flat $9–29/mo or small markup on routed calls; the founder's cheap-routing edge is the margin.
+- Defensibility / moat: 4 — No third-party "cheap AI action" Zapier app was found (opportunity), **but** Zapier's Integration Publishing Requirements §2(i) allow removing integrations deemed *competing* — an app that undercuts AI-by-Zapier is a candidate; plus Zapier's own 1x own-account option substitutes.
+- Go-to-market realism: 7 — The free account-scanning audit tool rides live "Zapier AI pricing" search intent — a genuine, dated growth loop; persona reachable via r/Zapier and no-code newsletters.
+- Timing ("why now"): 7 — The strongest, most concrete, most dated "why now" in the Round-2 set: a specific June-15-2026 repricing event creating live migration intent, confirmed first-hand.
+
+**Feasibility — 6**
+- Technical complexity vs. capability: 8 — A Zapier app + cheap multi-model routing endpoint is a direct expression of the founder's single strongest skill.
+- Capital / resources vs. runway: 8 — Cheap-infra routing; bootstrap-friendly.
+- Time to testable MVP: 7 — Free audit tool + a Zapier AI action is a ≤4-week MVP.
+- External dependencies: 3 — The crux risk: a **confirmed** Zapier competing-app policy (publishing requirements §2(i)) directly threatens the in-platform delivery, and Zapier can re-price or cut app-store AI actions at will — the whole product lives on someone else's platform.
+
+**Composite:** 0.40×6 + 0.35×6 + 0.25×6 = **6.00**
+**Gate decision:** Iterate (at the floor) — The best founder-edge fit and the strongest dated "why now" of the new ideas, but capped at the floor by a confirmed platform-policy risk and unverified migration volume.
+**Biggest unknown:** Would a SwapStep AI action survive Zapier's competing-app policy (§2(i)), or does the entire in-platform delivery mechanism get removed — and is the migration intent real enough to monetize before the window closes?
+**De-risking step:** Ship the *free audit tool first* (no Zapier app required) to measure real "Zapier AI pricing" migration demand and capture emails; in parallel, get a written read on §2(i) from Zapier's developer channel before building the paid AI action.
+
+---
+
 ### IDEA-06 — ShipAgent  ·  Composite: 5.90  ·  Gate: Park
 
 **Desirability — 6**
@@ -297,6 +342,90 @@
 **Gate decision:** Park — Demand is real and it is the founder's strongest-skill expression, but it is the most directly-cloned (Agntable) and thinnest-margin idea; viability is the blocker.
 **Biggest unknown:** Can cheap infra hold a positive margin under a $9–29 floor against $3.99/mo hosts and $29 one-time kits (K4)?
 **De-risking step:** Model true per-user infra cost at the floor price against Agntable/Agent37 pricing; if margin isn't clearly positive, don't build.
+
+---
+
+### IDEA-12 — Rehearse  ·  Composite: 5.90  ·  Gate: Park
+
+**Desirability — 6**
+- Pain intensity: 7 — Same strongly-evidenced pain as its parent AgentProbe: "you can't just diff it like code," a prompt change silently alters behavior (SIG-01/04, strong/fetched); a painkiller for shipping agents from a repo.
+- Demand evidence: 7 — Strong, fetched SIG-01/04 carry over, and a June-2026 practitioner survey treats CI/CD eval wiring as an active unsolved workflow problem; but the specific "put it in the PR as a required check" surface is the bet, not the evidenced part.
+- Willingness to pay: 4 — The crux: the exact PR surface is already occupied by a **free, OpenAI-owned promptfoo GitHub action** (before/after PR comparisons) plus Braintrust's PR action; public repos are free, so paid conversion faces direct free pressure — lower than AgentProbe's WTP for that reason.
+- Founder–market resonance: 8 — Record/replay + behavioral-diff is the founder's eval core, and the public-PR footprint is the growth loop governance said Round 1 lacked.
+
+**Viability — 5**
+- Market size & growth: 6 — Evals-in-CI/CD expanding and consolidating (OpenAI acquired promptfoo Mar 2026); no discrete sub-size (gap).
+- Monetization & unit economics: 5 — $15–49/mo private repos, but free public repos + a free MIT competitor squeeze the paid line.
+- Defensibility / moat: 4 — promptfoo (free, OpenAI-owned) and Braintrust's `eval-action` already sit on this surface; differentiation rests only on plain-English diff + zero-config + public-repo loop, not the primitive — highest already-free-competitor pressure of the Round-2 set.
+- Go-to-market realism: 6 — The Codecov/Vercel-bot public-repo loop is a real growth mechanic, but only pays off if enough agent code is actually open-source.
+- Timing ("why now"): 5 — Coherent (agent code moved into Git/CI), but the 2026 promptfoo acquisition + Braintrust's action mean incumbents are already on the surface as the idea arrives.
+
+**Feasibility — 7**
+- Technical complexity vs. capability: 8 — Record/replay + behavioral diff + a GitHub/GitLab app is the founder's wheelhouse.
+- Capital / resources vs. runway: 7 — Cheap, though free public-repo runs are a real infra cost line.
+- Time to testable MVP: 6 — GitHub app + scenario replay + human-readable diff comment is buildable but non-trivial in 4 weeks.
+- External dependencies: 7 — GitHub/GitLab platform dependency, otherwise self-contained.
+
+**Composite:** 0.40×6 + 0.35×5 + 0.25×7 = **5.90**
+**Gate decision:** Park — The reframe moves off the crowded free-OSS tracing floor onto the PR surface, but that surface is already occupied by a free, OpenAI-owned promptfoo action plus Braintrust's PR action; scored on its own evidence it falls *below* its parent AgentProbe (6.65), not above it — no reframe inflation.
+**Biggest unknown:** Is there a paid wedge above a free, OpenAI-owned promptfoo action that already posts before/after PR comparisons — i.e. will teams pay for plain-English zero-config diffs rather than wire up the free tool once?
+**De-risking step:** Put the plain-English behavioral-diff PR comment in front of 10 teams already running promptfoo/Braintrust in CI and measure whether any switch or pay vs. "the free action is good enough."
+
+---
+
+### IDEA-13 — Eject  ·  Composite: 5.65  ·  Gate: Park
+
+**Desirability — 6**
+- Pain intensity: 6 — "You're renting a prettier box"; makers abandon platform after platform over hidden complexity and lock-in (SIG-11) — a genuine frustration, but more an ownership preference than an acute, bleeding wound.
+- Demand evidence: 6 — SIG-11 is unusually **price-anchored** ("$19 starter was enough," would pay "only if they can export and own the code"), but it is search-surfaced and needs re-verification; corroborated by SIG-08/SIG-12.
+- Willingness to pay: 6 — An explicit $19/mo anchor and a stated condition ("only if I can own it") is the clearest WTP articulation of the new ideas, though export may be a nice-to-have, not a must-buy.
+- Founder–market resonance: 8 — Agent-design taste + cheap orchestration infra fit "generate a good agent AND run it cheaply," and the "built with Eject" share page fits the founder's build-in-public growth comfort.
+
+**Viability — 5**
+- Market size & growth: 7 — Large, hot, and heavily venture-funded (Lovable, Replit, Gumloop, Emergent all raised big in 2026) — demand is not the question.
+- Monetization & unit economics: 6 — $19/mo + higher tiers, cheap-infra margin on hosted runs.
+- Defensibility / moat: 4 — Crowded and extremely well-capitalized; OSS builders (Langflow exports JSON, Flowise self-hosts) already blunt "no lock-in," and export-as-headline may be a feature, not a moat — though a true agent-specific "describe → eject clean source" product looks under-occupied.
+- Go-to-market realism: 5 — A solo bootstrapper's distribution is dwarfed by funded incumbents iterating the same UX; the "built with" loop is unproven.
+- Timing ("why now"): 5 — The lock-in backlash is plausible, but the funding wave means many well-funded teams are chasing the same UX simultaneously.
+
+**Feasibility — 6**
+- Technical complexity vs. capability: 5 — Codegen good enough to *actually own and run* is genuinely hard; the eject promise raises the quality bar well above a demo.
+- Capital / resources vs. runway: 7 — Cheap infra for hosted runs; bootstrap-friendly.
+- Time to testable MVP: 5 — A narrow template/export set is scoped to 4 weeks, but production-grade codegen quality in that window is a real risk.
+- External dependencies: 7 — LLM providers; relatively low platform risk vs. the Zapier/OpenAI-dependent ideas.
+
+**Composite:** 0.40×6 + 0.35×5 + 0.25×6 = **5.65**
+**Gate decision:** Park — Price-anchored ownership demand and an under-occupied agent-specific eject wedge, but a crowded, heavily-funded category where export-as-headline may not out-pull incumbent distribution, and codegen quality is a real feasibility risk.
+**Biggest unknown:** Does "own and export your agent's clean source" out-pull funded incumbents' distribution, or is it a nice-to-have that doesn't change platform choice?
+**De-risking step:** Land a no-build "export my agent to a clean repo" offer in r/nocode/r/AI_Agents against SIG-11's exact complaint and measure how many of the "I'd pay to own it" makers actually put down a $19 deposit.
+
+---
+
+### IDEA-14 — PlainFlow  ·  Composite: 5.65  ·  Gate: Park
+
+**Desirability — 6**
+- Pain intensity: 5 — Non-technical owners bounce off n8n/Make JSON and webhooks (SIG-12), but the counter-signal is strong — many "stick with Zapier because templates make it hard to break things," so the pain may not be acute enough to switch for.
+- Demand evidence: 5 — SIG-12 is the weakest anchor of the three new-signal ideas (search-surfaced), and funded challengers (Gumloop, Lindy) already chase this exact persona.
+- Willingness to pay: 6 — The persona **already pays** for Zapier/Make, so switching WTP exists, but it is indirect (no price anchored to *this* product).
+- Founder–market resonance: 7 — Orchestration + cheap infra make a "just works, we run it" experience viable at a low price; the vertical template gallery fits the founder's community-led GTM.
+
+**Viability — 5**
+- Market size & growth: 6 — Large and expanding, but the "simplicity for non-devs" slot is actively contested by funded players (Gumloop ~$37/mo, Lindy).
+- Monetization & unit economics: 6 — $15–39/mo undercutting a freelancer; cheap-infra margin.
+- Defensibility / moat: 4 — "Describe it in plain English, never see JSON" is *exactly* Gumloop/Lindy's pitch; only the vertical-niche narrowing (e.g. salon "missed-call text-back") is differentiated.
+- Go-to-market realism: 6 — The vertical template gallery is a plausible SEO/growth loop and fits community-led GTM.
+- Timing ("why now"): 5 — The same 2025–26 wave that raised the skill floor also produced the funded challengers now filling the gap as the idea arrives.
+
+**Feasibility — 6**
+- Technical complexity vs. capability: 6 — A self-healing, chat-first, guardrailed automation builder is non-trivial; the narrow-vertical scope makes it tractable.
+- Capital / resources vs. runway: 7 — Cheap-infra; bootstrap-friendly.
+- Time to testable MVP: 6 — One or two verticals keeps the MVP in the 4-week window.
+- External dependencies: 5 — K2 watch: "we run it" must self-heal or it becomes a founder support queue; plus per-integration third-party app risk.
+
+**Composite:** 0.40×6 + 0.35×5 + 0.25×6 = **5.65**
+**Gate decision:** Park — Plausible non-dev complexity pain and a persona that already pays, but the weakest signal anchor (SIG-12), a "good-enough" incumbent (Zapier templates), and funded AI-native challengers (Gumloop, Lindy) already own the "plain-English builder" positioning.
+**Biggest unknown:** Is the non-dev owner's pain acute enough to switch from Zapier's safe templates — and can a solo founder out-focus funded challengers on a single high-demand vertical?
+**De-risking step:** Re-verify SIG-12 live, then run a single-vertical landing page (e.g. "salon missed-call text-back, we build and run it") and measure sign-ups/pre-orders against Zapier's existing template for the same job.
 
 ---
 
@@ -328,10 +457,51 @@
 
 ---
 
+## Round 2 — new ideas scored
+
+Cards for IDEA-11 (Billback, rank 2, Iterate), IDEA-15 (SwapStep, rank 10, Iterate),
+IDEA-12 (Rehearse, rank 12, Park), IDEA-13 (Eject, rank 13, Park) and IDEA-14
+(PlainFlow, rank 14, Park) are placed in ranked order above. Below is the
+Billback card (the only new idea that cracked the top tier); the other four new
+cards appear at their composite rank in the list above.
+
+### IDEA-11 — Billback  ·  Composite: 7.00  ·  Gate: Iterate
+
+**Desirability — 7**
+- Pain intensity: 7 — The strongest pain in the maintenance cluster: agents break months later and the freelancer becomes "unpaid support, on-call dev, integration janitor" (SIG-15, medium) while clients churn by month four (SIG-03, strong/fetched) — a bleeding, recurring-revenue wound, not a vitamin.
+- Demand evidence: 7 — SIG-03 (strong, fetched) + SIG-15 (medium), reinforced by a June-2026 agency incident-playbook framing the antidote as "monitoring that turns silent failures into loud ones" — the firefighting pain is strongly evidenced (the *paid-fix conversion* is the unproven part, not the pain).
+- Willingness to pay: 6 — Rides the existing "fixed build fee + maintenance retainer" norm (SIG-15) and pays for itself on the first recovered fix, but neither per-incident client approval nor breakage *frequency* is evidenced in the signals (SIG-03/15 are WTP-absent).
+- Founder–market resonance: 8 — Drift/breakage detection and monitoring pipelines are the founder's observability wheelhouse; the branded client-approval page is a genuine growth loop (every approving client sees the platform).
+
+**Viability — 7**
+- Market size & growth: 6 — Agent monitoring / incident-management, expanding (plentiful 2026 "AI agent failure detection / incident management" roundups), inside the broader agent market; no discrete sub-size (gap).
+- Monetization & unit economics: 7 — Flat $19–39/mo + per-agent monitoring fee + optional small % of approved fixes; cheap infra keeps per-agent monitoring margin-positive and the model monetizes recovered revenue, not an upsell.
+- Defensibility / moat: 7 — Research's specific check found **no tool that converts agent failures into client-approved, paid fix tickets**; adjacent prior art (Augment Cosmos, Monte Carlo Agent Health, Datadog, Better Stack) is all **internal dev-team** tooling — the freelancer→SMB-client branded approval/billing layer is unoccupied, the same structural gap Aftercare exploits.
+- Go-to-market realism: 7 — Buyer is the freelancer, reachable in the exact AI-agency Discords/Skool/Indie-Hackers communities the founder can access (K5); the branded approval page doubles as distribution.
+- Timing ("why now"): 7 — Well-supported: the 2025 autonomous-client-build cohort is hitting first-wave months-later breakage (SIG-15) exactly as agencies feel the month-4 churn cliff (SIG-03), with 2026 agency incident-playbook content appearing now.
+
+**Feasibility — 7**
+- Technical complexity vs. capability: 8 — Breakage/drift detection + auto-drafted incident + a branded approval page is squarely the founder's systems-engineering strength.
+- Capital / resources vs. runway: 8 — Cheap per-agent monitoring; bootstrap-friendly.
+- Time to testable MVP: 6 — Monitor → incident draft → client-approval page is shippable in ≤4 weeks, though the detect-and-scope-a-fix loop and the client-facing billing veneer add scope.
+- External dependencies: 6 — Needs access to each client agent's logs/endpoints and a client-approval/billing flow; adjacent incumbents (Monte Carlo, Augment) could bolt on a client-billing veneer.
+
+**Composite:** 0.40×7 + 0.35×7 + 0.25×7 = **7.00**
+**Gate decision:** Iterate — Scored on its own evidence, the reframe genuinely sidesteps Aftercare's "will the freelancer *sell* a report?" unknown by attaching to firefighting they're already forced to do, and lands on the same cleanest-whitespace in the run — but it swaps in a new, un-evidenced conversion (will the client approve per-incident *paid* fixes?), which keeps it at Iterate, not Advance. No reframe inflation: it ties Aftercare at 7.00 on merit, it does not inherit or exceed it.
+**Biggest unknown:** Will SMB clients approve per-incident "approve a 2-hour fix" charges (rather than feel nickel-and-dimed), and is agent-breakage frequency high enough to generate meaningful recovered revenue that justifies the monitoring fee?
+**De-risking step:** Interview 6 AI-automation freelancers to measure real breakage frequency per client agent, then show 5 of their SMB clients the mock "your Invoicing Agent stopped reading POs — approve a 2-hour fix?" page and test whether they'd tap approve at a stated price — before any build.
+
+---
+
 ## Top 3 recommendation
 
-1. **IDEA-03 Aftercare (7.00)** — Best-evidenced demand (SIG-03/15) on the cleanest whitespace in the run (nobody sells the white-label freelancer→client health report), riding an existing retainer payment. **Highest-priority validation:** pre-sell the mock monthly report to 5 AI-automation freelancers and confirm they'd attach it to a client retainer at a named price before any build.
-2. **IDEA-01 AgentProbe (6.65)** — The most directly-quoted pain in the set and a tight skill fit, but it must prove it can clear the free-OSS floor. **Highest-priority validation:** show the per-step-diff replay to 10 builders already on free OSS and count how many switch or pay vs. "my tests cover it."
+The new round does not change the top tier's shape but adds a sharper framing of the
+run's single best opportunity. **Billback (IDEA-11) ties Aftercare at 7.00 and is the
+more de-risked framing of the same whitespace**, so the agency-maintenance play now
+leads the recommendation.
+
+1. **IDEA-11 Billback / IDEA-03 Aftercare (7.00)** — The same, best-evidenced demand (SIG-03/15, month-4 churn + the "unpaid integration janitor" trap) on the cleanest unoccupied slot in the run (nobody sells the white-label freelancer→client packaging/billing layer). **Pursue Billback as the sharper framing**: it removes Aftercare's "will they sell a report?" unknown by attaching to firefighting the freelancer is already forced to do. **Highest-priority validation:** measure real per-agent breakage frequency with 6 freelancers, then test whether their SMB clients will tap "approve a paid fix" at a stated price before any build.
+2. **IDEA-01 AgentProbe (6.65)** — The most directly-quoted pain in the set and a tight skill fit, but it must prove it can clear the free-OSS floor. **Highest-priority validation:** show the per-step-diff replay to 10 builders already on free OSS and count how many switch or pay vs. "my tests cover it." (Prefer AgentProbe over its reframe Rehearse, which scored *lower* at 5.90 because a free, OpenAI-owned promptfoo action already occupies the PR surface.)
 3. **IDEA-07 ProofKit (6.65)** — Real trust-wall demand plus a built-in growth loop that fits the founder's distribution goal, but the whole thesis rests on one unproven claim. **Highest-priority validation:** A/B a real seller's landing page with vs. without the ProofKit report and measure buyer conversion lift — no lift kills it cheaply.
 
-> Honorable mention: **IDEA-04 Hatch** is the strongest *motivation* fit (the monetization layer for agent makers + a public-page growth loop the founder explicitly wants); it ranks 4th only because demand-side buyer conversion and OpenAI platform risk are unresolved. If the founder weights "builds toward the viral-consumer home" over pure evidence, Hatch is the one to run alongside the top 3.
+> Honorable mentions. **IDEA-04 Hatch** remains the strongest *motivation* fit (the monetization layer for agent makers + a public-page growth loop the founder explicitly wants) at 6.40. Of the new ideas, **IDEA-15 SwapStep (6.00, Iterate)** is the best expression of the founder's cheap-multi-model-routing edge and has the strongest dated "why now" in the run, but it is capped at the floor by a *confirmed* Zapier competing-app policy (§2(i)) — if pursued, ship the free audit tool first (platform-independent) and get a written policy read before building the paid Zapier AI action.
