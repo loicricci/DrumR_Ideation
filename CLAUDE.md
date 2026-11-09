@@ -33,14 +33,16 @@ the `ideator` needs a `founder-profile.md` to exist first (run the interview via
   `/report` (optionally `/report <run-id>`). It only reformats existing
   artifacts — it never re-scores or re-researches.
   → `output/<run-id>/summary.html`
-- **`statement`** — on demand, writes a one-page idea statement for one idea
-  (persona, problem statement, triggers, value proposition, rough economics,
-  scores, assumptions to test). Run with `/statement <IDEA-ID | advance> [run-id]`.
-  It copies scores from the scorecard and never re-scores. Economics figures
-  are always labeled as assumptions.
-  → `output/<run-id>/statement-<IDEA-ID>.md` (for people) and
-  `statement-<IDEA-ID>.json` (for P/S Fitter; schema in
-  `templates/statement.schema.json` — keep the two in sync if you edit it)
+- **`handoff`** — on demand, exports an idea that **passed the gate** (Advance)
+  to P/S Fitter, following the handoff requirements v1. Run with
+  `/handoff <IDEA-ID | all> [run-id]`. The agent mines verbatim customer quotes
+  and competitor data and writes the YAML; `scripts/handoff.py` runs the
+  self-check and renders the Markdown from the YAML.
+  → `output/<run-id>/project-start-<IDEA-ID>.yaml` (source of truth, shape in
+  `templates/project-start.yaml`), `statement-<IDEA-ID>.md` (rendered, never
+  hand-edited), and `evidence-<IDEA-ID>.json` when there are more than 20
+  evidence items. It never includes prices, max CAC, budgets, thresholds, CTAs
+  or copy — P/S Fitter decides those — and leaves `experiment.total_budget` empty.
 
 ## Conventions
 
