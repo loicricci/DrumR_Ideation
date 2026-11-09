@@ -44,10 +44,34 @@ the `ideator` needs a `founder-profile.md` to exist first (run the interview via
   evidence items. It never includes prices, max CAC, budgets, thresholds, CTAs
   or copy — P/S Fitter decides those — and leaves `experiment.total_budget` empty.
 
+### The idea engine (`/engine`)
+
+The goal: **every session ships one idea worth pushing to P/S Fit**, feeding a
+target of 10 handed-off ideas. `/engine [focus]` runs:
+
+1. **`signal-scout`** — mines evidenced pain signals (verbatim quotes,
+   triggers, WTP) before any idea exists, filtered by the thesis.
+   → `output/<run>/signals.md`
+2. **ideator → market-intelligence → governance**, with every idea tied to a
+   signal and checked against the thesis kill rules.
+3. **A capped loop** (max 3 rounds): parked ideas are replaced from unused
+   signals and the top Iterate ideas are reframed around their biggest unknown.
+   Only new IDs are researched and scored; earlier scores carry forward.
+4. **`idea-challenger`** on any Advance idea; only a challenged Advance passes.
+5. **`handoff`** exports it to P/S Fitter.
+6. **`scripts/bank.py sync`** rebuilds `ideas-bank.md` (every idea across runs,
+   status, signals, parent) and the handed-off counter.
+
+Persistent inputs live in `founder/`: `profile.md` (copied into each run) and
+`thesis.md` (allowed business shapes and kill rules K1–K7). Edit the thesis to
+change what the engine looks for. The gate thresholds are never lowered to get
+a pass.
+
 ## Conventions
 
 - Ideas keep stable IDs `IDEA-01` … `IDEA-10` across all artifacts. Never
-  renumber them — downstream agents join on these IDs.
+  renumber them — downstream agents join on these IDs. Engine refill rounds add
+  `IDEA-11`, `IDEA-12`… (a reframe records its `Parent`).
 - Each pipeline run writes to its own timestamped subfolder inside `output/`,
   e.g. `output/2026-06-19-2234/`. This means multiple runs never overwrite each
   other. The orchestrator commands (`/ideate`, `/ideate-fast`) create the folder

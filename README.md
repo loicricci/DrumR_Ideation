@@ -14,6 +14,7 @@ can't ask you questions.) It then runs three specialist subagents as a pipeline:
 | 1 | **Ideator** | Reads your founder profile and generates **exactly 10** product ideas grounded in your edge and constraints | `output/ideas.md` |
 | 2 | **Market Intelligence** | Researches each idea on the open web — market size, trends, competitors, demand signals, risks — with citations | `output/market-research.md` |
 | 3 | **Governance** | Scores every idea on **Desirability, Viability, Feasibility**, ranks them, and gives each a gate decision (Advance / Iterate / Park) | `output/scorecard.md` |
+| ★ | **Signal Scout** *(engine)* | Mines evidenced pain signals — verbatim complaints, triggers, willingness to pay — before any idea is generated (`/engine`) | `output/signals.md` |
 | ★ | **Reporter** *(on demand)* | Packages a finished run into one polished, print-ready HTML summary you save as a PDF (`/report`) | `output/summary.html` |
 | ★ | **Handoff** *(on demand)* | Exports an idea that passed the gate to P/S Fitter: persona, problem in customers' words, triggers, alternatives, competitors, 10+ verbatim quotes, risks (`/handoff`) | `output/project-start-IDEA-NN.yaml` + `statement-IDEA-NN.md` |
 
@@ -96,6 +97,25 @@ not exported. The checker needs Python 3 with PyYAML (`pip install pyyaml`).
 
 ---
 
+### 6. Run the idea engine (one PSF-ready idea per session)
+
+```
+/engine open
+/engine "creator tools"
+```
+
+`/engine` starts from **evidence instead of a seed idea**: the Signal Scout
+mines pain signals first, the ideator ties every idea to a signal, and
+governance parks anything that breaks your thesis kill rules
+(`founder/thesis.md`). If nothing reaches Advance, it loops (at most 3 rounds):
+parked ideas are replaced from unused signals, and the top Iterate ideas are
+reframed around their biggest unknown. Any Advance idea must survive an
+independent `/challenge` before it is exported with `/handoff`. Progress across
+sessions is tracked in `ideas-bank.md` (`python3 scripts/bank.py sync`).
+
+Set it up once: put your profile in `founder/profile.md` and your filters in
+`founder/thesis.md`.
+
 ## Install globally (use it in any project)
 
 To make the agents available everywhere, copy them into your user scope:
@@ -120,10 +140,12 @@ drumr-ideation-kit/
 │   │   ├── ideator.md              # 1. reads profile -> 10 ideas
 │   │   ├── market-intelligence.md  # 2. web research per idea
 │   │   ├── governance.md           # 3. scoring + ranking + gate
+│   │   ├── signal-scout.md         # ★ engine: evidenced pain signals first
 │   │   ├── reporter.md             # ★ printable HTML/PDF summary
 │   │   └── handoff.md              # ★ P/S Fitter export
 │   ├── commands/
 │   │   ├── ideate.md               # /ideate orchestrator
+│   │   ├── engine.md               # /engine — loop until one PSF-ready idea
 │   │   ├── report.md               # /report — export a PDF summary
 │   │   └── handoff.md              # /handoff — export to P/S Fitter
 │   ├── founder-interview.md        # interview spec (run by orchestrator)
@@ -134,7 +156,10 @@ drumr-ideation-kit/
 │   ├── scorecard.md
 │   └── project-start.yaml          # P/S Fitter handoff shape
 ├── scripts/
-│   └── handoff.py                  # handoff self-check + Markdown renderer
+│   ├── handoff.py                  # handoff self-check + Markdown renderer
+│   └── bank.py                     # rebuilds ideas-bank.md, loop status for /engine
+├── founder/                        # persistent profile.md + thesis.md (kill rules)
+├── ideas-bank.md                   # every idea across runs + handed-off counter
 ├── output/                         # generated artifacts land here
 ├── CLAUDE.md                       # shared project context + config
 ├── LICENSE

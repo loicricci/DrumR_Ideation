@@ -92,7 +92,14 @@ Follow `templates/project-start.yaml` exactly, and use the quality bars:
 - `risks`: 3–7, **riskiest first**, each with a category and evidence ids.
   Start from the scorecard's biggest unknown.
 - `ideation`: copy rank, D/V/F scores and composite from `scorecard.md`;
-  `gate_decision: "pass"`, `scored_by: "governance"`.
+  `gate_decision: "pass"`, `scored_by: "governance"`. If
+  `<run-dir>/challenge-<IDEA-ID>.md` exists, its final verdict is the one that
+  counts: use its scores and composite, and note the governance scores in
+  `notes`.
+- `meta.parent_idea_id`: the idea's "Parent" field in `ideas.md`, if any.
+- If `<run-dir>/signals.md` exists, start mining from the signals the idea
+  cites: their verbatim quotes are valid evidence (re-fetch to confirm they are
+  still online).
 - `meta.generated_by: "drumr-ideation-kit/handoff-v1"`,
   `source.statement: "<run-dir>/statement-<IDEA-ID>.md"`.
 - `experiment.total_budget` stays **empty**; `currency` is the country's.
