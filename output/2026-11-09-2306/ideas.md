@@ -172,3 +172,101 @@
 - **Signals:** SIG-04, SIG-15, SIG-09.
 - **Thesis check:** passes K1–K7 (approvals routed to the builder/owner, automated — no founder-run moderation queue; customer-facing operation stays with the builder → no K7 exposure).
 - **Parent:** none
+
+---
+
+## Round 2
+
+> **Refill logic.** Governance returned 0 Advance / 8 Iterate / 2 Park and flagged
+> two things: the whole set is dev-tooling with almost no consumer/viral growth
+> loop (the founder's headline goal), and the two top Iterate ideas each hinge on
+> one unproven assumption. This round removes those assumptions and deliberately
+> pulls toward the founder's preferences — a built-in growth loop and the cheap
+> agent-infra edge. **IDEA-11** reframes Aftercare so its value no longer depends
+> on the freelancer *selling* a report (it recovers billable revenue the
+> freelancer is already losing). **IDEA-12** reframes AgentProbe off the crowded
+> free-OSS tracing/eval floor into a CI-native PR review bot with a public-repo
+> growth loop. **IDEA-13/14/15** open three previously-unused signals (SIG-11
+> no-code lock-in, SIG-12 non-dev automation complexity, SIG-13 the dated June-15
+> Zapier AI-step repricing), each built around a sharing/SEO loop and, for
+> IDEA-15, squarely on the cheap-infra edge.
+
+---
+
+## IDEA-11 — Billback
+
+- **One-liner:** A monitor for deployed client agents that turns every silent breakage into a scoped, client-approvable fix ticket — converting the freelancer's unpaid firefighting into billable maintenance revenue.
+- **Target customer:** Freelancers and one-person AI-automation agencies who sold agents to SMB clients and are now on the hook for them.
+- **Problem / job to be done:** Agents break months later (API change, auth expiry, drift) and the freelancer becomes the "on-call dev, integration janitor" doing unpaid fixes, or the client silently reverts and churns. Today the freelancer eats the support time or chases a retainer conversation they keep losing. The value here does **not** depend on them selling a new "health report" line item (the thing Round 1 couldn't de-risk) — it attaches to work they are already forced to do, and makes it billable.
+- **Solution wedge:** Point it at the client's deployed agent; when it detects a failure or drift it auto-drafts a plain-English incident + a scoped fix estimate and pushes a **branded client-approval page** ("your Invoicing Agent stopped reading POs on Nov 3 — approve a 2-hour fix?"). The client taps approve; the freelancer bills the fix. The product monetizes recovered revenue, not a report the freelancer must upsell.
+- **Business model:** Self-serve, billed to the freelancer: flat $19–39/mo + a small per-agent monitoring fee; optionally a tiny % of fixes approved through the page. Recurring, and pays for itself on the first recovered fix.
+- **Founder edge:** Drift/breakage detection and monitoring pipelines are the founder's observability wheelhouse; cheap infra keeps per-agent monitoring margin-positive. The branded approval page is a growth loop — every client who approves a fix sees the platform, and clients with multiple freelancers surface the tool to them.
+- **Why now:** The 2025 cohort of "autonomous agent" client builds is hitting its first wave of months-later breakage (SIG-15) exactly as agencies feel the month-4 churn cliff (SIG-03).
+- **Biggest risk:** Clients may balk at per-incident "approve a fix" charges (feeling nickel-and-dimed), or breakage frequency is too low to generate meaningful recovered revenue — making the monitoring fee hard to justify.
+- **Signals:** SIG-15, SIG-03, SIG-04.
+- **Thesis check:** passes K1–K7 (monitors the freelancer's own deployment, approvals routed to the client automatically; no founder-run ops queue, no customer-facing conversation → no K7 exposure).
+- **Parent:** IDEA-03
+
+---
+
+## IDEA-12 — Rehearse
+
+- **One-liner:** A CI-native review bot that replays recorded scenarios on every pull request that touches an agent and posts a plain-English "here's what changed in your agent's behavior" diff as a check — like a preview deploy, but for agent behavior.
+- **Target customer:** Indie/solo developers and small teams shipping LLM agents from a Git repo, who already run CI and review PRs.
+- **Problem / job to be done:** A prompt or model change silently alters behavior and nobody notices until downstream breakage; builders either read raw traces by hand or wire up free OSS eval libraries (Langfuse/Phoenix) into their own CI — setup nobody maintains. The Round 1 version competed head-on with that free tracing/eval floor. This reframes onto a surface the OSS libraries *don't* own: the PR review itself.
+- **Solution wedge:** Install a GitHub/GitLab app; on each PR that changes prompts/agent code it replays a recorded scenario set and posts a required check + a human-readable behavioral diff comment ("3 of 20 scenarios now escalate to human where they used to auto-resolve"). Zero CI wiring. Free for public repos — the branded check and comment appear in public OSS agent repos, which is the SEO/word-of-mouth growth loop (the Codecov/Vercel-bot playbook); paid for private repos and larger scenario sets.
+- **Business model:** Self-serve; free for public repos (growth), $15–49/mo per private repo or small team. Recurring.
+- **Founder edge:** Record/replay + behavioral-diff engineering is the founder's eval/observability core; cheap infra makes free public-repo runs sustainable. The public-PR footprint is the built-in growth loop governance said Round 1 lacked.
+- **Why now:** Agent code moved into normal Git/CI workflows in 2025–26, but the review surface still treats a prompt change like any text diff — the behavioral-diff gap is open and OSS evals live offline, not in the PR.
+- **Biggest risk:** "CI + unit tests already cover it" — teams may fold scenario replay into their existing test step for free, and the public-repo loop only pays off if enough agent code is actually open-source.
+- **Signals:** SIG-01, SIG-04.
+- **Thesis check:** passes K1–K7.
+- **Parent:** IDEA-01
+
+---
+
+## IDEA-13 — Eject
+
+- **One-liner:** A plain-English agent builder whose whole promise is that you own the result — build an agent by describing it, then export clean, runnable source to your own repo anytime, no lock-in.
+- **Target customer:** Indie hackers and semi-technical makers who want to ship an agent without hand-coding, but refuse to be trapped in a platform they can't leave.
+- **Problem / job to be done:** Tools marketed as "no-code" still demand webhooks/JSON to get working, and once it works you don't own it — "you're renting a prettier box." Makers abandon platform after platform and say they'd pay only for a tool that lets them export and own the code.
+- **Solution wedge:** Describe the agent in plain English → get a working, hosted agent **and** a one-click "eject" that hands you the full source (prompts, tools, orchestration) as a standard repo you can run anywhere. The anti-lock-in export is the wedge and the headline, not a buried feature. Shared/published agents carry a lightweight "built with Eject" public page — the growth loop.
+- **Business model:** Self-serve; $19/mo starter (matching the stated WTP anchor) with hosted runs, higher tiers for more agents/usage; export included on paid plans. Recurring, with the founder's cheap infra giving margin on hosted runs.
+- **Founder edge:** Agent-design taste (what makes an agent good) plus cheap orchestration infra directly serve "generate a genuinely good agent AND run it cheaply"; the "built with" share page fits the founder's community-led, build-in-public growth comfort.
+- **Why now:** The 2025–26 flood of "build an agent in plain English" tools has produced an open backlash about hidden complexity and lock-in — a switching moment the incumbents created.
+- **Biggest risk:** "No-code agent builder" is a crowded, well-funded category; ownership/export may be a nice-to-have that doesn't overcome incumbents' distribution, and codegen quality good enough to actually own is hard to nail in a 4-week MVP.
+- **Signals:** SIG-11, SIG-08, SIG-12.
+- **Thesis check:** passes K1–K7 (MVP scoped to a narrow template/export set to stay inside the 4-week window; self-serve, automatable, cheap-infra margin).
+- **Parent:** none
+
+---
+
+## IDEA-14 — PlainFlow
+
+- **One-liner:** A plain-English automation builder for non-technical business owners where you never see JSON, expressions, or a webhook node — describe what you want, answer a couple of questions, and it runs.
+- **Target customer:** Non-technical small-business owners (salon, clinic, trades, small agency) who want to build their own automations/agents but bounce off n8n/Make.
+- **Problem / job to be done:** The leading automation tools assume comfort with JSON, expressions and self-hosting, so non-developers hit a syntax or webhook step they can't configure and give up — falling back to Zapier's guardrailed templates, hiring a freelancer, or abandoning. They already pay for Zapier/Make, so WTP and switching intent exist.
+- **Solution wedge:** A chat-first builder that turns a plain-English request into a working, guardrailed automation, asks clarifying questions in business terms (never JSON), and self-explains/self-heals when something changes — plus a **vertical template gallery** (e.g. "missed-call text-back for salons") that is the SEO/growth loop and community-seeded content. The wedge is one or two high-demand verticals, not a universal builder.
+- **Business model:** Self-serve subscription ($15–39/mo) undercutting a freelancer and competing on simplicity, not feature count. Recurring.
+- **Founder edge:** Agent orchestration + cheap infra make a "just works, we run it" experience viable at a low price; the shareable vertical template gallery is a built-in SEO/growth loop and fits the founder's community-led GTM.
+- **Why now:** Agent features bolted onto automation tools in 2025–26 raised the skill floor further for non-devs, widening the gap between "powerful" and "usable by an owner."
+- **Biggest risk:** The safe-template incumbents (Zapier) may already serve this persona "well enough," and SIG-12 is a weak/search-surfaced signal — the non-dev owner's pain may not be acute enough to switch for.
+- **Signals:** SIG-12, SIG-11, SIG-13.
+- **Thesis check:** passes K1–K7 (narrow-vertical MVP keeps build ≤4 weeks; K2 watch — automation must self-heal, not become a founder support queue).
+- **Parent:** none
+
+---
+
+## IDEA-15 — SwapStep
+
+- **One-liner:** A free "audit your Zapier AI bill" tool plus a drop-in cheaper AI action that replaces expensive AI-by-Zapier steps by routing to low-cost models at a flat price.
+- **Target customer:** Prosumer and small-business no-code automators who added AI steps to their Zaps and just got repriced.
+- **Problem / job to be done:** On June 15 2026 AI by Zapier moved to model-tier pricing with AI steps defaulting to the most expensive tier (confirmed on Zapier's official help page), so task-based AI bills are climbing faster than expected and teams "haven't adjusted." Today they manually audit Zaps to strip AI steps, route to cheaper models by hand, or shop for Make/Pabbly/n8n alternatives.
+- **Solution wedge:** A free, shareable web tool that scans a connected Zapier account, flags the expensive AI steps and estimates the monthly overspend (the migration-intent SEO/growth loop) — then a one-click swap to **SwapStep's own AI action** (a Zapier app) that runs the same prompt on a cheap-routed model at a flat, predictable price. Stay inside Zapier; just make the AI step cheap.
+- **Business model:** Self-serve; the audit is free (lead/growth loop), then a flat $9–29/mo subscription (or tiny markup on routed calls) for the cheaper AI action. Recurring; the founder's cheap-infra edge is the margin.
+- **Founder edge:** Cheap, cost-efficient multi-model routing is the founder's single strongest advantage — this idea *is* that edge pointed at a dated pricing event. The free audit tool is an SEO/shareable growth loop aimed at active "Zapier AI pricing" search intent.
+- **Why now:** The June-15-2026 AI-step repricing is a concrete, dated "losers" event creating live migration intent in exactly this buyer base — a time-boxed switching window.
+- **Biggest risk:** Dependence on Zapier's platform (they could cut app-store AI actions out or re-price again), and migration volume is unverified — the switching intent may be loud in competitor blogs but thin in practice.
+- **Signals:** SIG-13, SIG-02, SIG-14.
+- **Thesis check:** passes K1–K7 (Zapier app + routing endpoint is a ≤4-week MVP; self-serve, cheap-infra margin, reachable via r/Zapier and no-code newsletters).
+- **Parent:** none
