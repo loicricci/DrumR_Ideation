@@ -270,3 +270,106 @@
 - **Signals:** SIG-13, SIG-02, SIG-14.
 - **Thesis check:** passes K1–K7 (Zapier app + routing endpoint is a ≤4-week MVP; self-serve, cheap-infra margin, reachable via r/Zapier and no-code newsletters).
 - **Parent:** none
+
+---
+
+## Round 3
+
+> **Refill logic.** Round 2 landed 1 new Iterate / 3 Park, with Billback (IDEA-11)
+> tying Aftercare for the lead but swapping in a new unproven conversion, and
+> ProofKit (IDEA-07) still resting on the single unproven claim that a self-issued
+> trust score moves buyers. This round does two things. **Reframes** remove the
+> exact assumption the scorecard named: **IDEA-16** rebuilds Billback so the
+> founder's revenue is a flat subscription riding the existing maintenance-retainer
+> norm (SIG-15) — it no longer depends on per-incident client approvals or on how
+> often agents break; **IDEA-17** rebuilds ProofKit so trust comes from the
+> buyer's *own* data plus a real, enforced money-back guarantee, not a vendor
+> badge. **New ideas** open the strongest unused Round-3 signals: **IDEA-18** on
+> SIG-16 (the strongest, directly-fetched MCP-server pain) as hosted
+> protocol-specialised infra, not a library; **IDEA-19** on SIG-19 (buyers already
+> paying for templates) as a one-sided, creator-seeded storefront with automated
+> verification — deliberately *not* the parked two-sided Agent Creators
+> Marketplace; and **IDEA-20** on SIG-17 (solo-operator agent memory) as a
+> portable, cross-tool memory layer that native per-platform memory structurally
+> can't be. Every new idea leans on the cheap agent-infra edge and carries a
+> built-in distribution surface.
+
+---
+
+## IDEA-16 — Keepwell
+
+- **One-liner:** A flat-rate "agent care plan" toolkit that auto-detects and auto-fixes the routine breakages in a freelancer's whole client-agent portfolio and gives every client a branded uptime status page — so maintenance is sold as a predictable retainer, never a per-incident charge.
+- **Target customer:** Freelancers and one-person AI-automation agencies maintaining a portfolio of agents for SMB clients.
+- **Problem / job to be done:** Agents break months later (auth/token expiry, API/schema changes, drift) and the freelancer becomes the unpaid "on-call dev, integration janitor," or the client silently reverts and churns by month four. The Round-2 Billback framing tried to recover revenue *per incident*, which only pays off if breakage is frequent and clients approve each "approve-a-fix" charge — neither is evidenced. Freelancers already charge a "fixed build fee + monthly maintenance retainer" (SIG-15), so the real job is to make that flat retainer cheap to deliver and easy to justify, not to invent new per-incident billing.
+- **Solution wedge:** Point it at the freelancer's whole portfolio; it watches each agent, **auto-remediates the routine failure classes** (re-runs OAuth re-auth, patches known schema shifts, restarts on timeout), escalates only the rest to the freelancer with a one-click scoped fix, and publishes a **branded per-client uptime status page** ("your agents: 99.4% this month, 3 issues auto-resolved"). The status page is what the client sees — reassurance that kills silent churn — not a nickel-and-dime invoice. Value to the founder is a flat per-agent subscription; value to the freelancer is less unpaid firefighting plus a retainer they can defend. Revenue depends on portfolio size, not breakage count or client sign-off.
+- **Business model:** Self-serve, billed to the freelancer: flat $12–29/agent/mo (or a portfolio tier). Recurring and breakage-independent — one prevented churn or a few hours of saved firefighting per month pays for it.
+- **Founder edge:** Drift/breakage detection, auto-remediation and monitoring pipelines are the founder's observability wheelhouse; cheap infra keeps per-agent monitoring margin-positive. The branded status page is the growth loop — every client (and any other freelancer they work with) sees the platform on a page that carries its mark.
+- **Why now:** The 2025 cohort of autonomous client builds is hitting its first wave of months-later breakage (SIG-15) exactly as agencies feel the month-4 churn cliff (SIG-03), and 2026 agency incident-playbook content is framing "turn silent failures into loud ones" as the fix.
+- **Biggest risk:** Auto-remediation that is too shallow leaves the freelancer still firefighting (so the flat fee feels unearned); and if freelancers don't already run a maintenance retainer, Keepwell has to create that habit rather than ride it.
+- **Signals:** SIG-15, SIG-03, SIG-04.
+- **Thesis check:** passes K1–K7 (monitors/remediates the freelancer's own deployments, status pages auto-generated; no founder-run ops queue, no customer-facing conversation → no K7 exposure; K2 watch — remediation must be automated, not a founder support channel).
+- **Parent:** IDEA-11
+
+---
+
+## IDEA-17 — Backstop
+
+- **One-liner:** A drop-in "try it on your own data, money-back if it fails" layer a builder puts on their agent's landing page — so buyers trust results they watched run on their *own* inputs and a refund they'll actually get, not a self-issued score.
+- **Target customer:** Indie builders with a working agent (lead-qualifier, support bot, back-office automation) trying to sell it self-serve, who hit the distribution-and-trust wall.
+- **Problem / job to be done:** Buyers "want proof the agent works" and won't trust an unknown agent; SMBs have been burned paying real money ($299, $1,428) for voice/support agents that turned out "inconsistent, unreliable… unusable," then fought strict refund policies. The Round-2 ProofKit answered this with a builder-supplied trust score — but "today the badge is just a badge" and benchmark scores "overstated reliability," so the value hinged on buyers trusting a self-issued number. This reframes trust onto two things buyers *do* believe: their own eyes and an enforced refund.
+- **Solution wedge:** The builder embeds a Backstop flow on their page. The buyer uploads a handful of their **own** real examples (their emails, their tickets, their records); the agent runs them transparently in a sandbox and the buyer sees the actual outputs on their actual data — proof the buyer inherently trusts because it isn't a vendor benchmark. The builder optionally attaches a **money-back guarantee tied to an agreed pass bar on those inputs**, which Backstop tracks and auto-triggers as a refund through the builder's own Stripe if the bar isn't met. Trust is backed by something real (the buyer's data + a refund they'll actually receive), not a score.
+- **Business model:** Self-serve, billed to the builder: flat $39–99/mo for the trial-on-your-data flow and guarantee automation, higher tier for volume/custom scenarios. Recurring.
+- **Founder edge:** Sandbox-run-on-arbitrary-inputs plus eval/transcript tooling is the founder's observability + agent-design core; cheap infra keeps per-trial sandbox runs margin-positive. The "powered by Backstop · money-back if it fails your test" badge on every seller's page is the distribution surface.
+- **Why now:** A 2025–26 surge of solo-built agents hit a buyer base (SIG-09) now actively burned by unreliable agents and aggressive billing — a money-back-on-your-own-data guarantee is the precise antidote to that complaint, and self-issued trust scores are visibly failing to move buyers.
+- **Biggest risk:** Builders may refuse to stake a real refund (fear of abuse or of their agent genuinely failing on messy real data), so adoption could stall at the guarantee step even though the "run on your own data" proof still has standalone value.
+- **Signals:** SIG-06, SIG-09.
+- **Thesis check:** passes K1–K7 (tests the builder's own agent on buyer-supplied inputs in a sandbox; the founder never operates a customer conversation → SIG-09 K7 exposure stays removed). K7 finance watch: Backstop never custodies funds — refunds run on the *builder's own* Stripe via delayed capture / refund API, so there is no money-transmission exposure.
+- **Parent:** IDEA-07
+
+---
+
+## IDEA-18 — Pier
+
+- **One-liner:** A hosted home for MCP servers that catches the silent protocol failures before production — deploy once, and Pier runs cross-client conformance tests and keeps it up, so "15 minutes to deploy, 15 hours a week to keep running" becomes a subscription.
+- **Target customer:** Solo/indie developers and technical freelancers building and maintaining MCP servers that connect agents (their own or clients') to tools and APIs.
+- **Problem / job to be done:** The MCP protocol fails silently — a `console.log` to stdout corrupts the JSON-RPC stream with no error, a wrong error-shape gets swallowed, and clients parse schema fields with different strictness — so "errors are silent, the protocol is unforgiving, and most issues only show up after you've connected everything… invisible until production." Cross-client testing "is killing me," and keeping a handful of servers running reportedly eats ~15 hours/week. Today builders log-to-file by hand, add SIGTERM handlers, and print-spelunk per client.
+- **Solution wedge:** Push an MCP server to Pier and it (1) runs a **cross-client conformance suite** that replays the server against the real client parsers and flags exactly the silent killers — stdout framing corruption, malformed error responses, schema fields a stricter client will reject — *before* deploy; (2) hosts it on cheap infra with the stdio/transport plumbing and SIGTERM/restart handling done for you; (3) monitors it in production and surfaces protocol-level failures as loud, readable alerts. Every hosted server gets a public "conformance-verified" install page. Narrow and protocol-specialised — not a general agent PaaS (that's the parked ShipAgent/Agntable space).
+- **Business model:** Self-serve; free for one server/dev, $19–49/mo by server count or traffic. Recurring; the cheap-infra edge is the margin on hosted servers.
+- **Founder edge:** Hosting multi-process agent/tool infra cheaply and reliably is the founder's single strongest advantage; the protocol-conformance harness is exactly the kind of systems problem that energises him. The public verified-install pages (and a directory of conformance-verified servers) are the distribution loop — each shared server markets Pier, and corroborates the "would people pay for vetted MCP servers vs free GitHub repos?" demand (SIG-19).
+- **Why now:** MCP adoption exploded in 2025–26 and the reference servers ship breaking changes often, so building and *keeping* servers running is a fresh, recurring chore with no specialised home yet.
+- **Biggest risk:** Much of the pain is "learn the protocol's gotchas once," so the fix could be an open-source linter/library + docs rather than a paid host — Pier must prove the *keeping-it-running* (conformance + uptime + monitoring) recurring value is worth paying for, not just the one-time lint.
+- **Signals:** SIG-16, SIG-19.
+- **Thesis check:** passes K1–K7 (self-serve, automatable hosting; K3 watch — MVP scoped to host + one cross-client conformance check + uptime alert to stay in the 4-week window; K4 rides the cheap-infra edge; reachable in r/mcp, r/ClaudeAI, MCP Discords).
+- **Parent:** none
+
+---
+
+## IDEA-19 — Runnable
+
+- **One-liner:** A "Gumroad for working automations" where creators sell n8n/agent templates that Runnable auto-verifies actually run before listing, delivers instantly, and backs with a money-back guarantee — fixing the non-delivery and "doesn't work as stated" trap buyers keep hitting.
+- **Target customer:** Primary (the seeded side): community creators who build and sell agent/automation templates and "build-and-sell AI automations" packs. Their buyers — semi-/non-technical makers already paying for these templates — come from each creator's own audience, not from the founder.
+- **Problem / job to be done:** Buyers already pay for templates (e.g. a "$29 Build and Sell AI Automations" pack) but "paid for a template and got nothing after payment, no email, no instructions," or the template "doesnt work as stated by it's creator" — with no buyer protection because the sale is creator-to-buyer, not platform-backed. Sellers, meanwhile, note a bare template "rarely carries much price on its own because buyers can't easily judge quality before purchase." Both sides are bleeding trust the current Gumroad/forum path can't provide.
+- **Solution wedge:** A storefront infra tool sold to creators. On upload, Runnable **test-imports and runs the template in a sandbox** to verify it works and captures a "verified working" proof (a dry-run transcript/screens) buyers see before paying — automated, so no human review queue. Checkout + **instant, guaranteed delivery** fixes the non-delivery payments bug, and purchases carry an auto-enforced money-back guarantee if the verified template fails on import. Optional one-click deploy (spin up a running copy on the founder's cheap infra) turns the "template-plus-setup sells better" counter-signal into an upsell. One-sided by design: the founder recruits *creators only* from the no-code/agent communities he can reach; buyers arrive through each creator's own following — so it is **not** the parked two-sided Agent Creators Marketplace and satisfies the thesis "one side seeded by the founder alone."
+- **Business model:** Self-serve; small transaction fee per sale (+ optional creator subscription for a custom storefront/higher verification volume, and a margin on one-click-deploy hosting). Recurring-leaning via repeat creator sales and hosted deploys.
+- **Founder edge:** The sandbox that safely imports and runs an arbitrary n8n workflow / agent template to verify it is an agent-infra problem the founder solves cheaply; one-click deploy rides the same cheap-hosting edge. Each creator's branded storefront + "verified on Runnable" badge is the distribution loop — buyers discover Runnable through sellers they already follow, and some convert to sellers.
+- **Why now:** A 2025–26 cottage industry of selling n8n/agent templates and skill packs sprang up faster than any trust, delivery or verification layer — buyer complaints are clustering on the n8n forum and Gumroad right now.
+- **Biggest risk:** Automated verification can confirm a template *imports and runs* but not that it does what the creator *claims* on the buyer's real stack, so "doesn't work as stated" disputes may persist; and the market may resolve toward done-for-you setup, making the pure storefront a thin wedge.
+- **Signals:** SIG-19, SIG-11.
+- **Thesis check:** passes K1–K7 (marketplace one-sided → creators seeded by founder alone; verification automated so no manual moderation queue → K2 holds; self-serve, credit-card; K7 fine — no regulated content, and the money-back is tracked on the creator's/platform's standard payments rail, not fund custody).
+- **Parent:** none
+
+---
+
+## IDEA-20 — Throughline
+
+- **One-liner:** A portable, cross-tool memory layer for solo operators — one place your context lives that every agent and assistant reads and writes via MCP, so you stop re-briefing a fresh agent every morning and your memory isn't locked to one vendor.
+- **Target customer:** Solo operators and indie builders running AI agents / coding assistants day-to-day on their own project or business (often non-team, across more than one tool).
+- **Problem / job to be done:** Agents have no persistent memory across sessions, so the operator "re-explains everything" every morning — "that's not automation, that's babysitting" — burning ~10 minutes per session plus weekly upkeep of hand-maintained CONTEXT.md / CLAUDE.md files; vector DBs are rejected as "too much setup for a solo operator." Native platform memory is appearing, but it is siloed per vendor — it doesn't follow you from Claude to Cursor to a custom agent, and it doesn't let you own or export what it knows.
+- **Solution wedge:** A zero-setup hosted memory the operator fills once (or that auto-captures from sessions), exposed as an **MCP server any client can connect** — so the same memory is read/written by every agent and assistant the operator uses, no vector-DB plumbing. The defensible position against "native memory will close this" is exactly what native memory can't be: **cross-tool, portable, and exportable** — your context is Switzerland, it follows you between vendors and you own it. Ends the daily re-brief without the operator maintaining a context file by hand.
+- **Business model:** Self-serve; free below a memory-size/connected-client cap, $9–19/mo for more. Recurring; the founder's cheap memory/retrieval-infra edge is the margin.
+- **Founder edge:** Agent memory, retrieval and orchestration pipelines are named founder strengths ("orchestration, tools, memory, multimodal pipelines"), and serving a fast, cheap memory store is squarely the cheap-infra edge. Shipping as an MCP server rides the exploding MCP ecosystem (SIG-16) as a distribution surface — every client it plugs into is a place it is discovered.
+- **Why now:** Agents moved from single-shot prompts to multi-session, days-long work in 2025–26, so the lack of cross-session memory became a daily productivity tax — and MCP arrived as the standard way to plug one memory into every client at once.
+- **Biggest risk:** Native per-platform memory keeps improving and may be "good enough" for operators who live in one tool, and the cheap workaround (a single CONTEXT.md file) is good enough for many — so the cross-tool/portability wedge has to be felt as a real, not theoretical, benefit; the built-in growth loop here is also thinner than the other Round-3 ideas.
+- **Signals:** SIG-17, SIG-16.
+- **Thesis check:** passes K1–K7 (self-serve, automatable; memory store + MCP server is a ≤4-week MVP; cheap per-user infra keeps margin positive under a low price; reachable in Indie Hackers, r/AI_Agents, AI-coding Discords).
+- **Parent:** none
