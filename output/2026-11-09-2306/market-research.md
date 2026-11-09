@@ -512,3 +512,324 @@ https://www.everydev.ai/tools/withhuman · https://news.ycombinator.com/item?id=
   cost-anxiety ideas), but in nearly every category the incumbents moved *during* 2025–26,
   so several ideas arrive just after the gap began closing. The founder's cheap-infra edge
   is the main thing that keeps the thinnest-margin ideas (ShipAgent, Hatch) viable.
+
+---
+
+## Round 2
+
+> Scope: IDEA-11…IDEA-15 only (refill reframes + three new-signal plays). Method:
+> 6 WebSearch + 1 WebFetch (official Zapier help page). I did not modify the
+> IDEA-01…10 research above. Same six dimensions, cited, inferences labeled,
+> per-idea confidence, neutral (no scoring). The dominant finding this round: the
+> no-code / automation-builder category (IDEA-13/14) is **large, hot and heavily
+> venture-funded** (Lovable, Replit, Gumloop, Emergent all raised big in 2026), so
+> these are crowded-market entries, while IDEA-15's whole thesis turns on a
+> **Zapier platform-policy risk I was able to confirm as real**.
+
+---
+
+## IDEA-11 — Billback
+
+Monitor for deployed client agents that turns breakages into client-approvable paid fix tickets.
+
+1. **Market & trend.** Sits at the intersection of **agent monitoring / incident
+   management** (same category as Aftercare, *expanding* — 2026 roundups of "AI agent
+   failure detection," "AI incident management" tools are plentiful) and the
+   freelancer/agency maintenance-retainer motion. No discrete dollar size for the
+   sub-niche (gap); directionally up with the broader agent market.
+2. **Demand signals.** **SIG-15** (medium) + **SIG-03** (strong) anchor it: agents break
+   months later (API change, auth expiry, drift) and the freelancer becomes "unpaid
+   support, on-call dev, integration janitor." A June-2026 incident guide for AI
+   automation agencies independently frames the antidote as "monitoring that turns silent
+   failures into loud ones" and prioritizing "making sure it never recurs" — matching the
+   idea's detect→ticket loop. (Estimate: this validates the *monitoring/firefighting*
+   pain; it does **not** prove clients will approve per-incident *paid* fix tickets —
+   that conversion is the unproven core.)
+3. **Competitive landscape.** **Specific check result: I found no tool that converts agent
+   failures into client-approved, paid fix tickets** — that exact packaging appears open.
+   Adjacent prior art exists and is the real competitive pressure: **Augment Code's
+   Cosmos** (launched May 4 2026, now on every paid plan) does triage + fix PRs behind a
+   **human approval gate**; **Monte Carlo Agent Health** diagnoses silent failures and
+   proposes fixes, grounding findings in GitHub source; **Datadog** and **Better Stack**
+   run approval-gated remediation; **Cleric** is read-only investigation. General agent
+   monitors (UptimeRobot, Galileo, OneUptime, Revefi) cover detection. All of these are
+   **internal dev-team tools**, not a **freelancer→SMB-client branded approval page that
+   bills a fix** — that framing is the whitespace.
+4. **Whitespace & wedge.** The wedge is the **client-facing branded approval page**
+   ("your Invoicing Agent stopped reading POs on Nov 3 — approve a 2-hour fix?") that
+   makes already-forced firefighting billable, plus a monitoring fee. Same structural gap
+   Round 1 found for Aftercare (**incumbents sell to the team running the agent, nobody
+   sells the freelancer→client packaging/billing layer**), here pointed at recovered
+   revenue rather than a report the freelancer must upsell. The reframe genuinely sidesteps
+   the Aftercare "will they sell a report?" unknown.
+5. **Key risk.** Founder's flag holds and the evidence can't retire it: **(a)** clients may
+   feel nickel-and-dimed by per-incident "approve a fix" charges, and **(b)** breakage
+   frequency may be too low to generate meaningful recovered revenue, making the monitoring
+   fee hard to justify. Neither the volume of breakages nor client willingness to pay
+   per-ticket is evidenced in the signals (both are WTP-absent, SIG-03/15). A softer risk:
+   adjacent incumbents (Monte Carlo, Augment) could add a client-billing veneer.
+6. **Timing.** "Why now" is coherent and well-supported: the 2025 cohort of autonomous
+   client builds is hitting first-wave months-later breakage (SIG-15) exactly as agencies
+   feel the month-4 churn cliff (SIG-03), and 2026 agency incident-playbook content is
+   appearing — the firefighting pain is live right now.
+
+**Confidence: Medium** — the underlying firefighting pain is strongly evidenced and the
+exact "approve-a-paid-fix" packaging looks unoccupied, but client willingness to pay
+per-incident and breakage frequency are both unproven.
+
+**Sources:** https://futureagi.com/blog/best-ai-agent-failure-detection-tools-2026/ ·
+https://www.augmentcode.com/tools/ai-incident-management-software ·
+https://montecarlo.ai/blog-introducing-agent-health ·
+https://ciela.ai/blogs/how-to-handle-ai-automation-that-breaks-in-production ·
+https://uptimerobot.com/knowledge-hub/monitoring/ai-agent-monitoring-best-practices-tools-and-metrics/
+
+---
+
+## IDEA-12 — Rehearse
+
+CI-native PR review bot that replays recorded scenarios and posts a behavioral-diff check.
+
+1. **Market & trend.** LLM/agent **evals-in-CI/CD**, *expanding and consolidating* — 2026
+   produced heavy "evals in CI/CD" content and a signal event: **OpenAI acquired promptfoo
+   in March 2026** (tool remains open-source MIT), a consolidation marker for the exact
+   surface this idea targets. No discrete sub-category dollar size (gap).
+2. **Demand signals.** **SIG-01/SIG-04** (strong, fetched) carry over: "you can't just diff
+   it like code"; a prompt change silently alters behavior. A June-2026 practitioner survey
+   ("evals — how do you know your AI works") treats CI/CD eval wiring as an active, unsolved
+   workflow problem. (Estimate: validates the behavioral-diff *need*; the specific "put it
+   in the PR as a required check" surface is the bet.)
+3. **Competitive landscape (crowded, partly free — and the specific check).** The
+   PR/CI-eval surface is **already occupied by named tools**: **promptfoo** runs locally in
+   CI via a **native GitHub Action that posts before/after PR comparisons** (MIT, free,
+   OpenAI-owned since Mar 2026) — this is the closest competitor and it is free. **Braintrust**
+   ships `braintrustdata/eval-action` that **runs evals per-PR, posts a score comment, and can
+   block merges below thresholds** (Pro from **~$249/mo flat**). **LangSmith** gates CI by
+   wrapping its SDK in your own GitHub Actions glue (no clean native action per the Atlas
+   survey; a 10-person team ~**$390/mo** on Plus at $39/seat — vendor-sourced). OSS evals
+   (Langfuse, Phoenix, DeepEval, Evidently) run in CI but mostly **offline, not in the PR
+   comment** — which is the gap the idea targets. Pricing is vendor-authored; verify live.
+4. **Whitespace & wedge.** The wedge — **zero-CI-wiring GitHub/GitLab app that posts a
+   human-readable behavioral diff** ("3 of 20 scenarios now escalate to human where they
+   used to auto-resolve") as a required check, **free for public repos** as a Codecov/Vercel-
+   style growth loop — is a real positioning gap vs. promptfoo (needs workflow setup) and
+   Braintrust (team-priced, score-centric not plain-English-diff). But note promptfoo's native
+   action already does "before/after PR comparisons," so the differentiation rests on the
+   **plain-English behavioral-diff + zero-config + public-repo loop**, not the primitive.
+5. **Key risk.** Founder's flag confirmed on two fronts: **(a)** "CI + unit tests already
+   cover it" (SIG-01 counter-signal) — teams may fold scenario replay into an existing free
+   test step (promptfoo is free + MIT), and **(b)** the public-repo growth loop only pays off
+   if enough agent code is actually open-source. OpenAI owning promptfoo raises the odds the
+   free option gets better, not worse. Highest "already-free-competitor" pressure of the Round-2
+   set.
+6. **Timing.** "Why now" (agent code moved into normal Git/CI in 2025–26 but the review
+   surface still treats a prompt change as plain text) is coherent, but the 2026 promptfoo
+   acquisition and Braintrust's PR action mean **incumbents are already on this surface** — the
+   gap is narrowing as the idea arrives.
+
+**Confidence: Medium-Low** — the behavioral-diff-in-PR need is real and the zero-config +
+public-repo-loop framing is a genuine wedge, but a free, OpenAI-owned native competitor
+(promptfoo) plus Braintrust's PR action sit directly on this surface.
+
+**Sources:** https://www.braintrust.dev/articles/best-ai-evals-tools-cicd-2025 ·
+https://dev.to/hadleyworks/how-to-run-llm-evaluations-in-ci-without-paying-249month-2nf4 ·
+https://dev.to/nebulagg/top-5-ai-agent-eval-tools-after-promptfoos-exit-576i ·
+https://laoujin.github.io/Atlas/research/2026-06-04-evals-how-do-you-know-your-ai-works-session-blueprint/evals-in-ci-cd/ ·
+https://www.braintrust.dev/articles/braintrust-vs-promptfoo
+
+---
+
+## IDEA-13 — Eject
+
+Plain-English agent builder whose promise is you own the result — one-click code export, no lock-in.
+
+1. **Market & trend.** No-code / AI agent-builder category, *large, hot and heavily
+   venture-funded in 2026* — **Lovable** (~$200–330M round, $2.8–6.6B valuation; sources
+   conflict — verify), **Replit** ($400M Series D at $9B, launched Agent 4), **Gumloop**
+   ($50M Series B, Benchmark), **Emergent** ($130M Series C at $1.5B), **Lyzr** (reportedly
+   raising $100M at $500M). This is one of the best-capitalized categories any idea in this
+   run touches — demand is not the question; defensibility vs. funded incumbents is.
+2. **Demand signals.** **SIG-11** (medium, search-surfaced) is the anchor and is
+   **price-anchored**: "no-code" tools still demand "just configure this webhook," and makers
+   say they'd pay **only if they can "export and own their code without being locked in"**;
+   one cited "$19 starter plan was enough to build a usable agent" (matches the idea's WTP).
+   Supported by SIG-08 (self-hosting friction) and SIG-12 (non-dev complexity). The
+   ownership/anti-lock-in demand is specifically articulated, which is unusual and useful.
+3. **Competitive landscape (specific check).** Export/ownership is **partly available
+   already**, which blunts the "no-lock-in" headline: **Langflow** (MIT, self-hostable,
+   flows **export as JSON**, git-versionable, extensible in Python — note DataStax shut its
+   managed hosting in 2026, forcing self-host), **Flowise** (Apache-2.0, self-hostable on any
+   Docker host — but **no clean code-export feature found**), **Vellum** (commercial SaaS,
+   **not** a code-export option; vendor-cloud + enterprise self-host). The app-generator
+   analog the idea invokes — **Lovable/Bolt/Replit** — generate owned code for *apps*, and I
+   found **no direct source** on an agent-specific "describe → eject clean runnable source"
+   product, so that specific wedge looks under-occupied even though self-hostable OSS builders
+   exist. (Gap: no primary confirmation of a true one-click agent-source-eject competitor.)
+4. **Whitespace & wedge.** The wedge is **anti-lock-in as the headline** (plain-English build
+   → hosted agent **plus** one-click eject to a standard repo) rather than a buried export,
+   aimed at the "renting a prettier box" complaint. Plausible gap: OSS builders give you
+   self-host-your-whole-platform (Langflow/Flowise), not "own just your agent's clean source,"
+   and funded builders (Lovable-for-apps) don't target agents specifically. But "export" as the
+   *only* differentiator may be a feature, not a moat.
+5. **Key risk.** Founder's flag confirmed and sharpened by the funding data: **(a)** the
+   category is crowded and **extremely well-capitalized** (incumbents' distribution dwarfs a
+   solo bootstrapper), **(b)** ownership/export may be a nice-to-have that doesn't overcome
+   incumbent distribution, and **(c)** codegen quality good enough to *actually own and run* is
+   hard to nail in a 4-week MVP. SIG-11 is also search-surfaced (re-verify). SIG-11's own
+   counter-signal: some users are satisfied once n8n "clicks," so the pain may be onboarding,
+   not the category.
+6. **Timing.** "Why now" (2025–26 flood of "build an agent in plain English" tools producing a
+   lock-in/hidden-complexity backlash) is plausible and the funding wave corroborates category
+   heat — but that same heat means many well-funded teams are iterating on exactly this UX
+   simultaneously.
+
+**Confidence: Low-Medium** — demand (including price-anchored ownership WTP) is evidenced and
+the agent-specific eject wedge looks under-occupied, but this is a crowded, heavily-funded
+category and export-as-headline may not out-pull incumbent distribution; codegen quality is a
+real feasibility risk.
+
+**Sources:** https://futureagi.com/blog/dify-vs-flowise-vs-langflow-2026/ ·
+https://automationatlas.io/guides/vellum-vs-langflow-2026-comparison/ ·
+https://madappgang.com/blog/open-source-visual-agent-builders-compared-flowise-vs-langflow-vs-n8n-vs-sim-studio-in-2026/ ·
+https://dev.to/davekurian/lovable-raises-330m-series-a-to-scale-ai-powered-no-code-platform-17m1 ·
+https://dealroom.co/news/126729-replit-confirms-400m-series-d-at-9b-valuation-launches-agent-4-to-let-an/
+
+---
+
+## IDEA-14 — PlainFlow
+
+Plain-English automation builder for non-technical owners — never see JSON, expressions, or a webhook node.
+
+1. **Market & trend.** No-code/AI workflow-automation, *large and expanding*, but the
+   "simplicity for non-devs" slot is **actively contested by funded players** — **Gumloop**
+   ($50M Series B, "turn every employee into an AI agent builder," AI-native, model swappable
+   per step, Pro ~$37/mo) and **Lindy** (AI agents via natural-language setup, email/scheduling/
+   triage, per-user ~$30–200/mo) are both explicitly chasing the non-technical builder. Market
+   direction up; the specific persona is becoming crowded.
+2. **Demand signals.** **SIG-12** (weak, search-surfaced) is the anchor: reviewers cite n8n's
+   "steep learning curve… especially for non-developers" and call "heavy reliance on JSON
+   n8n's biggest weakness for non-technical users." Supporting **WTP is indirect but real**:
+   this persona **already pays** for Zapier/Make (switching-cost exists). The pain is
+   evidenced; its *acuteness* (enough to switch) is the weak point — SIG-12 is the weakest
+   anchor of the three new-signal ideas.
+3. **Competitive landscape (crowded, both incumbent and funded-challenger).** **Zapier** (most
+   established for non-devs, ~7,000–8,000 integrations, task-based billing, free 100 tasks /
+   paid from ~$19.99–29.99/mo, guardrailed templates that "make it hard to completely break
+   things"), **Make** (visual, budget pick, free 1,000 ops / paid from ~$9/mo), **Gumloop** and
+   **Lindy** (AI-native, natural-language — the most direct threats to "plain-English builder"),
+   plus **n8n** (the technical tool the idea positions against). The "describe it in plain
+   English, never see JSON" promise is **exactly Gumloop/Lindy's pitch**, so "no competitors"
+   is false — the challenge is differentiation, not category validation.
+4. **Whitespace & wedge.** The idea's own narrowing is the defensible part: **one or two
+   high-demand verticals** (e.g. "missed-call text-back for salons") with a **vertical template
+   gallery as the SEO/growth loop**, competing on *simplicity + "we run it"* not feature count.
+   Horizontal plain-English building is taken (Gumloop/Lindy); a **vertical, owner-facing,
+   self-healing niche** below Zapier's generality is the plausible gap (inference). The
+   template-gallery loop fits the founder's community-led GTM.
+5. **Key risk.** Founder's flag confirmed: **(a)** the safe-template incumbent (Zapier) may
+   already serve this persona "well enough" (SIG-12 counter-signal: non-devs "stick with Zapier
+   because templates make it hard to break things"), **(b)** SIG-12 is weak/search-surfaced, and
+   **(c)** funded AI-native challengers (Gumloop, Lindy) are already aimed at the same
+   non-technical builder with far more capital. Thesis **K2 watch**: "we run it" must self-heal,
+   not become a founder support queue.
+6. **Timing.** "Why now" (AI features bolted onto automation tools in 2025–26 raised the skill
+   floor for non-devs) is plausible, but the same wave produced Gumloop/Lindy targeting the gap —
+   the opening is being filled by well-funded teams as the idea arrives.
+
+**Confidence: Low-Medium** — the non-dev complexity pain is plausible and this persona already
+pays, but SIG-12 is weak, incumbents (Zapier templates) may be "good enough," and funded AI-native
+challengers already own the "plain-English builder" positioning. The vertical-niche narrowing is
+the only clear differentiator.
+
+**Sources:** https://dupple.com/learn/best-workflow-automation-tools ·
+https://www.lindy.ai/blog/gumloop-vs-zapier ·
+https://automationatlas.io/answers/lindy-pricing-explained-2026/ ·
+https://www.pulse.bot/venture-capital/news/gumloop-lands-50m-from-benchmark-to-turn-every-employee-into-an-ai-agent-builder-915bb47c-d464-40cb-8de1-e7b6c4a44615 ·
+https://automationatlas.io/answers/zapier-pricing-explained-2026/
+
+---
+
+## IDEA-15 — SwapStep
+
+Free "audit your Zapier AI bill" tool + a drop-in cheaper AI action that routes to low-cost models.
+
+1. **Market & trend.** No-code AI-step cost-optimization, *a dated, live window*. The
+   triggering event is **confirmed on Zapier's official help page**: starting **June 15, 2026,
+   AI by Zapier uses model-based pricing** — **Standard 1x (no tools), Advanced 3x (default,
+   supports tools), Premium 5x, or your own AI account 1x** tasks per run; tool calls add to the
+   tier's base cost; a safety limit pauses a step that hits **75 tasks in one run**; **Free plan
+   is excluded** (Professional/Team/Enterprise only). Secondary trackers note a June-2026 move to
+   a **single shared task pool** across Zaps/AI/code/MCP/SDK. This confirms SIG-13's core claim
+   first-hand.
+2. **Demand signals.** **SIG-13** (medium — strong "why now," weak first-hand quotes): AI steps
+   "default behaviours are expensive by design, and most teams haven't adjusted"; practitioners
+   auditing Zaps to strip AI steps or route to cheaper models. This persona **already pays Zapier
+   and is actively shopping alternatives** (Make/Pabbly/n8n) — switching WTP exists. Caveat: the
+   migration commentary is **mostly from competitor/alternative blogs** (nocode.tech, toolworthy),
+   so *intent is loud in content but actual migration volume is unverified* (the founder's own
+   flagged risk).
+3. **Competitive landscape (specific checks).** **(a) Does a third-party cheaper AI action exist
+   on Zapier?** I found **no named third-party "cheap AI action" Zapier app** in results — the
+   competition today is **switch-platform** (Make, Pabbly, n8n flat-tier pricing pushed by
+   roundup blogs) or **manual** (strip steps, bring-your-own-AI-account at 1x, route by hand).
+   Note Zapier's own **"your own AI account" = 1x** option already lets cost-conscious users
+   partly self-serve the savings, which is a built-in substitute. **(b) Zapier partner/app policy
+   — the critical finding:** Zapier's **Integration Publishing Requirements** state integrations
+   "from companies we deem to be competing with Zapier" are **not permitted and will be removed
+   from the Developer Platform** (per **section 2(i) of the Zapier Platform Agreement**), and
+   explicitly disallow "integrations by developers building on an API they own but for a
+   **competing product** with Zapier." A SwapStep AI action whose entire pitch is undercutting *AI
+   by Zapier* could plausibly be deemed competing — **a real, confirmed platform-policy risk, not
+   hypothetical.** (I could not retrieve the Platform Agreement's exact definition of "competing" —
+   verify directly.)
+4. **Whitespace & wedge.** The wedge is **"stay inside Zapier, just make the AI step cheap"** — a
+   **free account-scanning audit tool** (migration-intent SEO/growth loop on live "Zapier AI
+   pricing" search demand) + a one-click swap to SwapStep's own routed AI action. The free-audit
+   loop is a genuine, dated growth hook and squarely on the founder's cheap-multi-model-routing
+   edge. But the in-Zapier delivery mechanism is exactly what the policy above threatens.
+5. **Key risk.** Founder's flag is **confirmed and elevated** by the policy finding: dependence on
+   Zapier's platform is not just "they could re-price or cut app-store AI actions" — **their
+   published rules already allow removing integrations deemed competing**, and an AI action that
+   replaces AI by Zapier is a candidate. Compounding risks: **(a)** Zapier's own "bring your own AI
+   account at 1x" blunts the savings pitch, **(b)** migration volume is unverified (competitor-blog
+   loud, first-hand thin), and **(c)** a re-price could close the window as fast as it opened.
+6. **Timing.** "Why now" is the **strongest, most concrete, most dated** of the Round-2 set — a
+   specific June-15-2026 repricing event creating live migration intent in exactly this buyer base,
+   confirmed first-hand. The flip side: time-boxed — the window can close via another re-price, and
+   the platform-policy risk could foreclose the in-Zapier delivery entirely.
+
+**Confidence: Medium** — the triggering pricing event and switching intent are first-hand confirmed
+(strongest "why now" in the round), but the in-Zapier delivery faces a **confirmed competing-app
+policy risk**, no third-party cheap-AI-action competitor was found (both opportunity and warning),
+Zapier's own 1x "own-account" option is a built-in substitute, and migration volume is unverified.
+
+**Sources:** https://help.zapier.com/hc/en-us/articles/46597632373389-AI-by-Zapier-new-model-based-pricing-starting-June-15-2026 ·
+https://platform.zapier.com/publish/integration-publishing-requirements ·
+https://www.nocode.tech/article/zapiers-ai-step-pricing-is-eating-no-code-budgets-heres-how-to-audit-yours ·
+https://www.nocode.tech/article/zapier-just-changed-ai-pricing-too-48-hours-after-anthropic-heres-what-no-code-automators-need-to-know ·
+https://www.toolworthy.ai/blog/zapier-alternatives
+
+---
+
+## Round 2 cross-cutting read
+
+- **Two different competitive climates.** IDEA-11 (Billback) and the IDEA-13/14/15 cluster
+  sit in opposite weather. Billback and its exact "approve-a-paid-fix" packaging look
+  **unoccupied** (adjacent incumbents are internal dev-team tools, not freelancer→client
+  billing). IDEA-13/14 land in a **heavily venture-funded, fast-moving** no-code/agent-builder
+  category (Lovable, Replit, Gumloop, Emergent all raised big in 2026) where demand is proven
+  but a solo bootstrapper faces incumbents with large distribution.
+- **The reframes partly worked.** Billback genuinely removes Aftercare's "will the freelancer
+  sell a report?" unknown by attaching to forced firefighting — but swaps in a new unproven
+  conversion (will the client approve per-incident paid fixes?). Rehearse moves off the crowded
+  free-OSS tracing floor onto the PR surface, but that surface is **already occupied by a
+  free, OpenAI-owned promptfoo action + Braintrust's PR action** — the differentiation narrowed.
+- **IDEA-15 is the highest-variance bet.** It has the **strongest, dated, first-hand "why now"**
+  (confirmed June-15-2026 Zapier repricing) and a clean free-audit growth loop on the founder's
+  cheap-routing edge — but a **confirmed Zapier competing-app policy** (publishing requirements
+  §2(i)) directly threatens its in-platform delivery, and Zapier's own "bring your own AI account
+  at 1x" is a built-in substitute. Opportunity and platform risk are both concrete here.
+- **Growth-loop goal vs. evidence.** The round was pulled toward the founder's growth-loop/
+  consumer-virality goal (public-repo loop, vertical template gallery, free audit tool, "built
+  with" page). The loops are plausible but **none is evidenced as working** in the signals; they
+  remain design bets. SIG-12 (IDEA-14) is the weakest anchor; SIG-11 (IDEA-13) and SIG-13 (IDEA-15)
+  are search-surfaced but SIG-13's trigger is now first-hand confirmed.
