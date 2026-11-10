@@ -833,3 +833,401 @@ https://www.toolworthy.ai/blog/zapier-alternatives
   with" page). The loops are plausible but **none is evidenced as working** in the signals; they
   remain design bets. SIG-12 (IDEA-14) is the weakest anchor; SIG-11 (IDEA-13) and SIG-13 (IDEA-15)
   are search-surfaced but SIG-13's trigger is now first-hand confirmed.
+
+---
+
+## Round 3
+
+> Scope: IDEA-16…IDEA-20 only (two reframes + three new-signal plays on the
+> Round-3 signals SIG-16…20). Method: 10 WebSearch, 0 WebFetch — the comparison
+> and vendor-pricing surface returned enough first-party detail to cite without a
+> fetch. I did not modify IDEA-01…15 above. Same six dimensions, cited,
+> inferences labeled, per-idea confidence, neutral (no scoring). The dominant
+> findings this round: (a) the **MCP infra space is already crowded and partly
+> commoditized** — an **official, free cross-client conformance suite** and an
+> **official registry** both now exist, directly touching Pier's wedge; (b) the
+> **agent-memory category is hot and well-populated** (Mem0, Zep, Letta,
+> Supermemory, OpenMemory) with the exact "cross-tool portable memory" pitch
+> already claimed by several vendors; and (c) **performance/money-back
+> guarantees for AI agents are now common at the incumbent top** (Intercom Fin,
+> Richpanel, Fini), though "trial on your *own* data + guarantee" together is a
+> gap. Recurring caveat: 2026 pricing/"best tool" content is overwhelmingly
+> vendor-authored — treat figures as directional and verify live.
+
+---
+
+## IDEA-16 — Keepwell
+
+Flat-rate "agent care plan" toolkit: auto-remediate routine client-agent breakage + branded per-client uptime status page.
+
+1. **Market & trend.** Sits where **AI-agent monitoring/incident management**
+   (expanding — 2026 has a steady stream of "AI agent uptime," "AI outage
+   monitoring," "your AI agent crashed at 3am" content) meets the
+   freelancer/agency **maintenance-retainer** motion. No discrete dollar size for
+   the sub-niche (gap); directionally up with the broader agent market (~$10.9–15B
+   2026, per the file's cross-cutting anchor).
+2. **Demand signals.** **SIG-15** (medium) + **SIG-03** (strong) anchor it:
+   agents break months later and the freelancer becomes "unpaid support, on-call
+   dev, integration janitor," or the client silently reverts and churns by month
+   four. The **"build fee + monthly maintenance retainer" norm is well-corroborated
+   with price points** (specific check): 2026 pricing guides broadly recommend
+   splitting into a one-time build fee + a monthly retainer, with freelance build
+   fees cited around **$2,000–7,000 (simple) to $7,000–20,000 (moderate)** and
+   **monthly retainers ~$1,000–5,000** (OpenClaw), another guide citing
+   **£500–5,000/mo** for maintenance/updates, and guidance that the retainer should
+   cover "monitoring, prompt fixes when the model or an upstream API changes, and
+   small adjustments" (Ciela/ChatMaxima). One 2026 post notes build prices are
+   *falling* ($2,500–15,000), which is itself a reason freelancers lean harder on
+   retainers — tailwind for a tool that makes the retainer cheap to deliver.
+   (Estimate: this validates the *retainer norm* Keepwell rides; it does **not**
+   prove freelancers will pay a per-agent SaaS fee on top.)
+3. **Competitive landscape.** **Specific check — agent-maintenance/status-page
+   tools exist but target the internal team, not the freelancer→client package.**
+   Monitoring/status-page players surfaced: **OneUptime** (OSS; free tier includes
+   a status page with 100 subscribers + monitoring + basic incident mgmt),
+   **IncidentHub** (lists **per-client status pages** for teams managing several
+   clients — closest to Keepwell's multi-client framing), **UptimeRobot** (2026
+   guide explicitly on AI-agent monitoring), **AgentStatus** (provider-side probing
+   of model APIs), **Helvia** (per-agent health dashboards), plus general agent
+   monitors from Round 2 (Monte Carlo Agent Health, Datadog, Better Stack, Galileo,
+   OneUptime). None found that **auto-remediates** routine agent failure classes
+   *and* publishes a **branded per-client uptime page sold to a freelancer** — that
+   packaging looks open. The **auto-remediation** claim is the hardest part and is
+   where adjacent incumbents (Augment Cosmos, Monte Carlo, Datadog approval-gated
+   remediation, per Round 2) are moving.
+4. **Whitespace & wedge.** Same structural gap the file found for Aftercare/Billback:
+   **incumbents sell monitoring to the team running the agent; nobody sells the
+   white-label freelancer→client care-plan package** (auto-remediation + branded
+   status page + flat per-agent price). The reframe to a **flat, breakage-independent
+   retainer** (vs. Billback's per-incident "approve-a-fix" conversion) rides the
+   evidenced retainer norm rather than inventing a new billing event — a cleaner fit
+   to SIG-15's "price in ongoing maintenance" lesson.
+5. **Key risk.** Founder's flag holds and the evidence can't retire it: **(a)**
+   auto-remediation that is too shallow leaves the freelancer still firefighting
+   (so the flat fee feels unearned) — and robust cross-client auto-remediation is a
+   hard engineering bar; **(b)** if a given freelancer doesn't already run a
+   retainer, Keepwell must *create* that habit. SIG-03's counter-signal (the fix is
+   partly organizational — "require a named internal owner") also applies.
+6. **Timing.** "Why now" is coherent and supported: the 2025 autonomous-build
+   cohort is hitting first-wave months-later breakage (SIG-15) as agencies feel the
+   month-4 churn cliff (SIG-03), and 2026 agency incident-playbook content frames
+   "turn silent failures into loud ones" as the fix.
+
+**Confidence: Medium** — the retainer norm and firefighting pain are well-evidenced
+(now with price points), and the white-label care-plan packaging looks unoccupied,
+but reliable auto-remediation is a hard build and freelancer willingness to pay a
+per-agent SaaS fee is not directly evidenced.
+
+**Sources:** https://openclawlaunch.com/blog/how-to-charge-for-ai-agents ·
+https://ciela.ai/blogs/ai-agency-pricing-guide-retainers-projects ·
+https://chatmaxima.com/blog/?p=3896 ·
+https://oneuptime.com/ · https://incidenthub.cloud/services/llms-and-ai-tools ·
+https://uptimerobot.com/knowledge-hub/?p=590
+
+---
+
+## IDEA-17 — Backstop
+
+Drop-in "try it on your own data, money-back if it fails" layer for a builder's landing page.
+
+1. **Market & trend.** Sits in **AI-agent trust/conversion tooling** — risk-reversal
+   (money-back/performance guarantees) + buyer-side proof — a visibly *emerging*
+   2026 pattern: multiple vendors now publish guarantees (below). No discrete market
+   size (gap); rides the broader agent market and the SMB-agent buyer base (SIG-09).
+2. **Demand signals.** **SIG-06** (strong, fetched) — "the real problem is
+   distribution and trust"; buyers "want proof the agent works" — plus **SIG-09**
+   (strong, fetched) — SMBs paid real self-serve money ("$299," "$1,428") for voice/
+   front-desk agents that were "inconsistent, unreliable… unusable," then "felt the
+   cancellation and refund policies were applied very strictly." The complaint set is
+   precisely "I couldn't trust it and couldn't get my money back," which is the exact
+   antidote Backstop sells. (Estimate: this validates the *pain*; it does not prove
+   builders will *stake a real refund*.)
+3. **Competitive landscape.** **Specific check — buyer-side guarantees for AI agents
+   are now common at the incumbent top, but "trial on your own data + guarantee"
+   together is a gap.** **Intercom Fin** offers a headline **"$1M guarantee"** (up to
+   $1M back if not satisfied in the first 90 days, after ≥250 conversations, Fin spend
+   only). **Richpanel** refunds if agents don't resolve ≥50% of eligible conversations
+   within 30 days. **Fini** offers a 90-day guarantee if automated resolution falls
+   below 90% (requires ≥100k AI-handled interactions). **Ringly** pairs a 14-day free
+   trial with a 90-day 60%-resolution guarantee. **Trillet** (voice) offers a 28-day
+   money-back with full access day one. **Hubcity AI** offers a 30-day money-back
+   pilot but "builds in your actual environment, **not** a sandbox." Across the
+   results **none clearly combined a sandbox trial on the buyer's own data with a
+   guarantee** — that specific pairing is Backstop's wedge, though the individual
+   halves (guarantees; try-before-buy) are each well-occupied by incumbents selling
+   their *own* agent, not a drop-in layer builders embed.
+4. **Whitespace & wedge.** Two differentiators vs. the above: Backstop is a
+   **horizontal drop-in layer any indie builder embeds** (the incumbents guarantee
+   only their own product), and it fuses **run-on-your-own-data proof + an
+   auto-enforced refund**. Moves trust off the Round-2 ProofKit "self-issued score"
+   (which the idea itself concedes buyers distrust) onto two things buyers do believe
+   — their own eyes and a refund they'll actually receive.
+5. **Key risk — plus the Stripe check.** Founder's flag holds: **builders may refuse
+   to stake a real refund** (fear of abuse or of genuine failure on messy real data),
+   so adoption could stall at the guarantee step. **Stripe policy (specific check):**
+   Stripe's **Refunds API supports programmatic refunds** on a charge/PaymentIntent
+   (multiple refunds allowed, total ≤ original); third-party guides confirm refund
+   workflows can be automated by external triggers. Crucially, Backstop's design runs
+   refunds on the **builder's own Stripe account** (the builder authorizes it via
+   their keys / Connect), so it is the merchant refunding their own sale, not a third
+   party custodying or moving funds — I found **no Stripe prohibition** on
+   programmatic/automated refunds. (Gap: I did not find an explicit Stripe policy
+   page on "automated refunds triggered by a third party"; the cleanest compliance
+   posture is the builder-authorized, builder's-own-account model the idea already
+   specifies — verify against Stripe Connect refund docs before building.)
+6. **Timing.** "Why now" is strong: a 2025–26 surge of solo-built agents hit a buyer
+   base (SIG-09) now actively burned by unreliable agents + aggressive billing, and
+   the visible 2026 rise of incumbent guarantees (Fin, Richpanel, Fini) shows
+   risk-reversal is becoming a buying expectation — tailwind for a tool that brings it
+   to indie builders.
+7. *(note)* **Counter-read:** incumbents normalizing guarantees cuts both ways — it
+   validates demand but also means the guarantee alone isn't differentiating; the
+   "on your own data, drop-in for any builder" fusion is what has to carry it.
+
+**Confidence: Medium** — the trust/refund pain is strongly evidenced (SIG-06/09),
+the guarantee mechanism is technically clean on Stripe, and the "own-data + guarantee
++ drop-in" fusion is a genuine gap, but builder willingness to stake real refunds is
+unproven and both halves of the wedge are individually well-occupied.
+
+**Sources:** https://fin.ai/guarantee ·
+https://www.richpanel.com/trust/guarantee-terms · https://usefini.com/security/fini-guarantee-terms ·
+https://ringly.io/guarantee · https://docs.stripe.com/refunds ·
+https://www.trustpilot.com/review/myaifrontdesk.com
+
+---
+
+## IDEA-18 — Pier
+
+Hosted home for MCP servers with cross-client conformance testing + uptime, sold as a subscription.
+
+1. **Market & trend.** **MCP infrastructure**, *exploding but fast-crowding*. MCP
+   adoption surged through 2025–26; the **official registry** (registry.modelcontextprotocol.io)
+   launched in preview Sept 8 2025 and the official repo **retired its third-party
+   server list on Apr 14 2026** in favor of it, listing ~23,700–30,000+ servers
+   (counts conflict). Directories are large: Glama reported ~111,899 servers (Oct 28
+   2026), Smithery 6,000+. Clear upward trend, but the land-grab is already underway.
+2. **Demand signals.** **SIG-16** (strong, fetched) is the best-evidenced Round-3
+   pain: "console.log to stdout silently corrupts JSON-RPC framing. No error. Just
+   silence."; "errors are silent, the protocol is unforgiving… invisible until
+   production"; "the cross-client testing situation is killing me"; and the anecdotal
+   "15 minutes to deploy, 15 hours a week to keep running." Corroborated by **SIG-19**
+   demand-validation chatter ("would people pay for vetted MCP servers vs free GitHub
+   repos?"). (Estimate: validates the *building/keeping-running* pain; WTP is "none
+   found" — interest, not a paid purchase, and SIG-16's own counter-signal says the
+   fix may be an OSS linter + docs.)
+3. **Competitive landscape (crowded on hosting; the conformance wedge is partly
+   commoditized).** **Specific check results:** **Hosting** — **Smithery** (registry +
+   hosting; but a report says it is **shutting down its proxied server URLs/API/CLI on
+   Oct 31 2026** — verify, a notable instability signal in this space), **Glama**
+   (hosting metered by machine-hours + egress), **mcp.run** (usage/custom pricing),
+   **Cloudflare Workers** (free tier, paid from **$5/mo**, a standard place to deploy
+   remote MCP servers alongside **Fly.io**, **Railway**), plus Vercel. **Testing/
+   conformance — the key finding:** there is an **official, free MCP conformance suite**
+   (`npx @modelcontextprotocol/conformance server --url …`) that tests servers *and*
+   clients against the spec (the same suite used to assign SDK tiers) and ships a
+   **composite GitHub Action**; the **official MCP Inspector** now bundles a web UI +
+   scriptable CLI for CI + terminal UI; plus MCPJam, mcp-use Inspector, Postman/
+   Insomnia, Promptfoo/Snyk for security. So Pier's "cross-client conformance" headline
+   is **adjacent to a free official tool** — the differentiation has to be *hosted +
+   continuous + production monitoring*, not the one-time conformance check itself.
+4. **Whitespace & wedge.** The plausible gap (inference) is the **bundle for a solo
+   builder**: cheap hosting + continuous cross-client conformance-on-deploy + loud
+   production protocol-level alerting + a verified-install directory, as one
+   subscription — vs. today's split of (free official conformance CLI) + (generic
+   Cloudflare/Fly hosting) + (DIY monitoring). The "keeping it running" recurring value
+   is the wedge; the one-time lint is not.
+5. **Key risk.** Founder's own flag is confirmed by the competitive check: **much of the
+   pain is "learn the protocol's gotchas once,"** and an **official free conformance
+   suite + Inspector already exist**, so the testing half may not be monetizable — Pier
+   must prove the *hosting + continuous conformance + uptime* recurring value is worth
+   paying for. Hosting is crowded and cheap ($5/mo Cloudflare), compressing margin even
+   with the founder's cheap-infra edge. Smithery's reported hosted-proxy shutdown shows
+   how fragile pure MCP-hosting economics can be. WTP is unevidenced (SIG-16).
+6. **Timing.** "Why now" (MCP exploded 2025–26; reference servers ship breaking changes
+   often; no specialised home for *keeping* servers running) is real and live — but the
+   official registry + official conformance suite landing in 2025–26 means the ecosystem
+   is **standardizing the exact primitives Pier builds on**, so the window is open but
+   the free baseline is rising fast.
+
+**Confidence: Medium** — SIG-16 is the strongest Round-3 pain and the hosted-"keep it
+running" bundle is a plausible gap, but an official *free* conformance suite + Inspector
+sit on the testing wedge, MCP hosting is crowded and cheap, and WTP is unproven.
+
+**Sources:** https://www.fast.io/resources/best-mcp-hosting-platforms.md ·
+https://costbench.com/software/mcp-servers-tooling/ ·
+https://cdn.jsdelivr.net/npm/@modelcontextprotocol/conformance@0.1.16/README.md ·
+https://aident.ai/blog/test-mcp-server-with-mcp-inspector ·
+https://www.stackone.com/blog/mcp-registry-how-to-get-listed/ ·
+https://nordicapis.com/7-mcp-registries-worth-checking-out/
+
+---
+
+## IDEA-19 — Runnable
+
+"Gumroad for working automations": creators sell n8n/agent templates Runnable auto-verifies run before listing, with guaranteed delivery + money-back.
+
+1. **Market & trend.** **Resale of n8n/automation/agent templates**, a *fast-growing
+   2025–26 cottage industry* with a visible rush of marketplaces — **N8N Central**,
+   **n8nMarkets**, **The No-Code Marketplace** (launching with Zapier/Make/n8n
+   templates), **FlowMarket**, **neura.market** ("keep 90% of every sale"), plus
+   selling via Gumroad/LemonSqueezy/own site. Category is clearly expanding — and
+   crowding with would-be marketplaces.
+2. **Demand signals.** **SIG-19** (medium, fetched) is the anchor: buyers *already pay*
+   for templates (a "$29 Build and Sell AI Automations" pack) but hit **non-delivery**
+   ("paid for a template and got nothing after payment, no email, no instructions") and
+   **"doesnt work as stated by it's creator"**, with no buyer protection because the
+   sale is creator-to-buyer, not platform-backed. Supported by **SIG-11** (lock-in/
+   ownership frustration). WTP is real on the buy side (paid, self-serve); the gap is
+   trust/delivery/quality, not price appetite.
+3. **Competitive landscape.** **Specific check — n8n's own Creator Hub exists, and
+   verification is largely absent across sellers.** n8n runs a **Creator Hub/creator
+   program** (a community user reports it requires **publishing 3 free workflows before
+   you can sell**, and that some submissions were **declined** — a light editorial
+   gate, not functional verification); PayRequest notes the creator program is separate
+   from selling via your own link and n8n "does not promise to host, distribute or sell
+   your product." Third-party marketplaces (N8N Central, n8nMarkets, No-Code
+   Marketplace) and generic storefronts (**Gumroad**, **LemonSqueezy**) are where most
+   resale happens — and **none surfaced that auto-runs/sandbox-verifies a template works
+   before listing**; one community thread even warns an alternative marketplace "is a
+   ghost." So Runnable's **automated "test-import-and-run in a sandbox → verified
+   working" proof + guaranteed delivery** is a genuine gap against today's
+   upload-a-file-and-hope storefronts.
+4. **Whitespace & wedge.** The wedge is **automated verification + instant guaranteed
+   delivery + money-back**, sold **one-sided to creators** (buyers arrive via each
+   creator's own audience) — deliberately *not* the parked two-sided Agent Creators
+   Marketplace. The one-click-deploy-on-cheap-infra upsell also answers the seller
+   counter-signal that "template-plus-setup sells better." This is a real,
+   under-occupied slot: the many new n8n marketplaces compete on selection/discovery,
+   not on *proving the template runs*.
+5. **Key risk.** Founder's flag holds and the evidence sharpens it: **(a)** automated
+   verification can confirm a template *imports and runs* but **not that it does what
+   the creator claims on the buyer's real stack** (credentials, data, downstream APIs),
+   so "doesn't work as stated" disputes may persist; **(b)** the market may resolve
+   toward **done-for-you setup** (the seller counter-signal in SIG-19), making the pure
+   storefront a thin wedge; **(c)** the space is **crowding with marketplaces** (N8N
+   Central et al.) competing for the same creators. Non-delivery is also partly a
+   payments-plumbing bug, arguably a feature not a company.
+6. **Timing.** "Why now" is well-supported: the template-resale cottage industry
+   sprang up faster than any trust/delivery/verification layer; buyer complaints are
+   clustering on the n8n forum *now* (2025 dates), and the wave of new marketplaces
+   confirms the category is forming in real time — though that same wave means Runnable
+   is entering a race, not an empty field.
+7. *(note)* **K-check corroboration:** the one-sided, automated-verification design
+   keeps it off the parked two-sided-marketplace failure mode and avoids a manual
+   moderation queue — consistent with the thesis, per the idea's own thesis check.
+
+**Confidence: Medium** — the buyer-trust/non-delivery pain is first-hand evidenced and
+automated run-verification is a real gap, but verification can't fully settle "works as
+stated," the market may drift to done-for-you setup, and template marketplaces are
+multiplying fast.
+
+**Sources:** https://community.n8n.io/t/i-paid-for-a-template-and-got-nothing/117986 ·
+https://community.n8n.io/t/where-can-i-sell-my-n8n-workflow-i-am-looking-for-marketplaces-not-the-creator-hub/212963 ·
+https://payrequest.io/blog/sell-n8n-workflows ·
+https://www.producthunt.com/p/n8n-central/n8n-central ·
+https://neura.market/sell-n8n-workflows
+
+---
+
+## IDEA-20 — Throughline
+
+Portable, cross-tool memory layer for solo operators, exposed as an MCP server every client reads/writes.
+
+1. **Market & trend.** **AI agent/assistant memory**, *hot and well-populated in 2026*
+   — a dense field of comparison content ("best AI agent memory frameworks/tools 2026")
+   covering Mem0, Zep, Letta, Cognee, Supermemory and MCP memory servers. Category
+   clearly expanding; also clearly already contested.
+2. **Demand signals.** **SIG-17** (medium, fetched) anchors it: solo operators "re-explain
+   everything" every morning — "that's not automation, that's babysitting" — burning
+   ~10 min/session plus weekly upkeep of hand-maintained CONTEXT.md files; vector DBs
+   rejected as "too much setup for a solo operator." The **cross-tool portability pain is
+   independently corroborated** (specific check): multiple 2026 sources confirm **native
+   memory does not port between ChatGPT and Claude** — imports are **one-time snapshots,
+   not live sync** (Anthropic shipped a free-tier memory *import* in Mar 2026 that pastes
+   a text dump; cross-session memory went free-tier Mar 2 2026), and "you can export a
+   copy… no, that copy is not usable memory you can carry to another model." WTP is "none
+   found" in SIG-17 (the cost is the daily re-brief), a real weak point.
+3. **Competitive landscape (crowded; the exact "portable cross-tool memory" pitch is
+   already claimed).** **Specific check with pricing:** **Mem0** (free: 10k memories/1k
+   retrievals/mo; **Starter $19/mo**; **Pro $249/mo**; + **OpenMemory**, a local-first
+   MCP memory server shared across Claude Desktop/Cursor/other MCP clients — i.e. Mem0
+   *already ships* Throughline's core concept), **Supermemory** (free ~$5/mo usage
+   included; hosted MCP), **Zep** (Context MCP Server lets Claude/Cursor connect; free +
+   paid cloud tiers; one unconfirmed claim it stopped maintaining its OSS core in 2026),
+   **Letta** (agents connect to external MCP servers; pricing page moved/301s — verify),
+   **Cognee** (OSS). Beyond frameworks, a whole crop of **consumer cross-tool memory apps**
+   (MemoryPlugin, memx.app, aimemory.pro, anuma.ai, Supermemory) already market "sync
+   memory across ChatGPT/Claude/Gemini." So "no competitors" is firmly false and the
+   **portability wedge is already a crowded pitch** — differentiation has to be
+   zero-setup + genuine ownership/export + solo-operator UX, not the concept itself.
+4. **Whitespace & wedge.** The defensible framing (per the idea) is what native memory
+   structurally can't be — **cross-tool, portable, exportable, "your context is
+   Switzerland"** — delivered as a **zero-setup hosted MCP server** for non-team solo
+   operators. That framing is real and corroborated by the portability evidence, but
+   Mem0/OpenMemory, Zep's Context MCP, and Supermemory's hosted MCP already occupy much
+   of it; the thin remaining slot is **solo-operator simplicity + ownership** below the
+   developer-framework tools.
+5. **Key risk.** Founder's flag confirmed on two fronts: **(a)** native per-platform
+   memory keeps improving and may be "good enough" for operators who live in one tool
+   (and is now free-tier on Claude/ChatGPT), and **(b)** the cheap workaround (one
+   CONTEXT.md) is good enough for many — so the cross-tool/portability benefit must be
+   *felt*, not theoretical. Added by the competitive check: **Mem0's OpenMemory already
+   ships a shared-across-clients MCP memory server**, so the wedge is occupied, not open.
+   The idea itself concedes its **growth loop is thinner** than the other Round-3 plays.
+   WTP is unevidenced (SIG-17).
+6. **Timing.** "Why now" (agents moved to multi-session, days-long work in 2025–26, so
+   cross-session memory became a daily tax; MCP arrived as the standard way to plug one
+   memory into every client) is coherent and genuinely live — but the *same* "why now"
+   has already pulled Mem0, Zep, Supermemory and a crop of consumer apps into the space,
+   so the opening is contested as the idea arrives.
+
+**Confidence: Low-Medium** — the re-brief pain and the cross-tool portability gap are
+real and corroborated, but the category is crowded and the precise "portable cross-tool
+MCP memory" wedge is already shipped by Mem0/OpenMemory, Zep and Supermemory; WTP is
+unevidenced and the growth loop is thin.
+
+**Sources:** https://atlan.com/know/best-ai-agent-memory-frameworks-2026/ ·
+https://blog.memoryplugin.com/best-ai-memory-tools/ ·
+https://blog.memoryplugin.com/sync-memory-across-chatgpt-claude-gemini-perplexity-grok/ ·
+https://dev.to/stantyan/i-tested-7-ai-memory-products-for-portability-all-7-lock-you-in-31pm ·
+https://hjarni.com/blog/best-mcp-memory-server
+
+---
+
+## Round 3 cross-cutting read
+
+- **The two reframes land better than the three new plays.** **Keepwell** (IDEA-16)
+  and **Backstop** (IDEA-17) each ride something now *evidenced*: the "build fee +
+  monthly retainer" norm (with real price points) for Keepwell, and a buyer base
+  burned by unreliability + strict refunds (SIG-09) plus a visible 2026 rise of
+  incumbent guarantees for Backstop. Both target a white-label/drop-in packaging gap
+  incumbents leave open. The three new-signal ideas land in **more crowded, partly
+  commoditized** territory.
+- **Crowded / partly commoditized (differentiation is the problem, not demand):**
+  **Pier** (an **official free conformance suite** + Inspector sit on its testing
+  wedge; MCP hosting is crowded and as cheap as $5/mo Cloudflare; Smithery reportedly
+  shutting its hosted proxy shows the economics are fragile) and **Throughline** (Mem0/
+  OpenMemory already ships a shared-across-clients MCP memory server; Zep and
+  Supermemory offer hosted MCP memory; a crop of consumer apps already pitch
+  "cross-tool memory"). Both have evidenced pain but an occupied wedge.
+- **Most open whitespace found this round:** the **automated run-verification + guaranteed
+  delivery** storefront for templates (**Runnable**) — the many new n8n marketplaces
+  compete on selection, none on *proving the template runs* — and the **white-label
+  freelancer→client care-plan** package (**Keepwell**), the same structural gap the file
+  flagged for Aftercare/MeterMark/Billback. **Backstop's** "own-data trial + enforced
+  refund, drop-in for any builder" fusion is also a real gap even though each half is
+  individually occupied.
+- **Best-evidenced demand vs. best-evidenced wedge diverge again.** Demand is strongest
+  and most directly quoted for **Pier** (SIG-16, strong/fetched) — but its wedge is the
+  most commoditized (official free tooling). The cleaner *unoccupied* positioning sits
+  with **Keepwell** and **Runnable**, whose anchor signals are only medium. **Throughline**
+  is weakest on both counts — crowded wedge *and* unevidenced WTP with a thin growth loop.
+- **Platform/standardization caveat.** Two Round-3 ideas depend on fast-standardizing
+  substrates: Pier builds on MCP exactly as the **official registry + conformance suite**
+  commoditize its primitives, and Throughline/Pier both ride MCP as a distribution
+  surface the platform owners are actively shaping. The founder's cheap-infra edge helps
+  margin but does not by itself answer the "why pay for this vs. the free/official
+  baseline?" question that recurs across Pier and Throughline. WTP is "none found" in the
+  anchor signals for Pier (SIG-16), Throughline (SIG-17) — a shared evidence gap — while
+  Keepwell (retainer norm), Backstop (SIG-09 paid buyers) and Runnable (SIG-19 paid
+  buyers) have at least indirect payment evidence.
