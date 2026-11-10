@@ -89,6 +89,13 @@ Default early-stage composite:
 Composite = 0.40 × Desirability + 0.35 × Viability + 0.25 × Feasibility
 ```
 
+**Competitors count as evidence.** Paying competitors prove demand and
+willingness to pay, so a proven model copied with a sharp, evidenced twist
+scores well. The Viability sub-score "Proven model + twist" replaces "moat".
+Competition lowers a score only when a free tool already does the twist, when
+the competitor owns the channel the idea depends on, or when there is no twist.
+Full rule in `.claude/agents/governance.md`.
+
 To change the emphasis, edit these weights here and tell the governance agent to
 use them. Gate thresholds: **Advance ≥ 7.5**, **Iterate 6.0–7.4**, **Park < 6.0**.
 

@@ -6,6 +6,7 @@
 - **Solution wedge:** <the smallest sharp entry point — not the 5-year vision>
 - **Business model:** <how it makes money>
 - **Founder edge:** <which advantage(s) from the profile this leans on>
+- **Proven model:** <incumbent(s) already earning from this job + the twist that makes their users switch, or "none — new category">
 - **Why now:** <the tech / regulatory / behavioral shift that makes this timely>
 - **Biggest risk:** <the one thing most likely to kill it>
 - **Signals:** <SIG-IDs from signals.md this idea answers, or "none (no signals.md)">

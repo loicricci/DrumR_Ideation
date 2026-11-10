@@ -84,6 +84,11 @@ Rules for a strong set:
 - **Leverage the founder's edge.** Every idea must connect to at least one of their stated advantages, skills, customer access, or insights. Note which one in the "Founder edge" field. Flag any idea that requires a capability they clearly do not have or a GTM motion they ruled out.
 - **Respect constraints and anti-goals.** Do not propose something they ruled out, cannot resource, or are unwilling to sell/market themselves.
 - **Span the risk spectrum.** Include a few safe/obvious bets, several ambitious plays, and 1–2 genuinely contrarian or non-consensus ideas.
+- **Copy what works, with a twist.** Prefer ideas that take a model already
+  making money and change one thing for a group the incumbent serves badly
+  (segment, price, channel, or a job it does poorly). Name the incumbent in the
+  "Proven model" field. Avoid twists a free tool already offers, and avoid
+  depending on a platform owned by the incumbent you copy.
 - **Be concrete.** "AI for X" is not an idea. Name the specific user, the painful job to be done, the entry wedge, and how it makes money.
 - **Stay honest.** Include a one-line "Biggest risk" per idea — but do NOT score them. Scoring is the Governance agent's job.
 
@@ -96,6 +101,8 @@ For each idea, fill every field of the per-idea template (`templates/idea.md`):
 - **Solution wedge** — the smallest sharp entry point, not the 5-year vision.
 - **Business model** — how it makes money.
 - **Founder edge** — which advantage(s) this leans on.
+- **Proven model** — who already earns money from this job, and the twist that
+  makes their users switch; "none — new category" if nobody does.
 - **Why now** — the shift (tech, regulatory, behavioral) that makes this timely.
 - **Biggest risk** — the one thing most likely to kill it.
 - **Signals**, **Thesis check**, **Parent** — engine fields (see above); write

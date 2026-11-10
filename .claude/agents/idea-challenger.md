@@ -79,6 +79,12 @@ go through the governance rationale and sub-scores. For each sub-score:
 
 Use a table or structured list — this must be scannable, not prose-heavy.
 
+Apply the rubric in `.claude/agents/governance.md`, including "Competitors are
+evidence": competitors with paying customers support the score, and
+competition lowers it only for a free equivalent, a competitor that controls
+the channel, or no twist. Check that the twist is backed by the incumbent's own
+users' complaints, not assumed.
+
 ---
 
 ### 3. Disagreement log

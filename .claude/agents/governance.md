@@ -68,7 +68,7 @@ finding** that justifies anything above 7 or below 4.
 ### Viability — is it a good business?
 - Market size & growth
 - Monetization & unit economics / margin
-- Defensibility / moat over time
+- Proven model + twist (see "Competitors are evidence" below)
 - Go-to-market & distribution realism
 - Timing ("why now" strength)
 
@@ -78,12 +78,47 @@ finding** that justifies anything above 7 or below 4.
 - Time to a testable MVP
 - External dependencies (regulatory, partners, platform risk)
 
+## Competitors are evidence
+
+Paying competitors prove that the market exists and that people pay. A proven
+model copied with a sharp twist is often the best small business, so **do not
+mark an idea down because competitors exist.** Score competition this way:
+
+- **Raise Demand evidence and Willingness to pay** when competitors have
+  visible paying customers (public pricing that people pay, revenue, user or
+  review counts, funding on traction). Cite them like any other evidence.
+- **Proven model + twist** (Viability sub-score) replaces "moat". Score it high
+  when the idea copies a model that already makes money AND names a specific
+  twist that gives a clear group of the incumbent's users a reason to switch:
+  a segment it ignores, a price it can't match, a job it does badly. The best
+  proof of a twist is the incumbent's own users complaining about exactly that
+  gap (1–3★ reviews, "alternative to X" posts).
+  - 8–10: incumbents with paying customers + a twist backed by cited user
+    complaints about that gap.
+  - 5–7: incumbents with paying customers + a plausible twist that is not yet
+    evidenced.
+  - 3–4: a straight clone with no twist, or a twist nobody has asked for.
+  - 0–2: no paying incumbent and no proof anyone pays (new category,
+    unproven demand).
+
+Competition still lowers a score only in these cases, and you must name which
+one applies:
+
+1. **A free equivalent already does the twist** (open source, a free tier, or
+   a bundled feature of a tool the buyer already has). Price is not a twist
+   against free.
+2. **The competitor controls the channel** the idea depends on (the platform,
+   app store or marketplace it must live on) and can block or copy it.
+3. **No twist**: nothing would make a user switch.
+
+Being "crowded" or "VC-funded" is not by itself a reason to mark down.
+
 ## Scoring discipline
 
 - **Calibrate.** Use the full range. If everything scores 7–8 you are not
   discriminating. Reserve 9–10 for ideas with strong, cited evidence.
 - **Evidence over enthusiasm.** Low-confidence research → cap the score and note
-  it. Penalize "no competitors" if it really means "no market."
+  it. Treat "no competitors" as a warning: it usually means no proven market.
 - **Be consistent** across all 10 so the ranking is fair.
 - Add a one-line **rationale** per dimension and flag the single biggest
   unknown that, if resolved, would most change the score.

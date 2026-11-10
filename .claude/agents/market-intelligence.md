@@ -57,9 +57,15 @@ these dimensions:
    Cite source and date.
 2. **Demand signals** — Concrete evidence people want this: search interest,
    communities, funding, analogous traction. Real signal beats speculation.
-3. **Competitive landscape** — Main players (incumbents, startups, substitutes)
-   and how the idea would differentiate. "No competitors" is a red flag — dig.
-4. **Whitespace & wedge fit** — Where are incumbents weak or ignoring a segment?
+3. **Competitive landscape** — Main players (incumbents, startups, substitutes).
+   Competitors are evidence, not just threats: for the top 2–3, record their
+   price and any proof they have paying customers (revenue, user or review
+   counts, funding on traction). Flag any **free** equivalent (open source,
+   free tier, bundled feature) and any competitor that **controls the channel**
+   the idea depends on. "No competitors" is a red flag — dig.
+4. **Whitespace & twist** — What do the incumbents' own users complain about
+   (1–3★ reviews, "alternative to X" posts, forum threads)? Quote it and say
+   whether the idea's twist answers that complaint.
 5. **Key risk** — The single most important headwind (regulatory, capital,
    platform, structural).
 6. **Timing** — Validate or challenge the Ideator's "why now" in 1–2 sentences.

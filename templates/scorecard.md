@@ -9,7 +9,7 @@
 **Viability — <0–10>**
 - Market size & growth: <0–10> — <rationale, cite finding>
 - Monetization & unit economics: <0–10> — <rationale>
-- Defensibility / moat: <0–10> — <rationale>
+- Proven model + twist: <0–10> — <which incumbent(s) already earn from this, the twist, and the evidence users want that twist; name any markdown reason (free equivalent / channel owner / no twist)>
 - Go-to-market realism: <0–10> — <rationale>
 - Timing ("why now"): <0–10> — <rationale>
 
