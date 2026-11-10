@@ -41,25 +41,56 @@
 > heavily venture-funded or platform-risk-capped territory. Net Round-2 result:
 > **1 Iterate (SwapStep, Billback) / 3 Park** new, with Billback the standout.
 
+> **Round 3 (refill, final round) note.** Scored IDEA-16…20 only; IDEA-01…15
+> scores and cards are carried forward verbatim. All five pass the K1–K7 kill
+> check (none force-Parked): K6 holds on each (Keepwell→SIG-03 strong; Backstop→
+> SIG-06/09 strong; Pier→SIG-16 strong; Runnable→SIG-19 fetched; Throughline→
+> SIG-17 fetched); **K7** is structurally removed for Backstop (refunds run on the
+> *builder's own* Stripe — no fund custody) and Runnable (standard payments rail,
+> one-sided marketplace, automated verification → **K2** manual-moderation rule
+> also holds); **K2** is watched for Keepwell (auto-remediation must be automated,
+> not a founder support channel). Scored on their own evidence, not their parents':
+> **IDEA-16 Keepwell** lands *below* its parents Aftercare/Billback (6.75 vs 7.00)
+> — it rides the now-evidenced "$1k–5k/mo retainer" norm with a cleaner
+> breakage-independent billing model, but stakes itself on a *harder* auto-
+> remediation build. **IDEA-17 Backstop** lands *below* its parent ProofKit (6.40
+> vs 6.65) — it moves trust off the discredited self-issued score onto own-data +
+> an enforced refund, a real improvement, but adds refund-staking + buyer-data-
+> upload + Stripe-Connect dependencies that lower feasibility. Of the three
+> new-signal plays, **Pier (6.30)** has the strongest Round-3 pain (SIG-16) but the
+> most commoditized wedge (a **free official MCP conformance suite** + $5/mo
+> hosting); **Runnable (6.00)** is the cleanest whitespace (no template marketplace
+> verifies that templates run) on medium evidence; **Throughline (5.90, Park)** is
+> weakest on both counts — Mem0/OpenMemory already ship its exact cross-tool MCP
+> memory wedge and WTP is unevidenced. Net Round-3 result: **4 Iterate (Keepwell,
+> Backstop, Pier, Runnable) / 1 Park (Throughline)**, with Keepwell the standout.
+> No reframe was inflated for being a reframe; no late idea was credited for being
+> late. Final tally across all 20: **0 Advance, 14 Iterate, 6 Park.**
+
 ## Ranked summary
 
 | Rank | ID | Title | Desirability | Viability | Feasibility | Composite | Gate |
 |------|------|-----------|:---:|:---:|:---:|:---:|:-------|
 | 1 | IDEA-03 | Aftercare | 7 | 7 | 7 | 7.00 | Iterate |
 | 2 | IDEA-11 | Billback | 7 | 7 | 7 | 7.00 | Iterate |
-| 3 | IDEA-01 | AgentProbe | 7 | 6 | 7 | 6.65 | Iterate |
-| 4 | IDEA-07 | ProofKit | 7 | 6 | 7 | 6.65 | Iterate |
-| 5 | IDEA-04 | Hatch | 7 | 6 | 6 | 6.40 | Iterate |
-| 6 | IDEA-02 | BudgetWall | 7 | 5 | 7 | 6.30 | Iterate |
-| 7 | IDEA-10 | Checkpoint | 6 | 6 | 7 | 6.25 | Iterate |
-| 8 | IDEA-09 | GroundWire | 6 | 6 | 6 | 6.00 | Iterate |
-| 9 | IDEA-08 | MeterMark | 6 | 6 | 6 | 6.00 | Iterate |
-| 10 | IDEA-15 | SwapStep | 6 | 6 | 6 | 6.00 | Iterate |
-| 11 | IDEA-06 | ShipAgent | 6 | 5 | 7 | 5.90 | Park |
-| 12 | IDEA-12 | Rehearse | 6 | 5 | 7 | 5.90 | Park |
-| 13 | IDEA-13 | Eject | 6 | 5 | 6 | 5.65 | Park |
-| 14 | IDEA-14 | PlainFlow | 6 | 5 | 6 | 5.65 | Park |
-| 15 | IDEA-05 | KeyRoom | 6 | 4 | 6 | 5.30 | Park |
+| 3 | IDEA-16 | Keepwell | 7 | 7 | 6 | 6.75 | Iterate |
+| 4 | IDEA-01 | AgentProbe | 7 | 6 | 7 | 6.65 | Iterate |
+| 5 | IDEA-07 | ProofKit | 7 | 6 | 7 | 6.65 | Iterate |
+| 6 | IDEA-04 | Hatch | 7 | 6 | 6 | 6.40 | Iterate |
+| 7 | IDEA-17 | Backstop | 7 | 6 | 6 | 6.40 | Iterate |
+| 8 | IDEA-02 | BudgetWall | 7 | 5 | 7 | 6.30 | Iterate |
+| 9 | IDEA-18 | Pier | 7 | 5 | 7 | 6.30 | Iterate |
+| 10 | IDEA-10 | Checkpoint | 6 | 6 | 7 | 6.25 | Iterate |
+| 11 | IDEA-09 | GroundWire | 6 | 6 | 6 | 6.00 | Iterate |
+| 12 | IDEA-08 | MeterMark | 6 | 6 | 6 | 6.00 | Iterate |
+| 13 | IDEA-15 | SwapStep | 6 | 6 | 6 | 6.00 | Iterate |
+| 14 | IDEA-19 | Runnable | 6 | 6 | 6 | 6.00 | Iterate |
+| 15 | IDEA-06 | ShipAgent | 6 | 5 | 7 | 5.90 | Park |
+| 16 | IDEA-12 | Rehearse | 6 | 5 | 7 | 5.90 | Park |
+| 17 | IDEA-20 | Throughline | 6 | 5 | 7 | 5.90 | Park |
+| 18 | IDEA-13 | Eject | 6 | 5 | 6 | 5.65 | Park |
+| 19 | IDEA-14 | PlainFlow | 6 | 5 | 6 | 5.65 | Park |
+| 20 | IDEA-05 | KeyRoom | 6 | 4 | 6 | 5.30 | Park |
 
 ---
 
@@ -459,9 +490,9 @@
 
 ## Round 2 — new ideas scored
 
-Cards for IDEA-11 (Billback, rank 2, Iterate), IDEA-15 (SwapStep, rank 10, Iterate),
-IDEA-12 (Rehearse, rank 12, Park), IDEA-13 (Eject, rank 13, Park) and IDEA-14
-(PlainFlow, rank 14, Park) are placed in ranked order above. Below is the
+Cards for IDEA-11 (Billback, rank 2, Iterate), IDEA-15 (SwapStep, rank 13, Iterate),
+IDEA-12 (Rehearse, rank 16, Park), IDEA-13 (Eject, rank 18, Park) and IDEA-14
+(PlainFlow, rank 19, Park) are placed in ranked order above. Below is the
 Billback card (the only new idea that cracked the top tier); the other four new
 cards appear at their composite rank in the list above.
 
@@ -493,15 +524,166 @@ cards appear at their composite rank in the list above.
 
 ---
 
+## Round 3 — new ideas scored
+
+Scored IDEA-16…20 only; IDEA-01…15 carried forward verbatim. The five cards below
+appear here in composite order (they also sit at their true rank in the summary
+table). Round-3 result: **4 Iterate (Keepwell, Backstop, Pier, Runnable) / 1 Park
+(Throughline)**, with **Keepwell (6.75)** the standout — the third framing of the
+run's best-evidenced whitespace, now with the cleanest billing model, held below
+Advance only by the auto-remediation build bar.
+
+### IDEA-16 — Keepwell  ·  Composite: 6.75  ·  Gate: Iterate  ·  Parent: IDEA-11
+
+**Desirability — 7**
+- Pain intensity: 7 — The strongest, best-evidenced pain in the run carries over: agents break months later and the freelancer becomes the "unpaid support, on-call dev, integration janitor" (SIG-15, medium), while clients silently revert and churn by month four (SIG-03, strong/fetched) — a bleeding, recurring-revenue wound.
+- Demand evidence: 7 — SIG-03 (strong/fetched) + SIG-15 (medium), now reinforced by research with concrete retainer price points (2026 pricing guides: ~$1,000–5,000/mo maintenance retainers, £500–5,000/mo for "monitoring, prompt fixes when an upstream API changes, small adjustments") — the retainer norm Keepwell rides is well-corroborated.
+- Willingness to pay: 6 — Rides an *evidenced* "build fee + monthly retainer" norm (cleaner than Billback's unproven per-incident approval), but research is explicit that this validates the retainer, not that freelancers will pay a per-agent SaaS fee *on top* of it — so WTP sits a notch below Aftercare's "marks up into an existing retainer" (7).
+- Founder–market resonance: 8 — Drift/breakage detection, auto-remediation and monitoring pipelines are the founder's observability wheelhouse; the branded per-client status page is a growth loop (every client, and any other freelancer they work with, sees the platform).
+
+**Viability — 7**
+- Market size & growth: 6 — Agent monitoring / incident-management + the agency maintenance-retainer motion, expanding (2026 "AI agent uptime / outage monitoring" content); no discrete sub-size (gap).
+- Monetization & unit economics: 7 — Flat $12–29/agent/mo (or portfolio tier), **breakage-independent** and riding the evidenced retainer norm rather than inventing a per-incident billing event; cheap infra keeps per-agent monitoring margin-positive. The cleanest monetization model of the three maintenance framings.
+- Defensibility / moat: 7 — Same cleanest-whitespace Aftercare/Billback exploit: incumbents sell monitoring to the team running the agent; research found **none that auto-remediates routine failure classes *and* publishes a branded per-client uptime page sold to a freelancer** (IncidentHub does per-client status pages for teams, but not the care-plan package). The white-label freelancer→client care-plan slot is open.
+- Go-to-market realism: 7 — Buyer is the freelancer, reachable in the exact AI-agency Discords/Skool/Indie-Hackers communities (K5); the branded status page doubles as distribution.
+- Timing ("why now"): 7 — Well-supported: the 2025 autonomous-build cohort is hitting first-wave months-later breakage (SIG-15) as agencies feel the month-4 churn cliff (SIG-03), and 2026 agency incident-playbook content frames "turn silent failures into loud ones" as the fix.
+
+**Feasibility — 6**
+- Technical complexity vs. capability: 6 — Monitoring + branded status page is core founder engineering, but **robust cross-client auto-remediation** (re-auth OAuth, patch schema shifts, restart on timeout) is a genuinely hard bar research flags as "the hardest part" — this is the new scope that pulls feasibility below Aftercare/Billback (both 8 here).
+- Capital / resources vs. runway: 8 — Cheap per-agent monitoring; bootstrap-friendly.
+- Time to testable MVP: 5 — Detection + status page + one-click escalation is ≤4 weeks, but reliable auto-remediation of routine failure classes adds scope beyond the window (MVP must scope remediation narrowly; K3 watch).
+- External dependencies: 6 — Needs access to each client agent's logs/endpoints/auth to remediate; adoption assumes the freelancer already runs a retainer (if not, Keepwell must *create* that habit).
+
+**Composite:** 0.40×7 + 0.35×7 + 0.25×6 = **6.75**
+**Gate decision:** Iterate — Scored on its own evidence, Keepwell is the most de-risked *billing model* of the maintenance cluster: it rides an evidenced flat-retainer norm (no per-incident approval, no dependence on breakage frequency) on the same cleanest whitespace. It lands **below** its parents Aftercare/Billback (7.00) — not above — because it stakes itself on a harder auto-remediation build (F 6 vs 7) and its "per-agent SaaS fee on top of the retainer" WTP is one step less directly evidenced. No reframe inflation.
+**Biggest unknown:** Can auto-remediation cover enough of the routine failure classes to make a flat per-agent fee feel earned (shallow remediation leaves the freelancer still firefighting), and will freelancers pay a per-agent SaaS fee on top of a retainer they already charge?
+**De-risking step:** With 6 AI-automation freelancers, inventory the *actual* recurring failure classes across their client agents (auth expiry, schema shift, timeouts) and measure what share is safely auto-remediable; in parallel, pre-sell the branded status page + flat per-agent price and confirm they'd add it to an existing retainer — before building the remediation engine.
+
+---
+
+### IDEA-17 — Backstop  ·  Composite: 6.40  ·  Gate: Iterate  ·  Parent: IDEA-07
+
+**Desirability — 7**
+- Pain intensity: 7 — Buyers "want proof the agent works" and won't trust an unknown agent (SIG-06, strong/fetched); SMBs paid real self-serve money ("$299," "$1,428") for agents that were "inconsistent, unreliable… unusable," then "felt the cancellation and refund policies were applied very strictly" (SIG-09, strong/fetched) — a painkiller for the exact "couldn't trust it and couldn't get my money back" wound.
+- Demand evidence: 7 — SIG-06 + SIG-09 both strong/fetched; Backstop's evidence is arguably a touch richer than ProofKit's because it adds the refund-frustration dimension the signals explicitly voice.
+- Willingness to pay: 5 — Sellers add support fees, but whether a builder pays $39–99/mo **and stakes a real refund** is unproven — the refund-staking is a new barrier on top of ProofKit's price question.
+- Founder–market resonance: 8 — Sandbox-run-on-arbitrary-inputs + eval/transcript tooling is the founder's observability + agent-design core; the "powered by Backstop · money-back if it fails your test" badge on every seller's page is a distribution surface.
+
+**Viability — 6**
+- Market size & growth: 6 — Agent trust/conversion (risk-reversal) tooling, a visibly emerging 2026 pattern; rides the SMB-agent buyer base (SIG-09).
+- Monetization & unit economics: 6 — $39–99/mo flat, recurring; cheap per-trial sandbox runs keep it margin-positive.
+- Defensibility / moat: 6 — The **own-data trial + auto-enforced refund, drop-in for *any* builder** fusion is a genuine gap (Intercom Fin's "$1M guarantee," Richpanel, Fini, Ringly all guarantee only *their own* agent, not a layer builders embed), and it moves trust off ProofKit's discredited self-issued score — an improvement (6 vs ProofKit's 5). But each half (guarantees; try-before-buy) is individually well-occupied at the incumbent top.
+- Go-to-market realism: 7 — The badge on every seller's landing page is a built-in growth loop; persona reachable in builder communities.
+- Timing ("why now"): 7 — Strong: a 2025–26 surge of solo agents hit a buyer base now actively burned by unreliability + aggressive billing, and the visible 2026 rise of incumbent guarantees shows risk-reversal is becoming a buying expectation.
+
+**Feasibility — 6**
+- Technical complexity vs. capability: 7 — Sandbox run-on-buyer-data + guarantee tracking + Stripe refund automation is within the founder's eval skillset.
+- Capital / resources vs. runway: 7 — Cheap per-trial runs.
+- Time to testable MVP: 6 — Embed flow + sandbox + guarantee tracking + Stripe refund API is a ≤4-week MVP with scoping.
+- External dependencies: 5 — More moving parts than ProofKit's pure sandbox: the buyer must upload their own real examples (a privacy ask — cf. SIG-18, where exactly this access stalls SMB deals), and the refund runs on the **builder's own Stripe/Connect** (K7-clean — no fund custody — but needs verification against Stripe Connect refund docs).
+
+**Composite:** 0.40×7 + 0.35×6 + 0.25×6 = **6.40**
+**Gate decision:** Iterate — A real improvement on its parent's make-or-break flaw: it replaces ProofKit's "self-issued score buyers distrust" with two things buyers *do* believe (their own eyes on their own data + a refund they'll actually get). Scored on its own evidence it lands **below** ProofKit (6.65) — not above — because the refund-staking + data-upload + Stripe-Connect dependencies lower feasibility (F 6 vs 7). No reframe inflation.
+**Biggest unknown:** Will indie builders actually stake a real money-back guarantee (fear of abuse, or of genuine failure on messy real data), or does adoption stall at the guarantee step even though the run-on-your-own-data proof has standalone value?
+**De-risking step:** Offer the "trial on your own data + money-back if it fails an agreed bar" flow to 8 indie builders selling a working agent and measure how many will turn the guarantee *on* at a stated pass bar — if most take the proof but refuse the refund, ship the proof-only flow and test whether it still moves buyer conversion.
+
+---
+
+### IDEA-18 — Pier  ·  Composite: 6.30  ·  Gate: Iterate
+
+**Desirability — 7**
+- Pain intensity: 7 — The strongest Round-3 pain: "console.log to stdout silently corrupts JSON-RPC framing. No error. Just silence"; "errors are silent, the protocol is unforgiving… invisible until production"; "the cross-client testing situation is killing me"; "15 min to deploy, 15 hours a week to keep running" (SIG-16, strong/fetched). A painkiller for MCP builders.
+- Demand evidence: 7 — SIG-16 is strong, fetched, dated (Oct 7 2025) with multiple verbatim quotes, corroborated by SIG-19 demand-validation chatter ("would people pay for vetted MCP servers vs free GitHub repos?").
+- Willingness to pay: 4 — The cap: WTP is "none found," SIG-16's own counter-signal says the fix may be an OSS linter + docs, and an **official FREE MCP conformance suite** already exists — the closest WTP signals are founders asking "would people pay?" (interest, not purchase). Free official tooling anchors price near zero.
+- Founder–market resonance: 8 — Hosting multi-process agent/tool infra cheaply is the founder's single strongest advantage, and a protocol-conformance harness is exactly the systems problem that energises him; the verified-install pages/directory are a distribution loop.
+
+**Viability — 5**
+- Market size & growth: 6 — MCP infra exploding (official registry launched Sept 2025; 23,700–111,899 servers across directories) but the land-grab is already underway.
+- Monetization & unit economics: 4 — Hosting is crowded and cheap ($5/mo Cloudflare, plus Smithery/Glama/mcp.run), the conformance half is commoditized by the free official suite, and WTP is unproven — margin is compressed even with the cheap-infra edge.
+- Defensibility / moat: 4 — An **official, free MCP conformance suite + Inspector** sit directly on the testing wedge; hosting is generic. The only wedge is the "keep-it-running" bundle (hosted + continuous conformance + production alerting), and Smithery reportedly shutting its hosted proxy (Oct 2026) shows how fragile pure-MCP-hosting economics are.
+- Go-to-market realism: 6 — Verified-install pages + a conformance-verified directory are a plausible distribution loop; persona reachable in r/mcp, r/ClaudeAI, MCP Discords.
+- Timing ("why now"): 6 — MCP exploded and the pain is live, but the official registry + conformance suite landing in 2025–26 means the ecosystem is standardizing the exact primitives Pier builds on — the free baseline is rising fast as the idea arrives.
+
+**Feasibility — 7**
+- Technical complexity vs. capability: 8 — Hosting multi-process infra + a cross-client conformance harness is the founder's strongest edge.
+- Capital / resources vs. runway: 6 — Cheap-infra edge, but hosting margin is compressed by $5/mo competition (K4 watch).
+- Time to testable MVP: 6 — Host + one cross-client conformance check + uptime alert is scoped to ~4 weeks (K3 watch).
+- External dependencies: 6 — MCP spec/registry/official-tooling evolving fast (platform-shaping risk); reference servers ship breaking changes often.
+
+**Composite:** 0.40×7 + 0.35×5 + 0.25×7 = **6.30**
+**Gate decision:** Iterate — The strongest, most directly-quoted Round-3 demand (SIG-16) and the founder's single best skill fit pull it over the floor, but it is pinned there by the weakest viability of the new ideas: a **free official conformance suite** sits on its differentiating wedge and $5/mo commodity hosting crushes margin, so monetization is the make-or-break.
+**Biggest unknown:** Will MCP builders pay for a hosted "keep-it-running" bundle (continuous conformance + uptime + production alerting) when an official *free* conformance suite + Inspector exist and generic hosting is $5/mo — i.e. is the recurring value real above the free/official baseline?
+**De-risking step:** Put the hosted "deploy once, we run cross-client conformance on every change + alert you on protocol-level failures" offer in front of 10 builders currently maintaining ≥2 MCP servers by hand, and measure how many pay vs. "the free official suite + Cloudflare is enough" — the one-time conformance lint is not the wedge; the keeping-it-running is.
+
+---
+
+### IDEA-19 — Runnable  ·  Composite: 6.00  ·  Gate: Iterate
+
+**Desirability — 6**
+- Pain intensity: 6 — Non-delivery ("paid for a template and got nothing after payment, no email, no instructions") and "doesnt work as stated by it's creator" (SIG-19) is a real trust/frustration pain, but it's a transactional annoyance more than a bleeding operational wound.
+- Demand evidence: 6 — SIG-19 is medium/fetched with first-hand buyer complaints clustered on the n8n forum (dated 2025); buyers are **already paying** ($29 packs). Real but medium-strength, and the customer Runnable sells to is the *creator*, while the pain quotes are buyer-side.
+- Willingness to pay: 6 — Buyers already pay for templates (paid, self-serve, evidenced) and creators pay storefronts, so payment behavior exists — better than "none found"; creator WTP for Runnable's fee/subscription specifically is inferred.
+- Founder–market resonance: 7 — The sandbox that safely imports and runs an arbitrary n8n/agent template to verify it is an agent-infra problem the founder solves cheaply; one-click deploy rides the cheap-hosting edge; the branded storefront + "verified on Runnable" badge is a distribution loop. Creators are seedable by the founder alone via no-code/agent communities (K5).
+
+**Viability — 6**
+- Market size & growth: 6 — The template-resale cottage industry is fast-growing but crowding with would-be marketplaces (N8N Central, n8nMarkets, No-Code Marketplace, neura.market).
+- Monetization & unit economics: 6 — Small transaction fee per sale + optional creator subscription + one-click-deploy hosting margin; recurring-leaning, but the fee model needs volume.
+- Defensibility / moat: 6 — **Automated "test-import-and-run in a sandbox → verified working" proof + guaranteed delivery + money-back** is a genuine gap: research found none of the many marketplaces or generic storefronts (Gumroad/LemonSqueezy) verify a template actually runs before listing. The moat is real but narrow — verification can't prove the template works on the *buyer's* stack.
+- Go-to-market realism: 6 — One-sided by design (creators seeded by founder; buyers arrive via each creator's own audience) keeps it off the parked two-sided-marketplace failure mode, but creator acquisition competes with the multiplying marketplaces.
+- Timing ("why now"): 6 — The cottage industry sprang up faster than any trust/delivery/verification layer and buyer complaints are clustering now, but the wave of new marketplaces means it's a race, not an empty field.
+
+**Feasibility — 6**
+- Technical complexity vs. capability: 6 — A sandbox that safely imports and runs arbitrary n8n workflows / agent templates (credentials, varied APIs, isolation) is non-trivial, but within the founder's infra skill.
+- Capital / resources vs. runway: 7 — Cheap infra for sandbox verification + hosted deploys.
+- Time to testable MVP: 5 — Storefront + sandbox verification + guaranteed Stripe delivery + money-back for one narrow template type (e.g. n8n) is scoped, but the safe-arbitrary-run sandbox is real scope for a 4-week window.
+- External dependencies: 6 — Payments rail (Stripe), per-platform import formats (n8n etc.), and creators to seed the supply side.
+
+**Composite:** 0.40×6 + 0.35×6 + 0.25×6 = **6.00**
+**Gate decision:** Iterate (at the floor) — The cleanest *whitespace* of the three new-signal plays (automated run-verification + guaranteed delivery is genuinely unoccupied) on first-hand, paid-buyer evidence, and it is the one marketplace the thesis permits (one side seedable by the founder alone). Capped at the floor by medium demand, multiplying competing marketplaces, and the hard limit that verification proves a template *runs*, not that it does what the creator *claims* on the buyer's stack.
+**Biggest unknown:** Does "verified it actually runs + guaranteed delivery + money-back" out-pull the done-for-you-setup direction the market may drift toward (the SIG-19 seller counter-signal), and will enough creators choose Runnable over the crowd of new marketplaces to seed supply?
+**De-risking step:** Recruit 5 template creators from no-code/agent communities, run their next launch through a manual "we verified it runs + guaranteed delivery" badge (no full build), and measure whether the verified badge lifts their conversion/price and whether buyers cite it — before building the automated sandbox.
+
+---
+
+### IDEA-20 — Throughline  ·  Composite: 5.90  ·  Gate: Park
+
+**Desirability — 6**
+- Pain intensity: 6 — "Every single morning, I had to re-explain everything… that's not automation, that's babysitting" (SIG-17, fetched) — ~10 min/session plus weekly CONTEXT.md upkeep is a real daily productivity tax, but a mild recurring annoyance rather than an acute wound.
+- Demand evidence: 6 — SIG-17 medium/fetched, and the cross-tool portability pain is independently corroborated (2026 sources confirm native memory doesn't port between ChatGPT/Claude; imports are one-time snapshots, not live sync). Real but medium.
+- Willingness to pay: 4 — "None found"; the cheap workaround (a single CONTEXT.md) is "good enough" for many, and native cross-session memory went free-tier on Claude/ChatGPT in Mar 2026 — the price anchor is near zero.
+- Founder–market resonance: 8 — Agent memory, retrieval and orchestration are named founder strengths ("orchestration, tools, memory, multimodal pipelines"), a fast cheap memory store is the cheap-infra edge, and shipping as an MCP server rides the exploding MCP ecosystem as a distribution surface.
+
+**Viability — 5**
+- Market size & growth: 6 — AI agent/assistant memory is hot and well-populated in 2026.
+- Monetization & unit economics: 5 — $9–19/mo, cheap-infra margin, but free-tier native memory + the CONTEXT.md workaround + free OSS (OpenMemory, local) compress it; WTP unevidenced.
+- Defensibility / moat: 3 — The most occupied wedge of Round 3: the exact "portable cross-tool MCP memory" pitch is **already shipped** by Mem0/OpenMemory (a shared-across-clients MCP memory server), Zep's Context MCP, and Supermemory, plus a crop of consumer apps marketing "sync memory across ChatGPT/Claude/Gemini." Differentiation rests only on solo-operator simplicity + ownership, not the concept.
+- Go-to-market realism: 5 — MCP server as a distribution surface and reachable communities, but the idea itself concedes the growth loop is thinner than the other Round-3 plays, and it competes with funded memory players.
+- Timing ("why now"): 5 — Live why-now (multi-session, days-long agent work made cross-session memory a daily tax; MCP arrived as the standard plug), but the same why-now already pulled Mem0/Zep/Supermemory + consumer apps in — the opening is contested on arrival.
+
+**Feasibility — 7**
+- Technical complexity vs. capability: 7 — A memory store exposed as an MCP server is squarely the founder's memory/retrieval wheelhouse.
+- Capital / resources vs. runway: 7 — Cheap per-user memory infra keeps margin positive under a low price.
+- Time to testable MVP: 7 — Memory store + MCP server is a ≤4-week MVP.
+- External dependencies: 6 — MCP ecosystem (platform-shaping risk) and native memory improving underneath it.
+
+**Composite:** 0.40×6 + 0.35×5 + 0.25×7 = **5.90**
+**Gate decision:** Park — The easiest build of the new ideas (F 7) and a real, corroborated portability pain, but it is the weakest on both viability counts: the precise "portable cross-tool MCP memory" wedge is already shipped by Mem0/OpenMemory, Zep and Supermemory (defensibility 3), WTP is unevidenced, native memory is now free-tier, and the growth loop is thin. Easy to build is not the constraint; an occupied wedge with no evidenced WTP is.
+**Biggest unknown:** Is the cross-tool/portability benefit *felt* strongly enough to pay for — over both free-tier native memory (good enough for single-tool operators) and the free CONTEXT.md workaround — when Mem0/OpenMemory already ship a shared-across-clients MCP memory server?
+**De-risking step:** None worth a full build yet — before anything, put a landing page offering "one memory that follows you across Claude, Cursor and your own agents, yours to export" in front of solo operators and measure email/deposit conversion against the fact that Mem0/OpenMemory already exist for free; park unless portability pulls real paid intent.
+
+---
+
 ## Top 3 recommendation
 
-The new round does not change the top tier's shape but adds a sharper framing of the
-run's single best opportunity. **Billback (IDEA-11) ties Aftercare at 7.00 and is the
-more de-risked framing of the same whitespace**, so the agency-maintenance play now
-leads the recommendation.
+Round 3 does not change the top tier's shape but adds the most de-risked framing yet of
+the run's single best opportunity. The **agency-maintenance play** now has three framings
+clustered at the top — **Aftercare (7.00)**, **Billback (7.00)** and the new
+**Keepwell (6.75)** — all exploiting the same cleanest unoccupied slot in the run
+(nobody sells the white-label freelancer→client packaging/billing layer). It remains the
+run's clear lead.
 
-1. **IDEA-11 Billback / IDEA-03 Aftercare (7.00)** — The same, best-evidenced demand (SIG-03/15, month-4 churn + the "unpaid integration janitor" trap) on the cleanest unoccupied slot in the run (nobody sells the white-label freelancer→client packaging/billing layer). **Pursue Billback as the sharper framing**: it removes Aftercare's "will they sell a report?" unknown by attaching to firefighting the freelancer is already forced to do. **Highest-priority validation:** measure real per-agent breakage frequency with 6 freelancers, then test whether their SMB clients will tap "approve a paid fix" at a stated price before any build.
-2. **IDEA-01 AgentProbe (6.65)** — The most directly-quoted pain in the set and a tight skill fit, but it must prove it can clear the free-OSS floor. **Highest-priority validation:** show the per-step-diff replay to 10 builders already on free OSS and count how many switch or pay vs. "my tests cover it." (Prefer AgentProbe over its reframe Rehearse, which scored *lower* at 5.90 because a free, OpenAI-owned promptfoo action already occupies the PR surface.)
-3. **IDEA-07 ProofKit (6.65)** — Real trust-wall demand plus a built-in growth loop that fits the founder's distribution goal, but the whole thesis rests on one unproven claim. **Highest-priority validation:** A/B a real seller's landing page with vs. without the ProofKit report and measure buyer conversion lift — no lift kills it cheaply.
+1. **Agency-maintenance: Keepwell (6.75) / Billback (7.00) / Aftercare (7.00)** — The same best-evidenced demand (SIG-03 strong month-4 churn + SIG-15 the "unpaid integration janitor" trap, now with real $1k–5k/mo retainer price points) on the cleanest whitespace. **Keepwell is the most de-risked billing model** (a flat, breakage-independent per-agent fee riding an *evidenced* retainer norm — it removes Billback's "will the client approve each paid fix?" unknown and Aftercare's "will they sell a report?" unknown), but it stakes itself on a harder auto-remediation build, which is why it scores just under its parents. **Highest-priority validation:** with 6 freelancers, inventory the actual recurring failure classes across their client agents and measure what share is safely auto-remediable, while pre-selling the branded status page + flat per-agent price into an existing retainer — before building the remediation engine.
+2. **IDEA-01 AgentProbe (6.65)** — The most directly-quoted dev-tool pain in the run and a tight skill fit, but it must prove it can clear the free-OSS floor. **Highest-priority validation:** show the per-step-diff replay to 10 builders already on free OSS and count how many switch or pay vs. "my tests cover it." (Prefer AgentProbe over its reframe Rehearse, which scored lower at 5.90 against a free, OpenAI-owned promptfoo action.)
+3. **Trust wall: ProofKit (6.65) / Backstop (6.40)** — Real trust-wall demand (SIG-06/09) with a built-in growth loop that fits the founder's distribution goal. **Backstop is the de-risked framing** — it moves trust off ProofKit's discredited self-issued score onto the buyer's own data + an enforced refund — but hinges on builders being willing to stake a real guarantee. **Highest-priority validation:** offer the "trial on your own data + money-back if it fails an agreed bar" flow to 8 indie sellers and measure how many turn the guarantee *on*; if they take the proof but refuse the refund, A/B the proof-only flow for buyer-conversion lift.
 
-> Honorable mentions. **IDEA-04 Hatch** remains the strongest *motivation* fit (the monetization layer for agent makers + a public-page growth loop the founder explicitly wants) at 6.40. Of the new ideas, **IDEA-15 SwapStep (6.00, Iterate)** is the best expression of the founder's cheap-multi-model-routing edge and has the strongest dated "why now" in the run, but it is capped at the floor by a *confirmed* Zapier competing-app policy (§2(i)) — if pursued, ship the free audit tool first (platform-independent) and get a written policy read before building the paid Zapier AI action.
+> Honorable mentions. **IDEA-04 Hatch (6.40)** remains the strongest *motivation* fit (the monetization layer for agent makers + a public-page growth loop the founder explicitly wants). Of the Round-3 new-signal plays, **IDEA-18 Pier (6.30, Iterate)** has the strongest demand (SIG-16) and the founder's best skill fit but the most commoditized wedge — a *free official* MCP conformance suite + $5/mo hosting — so it must prove recurring "keep-it-running" value above the free baseline; **IDEA-19 Runnable (6.00, Iterate)** is the cleanest whitespace (no template marketplace verifies that templates run) and the one thesis-permitted one-sided marketplace, worth a no-build verified-badge test. **IDEA-20 Throughline (5.90, Park)** is easy to build but its exact cross-tool-memory wedge is already shipped by Mem0/OpenMemory with no evidenced WTP — park unless portability pulls real paid intent.
