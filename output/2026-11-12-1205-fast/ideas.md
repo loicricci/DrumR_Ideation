@@ -47,6 +47,19 @@
   barrier for small experts:** no monthly fee and model costs covered, so Avee
   pays more than Delphi's estimated "85% minus $79/mo" below ~9 paying
   subscribers (estimate, orchestrator calculation).
+- **Trust = pedigree, not personality (founder input, this run):** credibility
+  comes from **verifiable credentials** (degree or PhD, years of experience,
+  school, previous or current company or institution), not from the
+  expert's name or fame; the name could even be hidden. Consequences:
+  (1) supply widens from influencers to any credentialed professional;
+  (2) users can **discover by credentials** (e.g. "marketing · Harvard ·
+  20 yrs FMCG"), so a new expert can earn without an audience, which partly
+  solves cold start alongside expert-led sharing; (3) **automated credential
+  verification** (diplomas, e.g. Europass digital credentials; employment via
+  work-email domain or LinkedIn) becomes the core asset and the main build.
+  Risks: employer policy for current employees, and K7 liability if
+  verification is weak. Closest precedent to check: JustAnswer (verified
+  professionals shown by credential).
 - **Solution wedge:** The product exists (Avee V2, v0.6.0): create an agent,
   feed it documents/links/updates (auto-ingested into RAG + semantic memory),
   publish it publicly or privately, with human escalation. The wedge under test
