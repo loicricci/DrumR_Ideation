@@ -45,9 +45,10 @@ country, run one at a time.
 
 Follow `.claude/commands/handoff.md` Steps 3–5 for each idea, with
 `gate_decision: "pass"` and `recommendation: Advance`. Give the `handoff`
-subagent the idea's "Ready for P/S Fit" brief from `scorecard.md` as the
-starting point for `persona` and `risks` (assumptions to test, riskiest
-first). Ideas in different runs or with different IDs write separate files, so
+subagent the idea's "Ready for P/S Fit" note from `scorecard.md` as the
+starting point. Keep the export a first view: a broad persona, and open
+questions on persona, problem and solution. P/S Fitter defines the hypotheses
+and tests. Ideas in different runs or with different IDs write separate files, so
 run them in parallel.
 
 The output must follow `templates/project-start.yaml` exactly. That's the P/S

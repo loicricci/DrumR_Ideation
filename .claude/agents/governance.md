@@ -244,11 +244,12 @@ Write `<run-dir>/scorecard.md` containing:
    rationale, the composite, the checklist (G1–G3, H1–H3), the recommendation,
    the biggest unknown, and a **"For the founder"** note: why this idea ranks
    above or below its neighbours, and what evidence would move it.
-   For every **Advance** idea, add a **"Ready for P/S Fit"** brief: the target
-   persona (who, where to find the first 10), the edge in one line, and the
-   **assumptions to test**, riskiest first (each with category
-   desirability/viability/feasibility, why it's uncertain, and the cheapest
-   test). This is the bridge into `/handoff`.
+   For every **Advance** idea, add a short **"Ready for P/S Fit"** note that
+   keeps things open: the broad target (candidate segments, none pre-selected),
+   the problem space, the solution direction, the edge in one line, and the
+   **open questions** on persona, problem and solution. Don't write sharp
+   hypotheses or tests: P/S Fitter runs its own rounds on persona, problem and
+   solution and defines them.
 3. A **Top 3 recommendation**: which ideas to pursue first and the single
    highest-priority validation step for each.
 

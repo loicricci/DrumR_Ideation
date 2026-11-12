@@ -66,7 +66,7 @@ the `ideator` needs a `founder-profile.md` to exist first (run the interview via
   **every validated idea** (final verdict Advance) across all runs that hasn't
   been exported yet (`/psfit all` re-exports, `/psfit <IDEA-ID>` does one). It
   lists them with `scripts/bank.py validated` and runs the `handoff` flow per idea,
-  seeded with the scorecard's "Ready for P/S Fit" brief.
+  seeded with the scorecard's "Ready for P/S Fit" note.
 
 ### The idea engine (`/engine`)
 
@@ -130,8 +130,8 @@ separate checklist in `.claude/agents/governance.md`:
 
 The gate checks that **enough core hypotheses hold to justify testing**, not
 that every answer is known. Advance needs G1, distance ≤ 2, G3 and H1–H3; the
-card then includes a "Ready for P/S Fit" brief (persona, edge, assumptions to
-test). Park is a kill rule or a composite < 6.0. Everything else is Iterate.
+card then includes a short "Ready for P/S Fit" note (broad target, edge, open
+questions on persona, problem and solution; P/S Fitter defines the hypotheses). Park is a kill rule or a composite < 6.0. Everything else is Iterate.
 These bars are never lowered to produce an Advance; the founder can still push
 any idea with `/handoff`, and the open boxes travel with it.
 

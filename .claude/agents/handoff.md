@@ -79,7 +79,12 @@ Follow `templates/project-start.yaml` exactly, and use the quality bars:
 
 - `project.one_liner` ≤ 25 words, naming the persona and the pain.
   Bad: "An AI platform that revolutionises finance for SMBs."
-- `persona.name` specific enough to find 10 of them this week. `role` is a job,
+- **Keep it a first view.** P/S Fitter runs its own rounds on persona, problem
+  and solution and defines the hypotheses. Don't pre-select a niche, a problem
+  framing or a solution form: the persona is broad, with candidate segments
+  listed in `context`; `solution.hypothesis` is the general direction;
+  `mvp_shape` leaves the test shape to P/S Fitter.
+- `persona.name` broad but concrete (who, where), with places to find them. `role` is a job,
   not an industry. `where_they_are` lists named places. `not_this_persona` has
   at least one exclusion.
 - `problem.in_their_words`: the pain as the persona says it — ideally one of
@@ -91,8 +96,9 @@ Follow `templates/project-start.yaml` exactly, and use the quality bars:
   services found. `price` is the public price only.
 - `market`: conditions with source and date; `size_signal` only if sourced.
 - `solution.wedge` must point at a specific `why_insufficient`.
-- `risks`: 3–7, **riskiest first**, each with a category and evidence ids.
-  Start from the scorecard's biggest unknown.
+- `risks`: 3–7 **open questions**, at least one each on persona, problem and
+  solution, each with a category, why it's uncertain and evidence ids. Leave
+  `how_to_test` empty: P/S Fitter designs the tests.
 - `ideation`: copy rank, D/V/F scores and composite from `scorecard.md`;
   `gate_decision`: `"pass"` or `"founder_push"` as the orchestrator says;
   `recommendation`: Advance / Iterate / Park from the scorecard;

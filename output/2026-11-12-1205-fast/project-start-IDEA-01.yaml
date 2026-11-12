@@ -6,7 +6,7 @@ meta:
   generated_by: "drumr-ideation-kit/handoff-v1"
   parent_idea_id: ""
   warnings:
-    - "TWO SIDES, ONE PERSONA EXPORTED. This idea is a two-sided marketplace. The persona below is the SUPPLY side (credentialed solo consultants) because that is who the founder must recruit first; the DEMAND side (their audiences) is described in persona.context and notes. Do not merge them — P/S Fit should test supply recruitment and audience WTP as two steps of one pre-sell."
+    - "TWO-SIDED, FIRST VIEW ONLY. The persona is deliberately broad (credentialed independent experts and their audiences); no segment, problem framing or solution form is pre-selected. Risks are open questions on persona, problem and solution for P/S Fitter to turn into its own hypotheses and tests."
     - "Evidence quality: 10 verbatim customer quotes from 5 distinct sources were reached, but only 4 are strength: strong (E02, E25, E26 on the supply-side pain; the rest are older than 24 months or second-hand and marked weak). Several pain items are from French business podcasts/blogs (type: article) rather than first-person customer quotes, because direct French customer verbatims from Reddit FR / freelance forums were unfetchable this run (reddit.com/old.reddit.com blocked; site:reddit.com returned no threads, per signals.md)."
     - "A few WTP/competitor items (JustAnswer FR billing E19, JustAnswer credential model E18, GPT Store E23, audience-distrust E22) are search-summary paraphrases, not pages fetched verbatim — all marked strength: weak."
     - "Market size_signal for the French persona is unsourced — no reliable public count of independent management/strategy consultants in France was found. Left empty rather than invented."
@@ -17,14 +17,14 @@ source:
 
 project:
   name: "Usage-paid expert agents"
-  one_liner: "Independent French consultants hit an income ceiling selling their time and re-answering the same questions; their audiences can't reach them on demand."
+  one_liner: "Credentialed French experts hit an income ceiling selling their time and re-answering the same questions; their audiences can't reach them on demand."
   country: "FR"
   language: "fr"
 
 persona:
-  name: "Independent French management/strategy consultant with a verifiable pedigree and a small audience"
-  role: "Solo independent consultant (consultant indépendant) selling advisory days"
-  context: "Works solo, bills a TJM (day rate, typically ~500-800 EUR/day), income capped by a full calendar; revenue plateaus around 100-150k EUR/year because everything is sold as time. Has a verifiable pedigree (degree/grande école, years of experience, named former employer) and a modest audience (LinkedIn following, newsletter, past clients) that asks the same questions repeatedly. DEMAND side served through them: those audiences — ambitious professionals and past clients — who want on-demand answers from that specific trusted consultant, more grounded than a general chatbot. Budget authority: the consultant controls their own tools and pricing."
+  name: "Credentialed independent experts in France and their audiences (first view, to be refined in P/S Fit)"
+  role: "Independent expert who sells their expertise (consulting, coaching, advisory)"
+  context: "First view, deliberately broad. Supply side: solo experts with a verifiable background (degree, years of experience, employers) whose income is capped by selling time and who answer the same questions repeatedly. Demand side: the people who follow or hire them and want on-demand access to that expertise. Candidate segments for P/S Fit to explore include independent strategy and management consultants, coaches, fractional executives and specialist advisors; none is pre-selected here."
   where_they_are:
     - "Malt (malt.fr) — freelance consultant marketplace"
     - "Comet (comet.co) — freelance/consultant community"
@@ -136,9 +136,9 @@ market:
       target_persona: "Consumers with a specific legal/medical/vet/tech question"
 
 solution:
-  hypothesis: "A credentialed French consultant publishes an AI agent (trained on their knowledge and fronted by their verified pedigree) that answers their audience 24/7 and produces deliverables, so the consultant earns passively by usage while their audience gets on-demand access to that specific trusted expert."
+  hypothesis: "Credentialed experts publish an AI agent trained on their knowledge and fronted by their verified background, which answers their audience on demand and can produce deliverables; users subscribe to the platform and experts earn by usage. Form and segment to be defined in P/S Fit."
   wedge: "Automated verified credentials as the trust frame + usage-based payouts with no monthly fee to the expert and model costs covered + multi-expert deliverables — aimed squarely at Delphi's 'monetization isn't built in' gap (E16) and Miria's premium, fame-gated framing (E11)."
-  mvp_shape: "Recruit 3-5 credentialed consultants from one named niche, publish credential-fronted agents with one paid deliverable on the existing Avee V2 product, and pre-sell their existing audiences a one-to-one subscription (landing page + Stripe checkout)."
+  mvp_shape: "Avee V2 already exists (agents, knowledge ingestion, public/private access, escalation). The smallest test shape is left to P/S Fitter."
   not_doing:
     - "Regulated advice categories (health, finance, legal) in the wedge"
     - "Per-agent subscriptions (platform subscription with usage limits only — founder decision)"
@@ -384,33 +384,32 @@ evidence_gaps:
   - "Miria and Delphi do not disclose their creator revenue split, so the competitive payout bar is unverified."
   - "No independent French user reviews/tests of Miria or Delphi were found — French coverage is press or vendor pages only."
 
-risks:
-  - assumption: "An expert's own audience will pay a recurring subscription for that expert's AI agent — not the human."
+risks:                           # open questions for P/S Fitter; it defines the hypotheses and tests
+  - assumption: "Persona: which expert segment, and which audience, feel this most and would adopt it first?"
     category: "desirability"
-    why_uncertain: "The strongest proven WTP is for reaching the human (Intro premium calls, JustAnswer live experts) or for a self-set price; a weak clone draws 'just like a normal ChatGPT chat, no real reason to use this' (E17), and audiences say 'it feels fake, I want the real person'. Recurring WTP for AI delivery at Avee's price is the core unproven leap."
-    evidence_ids: ["E17", "E20", "E13"]
-    how_to_test: "Pre-sell 3-5 recruited consultants' existing audiences a one-to-one AI subscription (landing page + Stripe checkout) and measure paid conversion."
-  - assumption: "Credential verification can be automated at acceptable accuracy."
-    category: "feasibility"
-    why_uncertain: "Load-bearing for the trust frame, K2 (solo ops) and K7 (liability). Diplomas via Europass and employment via work-email/LinkedIn are plausible, but employer policy for current employees and edge cases threaten automation; JustAnswer shows third-party credential verification is doable but non-trivial."
-    evidence_ids: ["E18"]
-    how_to_test: "Run the 3-5 recruits through an automated Europass + work-email/LinkedIn check and measure the share cleared without manual review."
-  - assumption: "Users choose Avee over Miria and Delphi for this job."
+    why_uncertain: "Evidence covers consultants, coaches and creators broadly (E02, E25, E26, E30) and competitors target different groups (Miria: well-known founders, E11; Delphi: creators and coaches, E14). No segment has been tested."
+    evidence_ids: ["E02", "E25", "E11", "E14"]
+    how_to_test:
+  - assumption: "Problem: is the sharpest pain on the expert side (time-capped income, repeated questions) or the audience side (on-demand access to a trusted expert), or both?"
     category: "desirability"
-    why_uncertain: "Both are funded and live; Miria is premium and celebrity-led (E11), Delphi is US-first with monetization not built in (E14, E16). Avee's affordable, consumer-facing, credential-first, usage-paid positioning is plausible but unproven against them."
+    why_uncertain: "Supply-side pain is evidenced in French first-hand quotes (E25, E26, E27); audience-side demand is evidenced indirectly (JustAnswer, E18; Miria subscriptions, E11, whose subscriber count is undisclosed, E13), with some audiences preferring the human (E22)."
+    evidence_ids: ["E25", "E26", "E18", "E11", "E13", "E22"]
+    how_to_test:
+  - assumption: "Solution: which form fits best (Q&A agent, deliverables such as decks or designs, escalation to the human), and does a verified-credential framing make users choose it over Miria and Delphi?"
+    category: "desirability"
+    why_uncertain: "Competitors are live and funded (E11, E14); a weak clone is judged generic (E17). The credential-first and deliverables angles are plausible but untested."
     evidence_ids: ["E11", "E14", "E17"]
-    how_to_test: "In the pre-sell, A/B the credential-first + affordable framing against a plain 'AI clone' framing and track conversion; ask declined users which alternative they'd use."
-  - assumption: "Inference and deliverables cost stays under the fair-use cap, so unit economics hold."
+    how_to_test:
+  - assumption: "Platform subscription with usage limits keeps model and deliverable costs below revenue per subscriber."
     category: "viability"
-    why_uncertain: "The ~40-45% structural margin and K4 depend on the fair-use cap + media-on-credits actually holding on real heavy users; the revenue model shows a single power user on a frontier-model agent turns margin negative without the cap (revenue-model.md sections 2-3)."
+    why_uncertain: "Economics depend on usage limits and credits holding with real heavy users (revenue-model.md, run 2026-11-12-1205-fast)."
     evidence_ids: []
-    how_to_test: "Instrument the pilot cohort's token/credit usage against the cap and confirm cost C < net N per subscriber in practice."
-  - assumption: "The expert-led sharing loop produces low-CAC signups."
-    category: "viability"
-    why_uncertain: "The distribution bet is that experts share their own agent with their own audience (+10% referral). Some credible experts refuse on trust grounds (E21), and the GPT Store precedent shows usage-based AI payouts stayed invite-only and paid most builders $0 (E23)."
-    evidence_ids: ["E21", "E23"]
-    how_to_test: "Give the recruited experts a shareable link + referral bonus and measure signups per expert-share."
-
+    how_to_test:
+  - assumption: "Expert credentials can be verified automatically."
+    category: "feasibility"
+    why_uncertain: "Central to the trust framing; diplomas (Europass) and employment (work email, LinkedIn) are plausible routes, with edge cases such as employer policy (E18)."
+    evidence_ids: ["E18"]
+    how_to_test:
 ideation:
   rank: 1
   scores:

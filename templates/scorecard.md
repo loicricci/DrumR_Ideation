@@ -37,10 +37,10 @@
 **De-risking step:** <the one experiment or reframe to run next>
 **For the founder:** <why it ranks above/below its neighbours; what evidence would move it up or down>
 
-<!-- Advance ideas only -->
+<!-- Advance ideas only. Keep it open: P/S Fitter defines hypotheses and tests. -->
 **Ready for P/S Fit**
-- **Persona:** <who exactly; where to find the first 10>
+- **Broad target:** <who, broadly; candidate segments, none pre-selected>
+- **Problem space:** <the pain area, both sides if two-sided>
+- **Solution direction:** <the general shape, not a specific form>
 - **Edge:** <one line, vs the closest competitor>
-- **Assumptions to test (riskiest first):**
-  1. <assumption> — <desirability|viability|feasibility> — <why uncertain> — <cheapest test>
-  2. <…>
+- **Open questions:** persona: <…>; problem: <…>; solution: <…>
