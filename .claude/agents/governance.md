@@ -86,6 +86,19 @@ guesswork.
   job is strong evidence that the market and demand are real. Differences
   between its model and this idea are a question for **Defensibility** and the
   **biggest unknown**, not a reason to discount the market signal.
+- **Read competition as market proof.** At the idea stage, competitors doing
+  the same business are usually the best sign that demand exists; an empty
+  market usually means demand isn't there yet (only rarely a hidden
+  opportunity, and only with strong evidence of pain). The strongest pattern
+  is **a proven market plus an edge to enter it differently**:
+  - a model proven elsewhere (funded or revenue-making competitors) and an
+    **unserved geography, language or regulatory zone** where nobody does it yet;
+  - or a proven market where the idea does something the incumbents don't
+    (positioning, pricing, trust, distribution, format).
+  Score this pattern up on Market size, Timing and Defensibility, and say what
+  protects the edge (how fast could the incumbent copy or localise?). An
+  idea with no competitors anywhere scores Demand from pain evidence alone and
+  names "is there a market at all?" as its biggest unknown.
 - **Refill rounds.** When the orchestrator says this is round N, score only the
   new IDs it lists. Carry every earlier idea's scores and gate forward
   **verbatim** — never re-score an idea that did not change. Rewrite the ranked
