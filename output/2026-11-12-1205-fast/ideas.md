@@ -1,0 +1,64 @@
+# Ideas — run 2026-11-12-1205-fast
+
+> Single-idea run. The founder asked to score **Avee V2 with usage-based expert
+> payouts** against governance, instead of generating 5 new ideas. The idea is
+> written by the orchestrator from the founder's brief (`avee-brief.md`) and the
+> stress-tested revenue model (`revenue-model.md`, v1 spec in section 7). It is
+> neutral and unscored.
+
+---
+
+## IDEA-01 — Avee: expert agents paid by usage
+
+- **One-liner:** An all-access subscription to AI agents trained by real
+  experts (consultants, coaches, advisors, creators, founders), where each
+  subscriber's net contribution is paid out to the experts whose agents that
+  subscriber actually used.
+- **Target customer:** Two sides. **Supply:** solo experts with a knowledge
+  base and an audience that asks repeat questions, who want an agent that
+  answers 24/7 and escalates only what it can't handle. **Demand:** people who
+  want on-demand answers from specific experts they trust, more grounded than a
+  general chatbot. No single expert segment is chosen yet.
+- **Problem / job to be done:** Experts trade time for money and answer the
+  same questions over and over. Their audiences can't reach them on demand.
+  Today experts use FAQs, courses, communities (Circle, Skool), Patreon /
+  Substack, or AI "digital clone" tools they price and market themselves.
+  Subscribers make do with general chatbots that lack the expert's specific
+  knowledge and voice.
+- **Solution wedge:** The product exists (Avee V2, v0.6.0): create an agent,
+  feed it documents/links/updates (auto-ingested into RAG + semantic memory),
+  publish it publicly or privately, with human escalation. The wedge under test
+  is the **monetization layer**: one $20–25/month All-Access plan, payouts by
+  usage, and a public per-agent earnings dashboard.
+- **Business model:** User-centric net contribution share, calculated per
+  subscriber per month. Net revenue after fees and reserve, minus metered
+  inference cost, gives the contribution. That is split 50% platform / 50%
+  creators, and the creator half goes to each agent by tier-weighted message
+  share. A fair-use inference cap (~$3/subscriber/month) protects the split;
+  image/video/voice run on credits. Extra layers: referral bonus for experts who
+  bring subscribers, paid human escalations, and expert-priced private-agent
+  add-ons. **Estimate:** at $24.99 with $3 inference, an agent that gets 50% of
+  a subscriber's usage earns ~$5.18 and the platform keeps ~41% of gross. At
+  $20, ~$3.98 and ~40%.
+- **Founder edge:** The product is already built by the founder. Cheap,
+  routed inference is the variable the payout formula depends on. Agent-design
+  taste. Solo technical speed.
+- **Why now:** RAG + memory + cheap model routing make an expert-specific agent
+  good and cheap enough to serve at a flat price. Creator-economy payout rails
+  (Stripe Connect) are commoditised. Platforms are experimenting with usage-based
+  creator payouts for AI agents (to be verified by market research).
+- **Biggest risk:** Two-sided cold start at under 50 users: subscribers won't
+  pay $20–25 without experts they already know, and experts won't bring their
+  audience for ~$3–5 per engaged subscriber when Patreon/Substack let them keep
+  ~90% of their own price.
+- **Signals:** none (no signals.md in this run; the founder reports under 50
+  users and no demand evidence yet).
+- **Thesis check:** At risk on **K6** (no evidenced pain signal in this run).
+  At risk on **K7** (expert-advice agents in health/finance/legal; avoidable by
+  excluding regulated categories). The marketplace shape needs one side
+  seeded by the founder alone. The 50+ prebuilt agents seed demand-side demo
+  traffic but not paying supply. K1 passes (self-serve). K2 passes if payouts
+  are automated via Stripe Connect. K3 passes (the product exists; the
+  billing/payout layer is ≤ 4 weeks). K4 passes only with the cost cap.
+  K5 is weak (no persona named).
+- **Parent:** none
