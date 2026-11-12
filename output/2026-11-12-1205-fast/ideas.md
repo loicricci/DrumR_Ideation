@@ -72,6 +72,20 @@
   questions. Note: Delphi already does group-by-background discovery
   ("Stanford alums"), so the differentiator is verification and professional
   depth, not grouping itself.
+- **Deliverables, not just answers (founder input, this run):** agents carry
+  **tools** as well as knowledge: generate a pitch deck, PPT slides, images or
+  designs, shaped by the expert's judgment and style ("get your deck from the
+  best entrepreneur or VC", "get a visual from the best designer"). Users can
+  request **several versions**, from one agent or from **several owners**
+  (e.g. a VC's deck vs a founder's deck vs a designer's deck) and compare them.
+  Effects: (1) higher willingness to pay than Q&A (deliverables have a market
+  price); (2) multi-owner comparison creates **cross-agent usage**, so the
+  usage-share payout spreads across experts; (3) a clear gap vs Delphi's chat-only
+  clones. Risks: generation cost (decks and images run on **credits**, per
+  revenue-model.md); generic AI deck tools (Gamma, Beautiful.ai) already render
+  slides, so the moat is the expert's judgment, not the renderer; and honesty
+  of the claim (an AI deck "from a VC" must be framed as built with that
+  expert's agent, with an optional paid human review via escalation).
 - **Solution wedge:** The product exists (Avee V2, v0.6.0): create an agent,
   feed it documents/links/updates (auto-ingested into RAG + semantic memory),
   publish it publicly or privately, with human escalation. The wedge under test
