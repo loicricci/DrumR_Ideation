@@ -385,7 +385,7 @@ evidence_gaps:
   - "No independent French user reviews/tests of Miria or Delphi were found — French coverage is press or vendor pages only."
 
 risks:
-  - assumption: "An expert's own audience will pay a recurring subscription (~20-25 EUR/mo) for that expert's AI agent — not the human."
+  - assumption: "An expert's own audience will pay a recurring subscription for that expert's AI agent — not the human."
     category: "desirability"
     why_uncertain: "The strongest proven WTP is for reaching the human (Intro premium calls, JustAnswer live experts) or for a self-set price; a weak clone draws 'just like a normal ChatGPT chat, no real reason to use this' (E17), and audiences say 'it feels fake, I want the real person'. Recurring WTP for AI delivery at Avee's price is the core unproven leap."
     evidence_ids: ["E17", "E20", "E13"]
@@ -427,7 +427,7 @@ ideation:
 notes: |
   Opinions for P/S Fitter (not inputs):
   - This is genuinely a TWO-SIDED marketplace exported as one supply-side persona. The single pre-sell test the scorecard proposes (recruit 3-5 credentialed consultants, pre-sell their audiences) exercises both sides at once; treat supply recruitment and audience WTP as two measured steps, not one.
-  - Lead the creator pitch with the corrected own-audience economics (~8-9.55 EUR per engaged subscriber at a 20 EUR price, no monthly fee, infra + deliverables included) and the small-expert wedge where Avee beats Delphi outright (E14, E16). Do NOT pitch 'Europe-based, nothing like this in France' — that is refuted with high confidence (Miria FR, Pickmybrain EE, Coachvox UK, Delphi reachable from the EU). The real edge is the credential-verification + usage-payout + deliverables combination.
+  - Lead the creator pitch with the own-audience economics (experts earn from usage with no monthly fee, and model costs and deliverables are covered; the split is calibrated in P/S Fit) and the small-expert wedge where Avee beats Delphi outright (E14, E16). Do NOT pitch 'Europe-based, nothing like this in France' — that is refuted with high confidence (Miria FR, Pickmybrain EE, Coachvox UK, Delphi reachable from the EU). The real edge is the credential-verification + usage-payout + deliverables combination.
   - Start with ONE named niche (independent management/strategy consultants) before widening to coaches/advisors — the French pain evidence (E01-E10, E25-E26) clusters on time-capped solo consultants/coaches who are tired of repeating the same assignments.
   - Governance scored under the v6.1 checklist (composite ranks only; Advance decided by G1-G3 + H1-H3, G2 distance 2). No challenge-IDEA-01.md was found in the run directory, so the governance scores stand as the final verdict.
 
