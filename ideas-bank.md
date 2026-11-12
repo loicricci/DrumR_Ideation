@@ -27,7 +27,7 @@
 | 2026-11-09-1957 | IDEA-10 | Open-Entry Underdog League | 5.40 | Park | — | Park | — | — |
 | 2026-11-09-1957 | IDEA-08 | Clip Factory (clip-loop-first) | 5.25 | Park | — | Park | — | — |
 | 2026-11-09-1957 | IDEA-02 | FactFight (fact-check battles) | 4.25 | Park | — | Park | — | — |
-| 2026-11-12-1205-fast | IDEA-01 | Avee: expert agents paid by usage | 6.65 | Iterate | — | Iterate | — | — |
+| 2026-11-12-1205-fast | IDEA-01 | Avee: expert agents paid by usage | 7.05 | Iterate | — | Iterate | — | — |
 
 ## Notes
 
