@@ -27,9 +27,20 @@
 - G1 — Thesis (no kill rule fires): <pass / fail> — <reason>
 - G2 — Founder–target distance: <0 Inside / 1 Adjacent / 2 Cold but mapped / 3 Far> — <route to the first 10>
 - G3 — Riskiest assumption testable in ≤ 4 weeks: <pass / fail> — <assumption + test>
-- G4 — Idea strength (≥ 7.5 Advance, < 6.0 Park): <value> — <band>
+- H1 — Market exists (Desirability ≥ 7): <pass / fail> — <converging evidence>
+- H2 — Money can work (Monetization ≥ 6, K4): <pass / fail> — <model>
+- H3 — Named edge vs closest competitor: <pass / fail> — <edge, and the competitor>
+- Park floor (composite < 6.0): <value>
 
 **Recommendation:** <Advance / Iterate / Park> — <one-line reason naming the deciding check(s). Advisory: the founder decides>
 **Biggest unknown:** <the single question that would most move this score>
 **De-risking step:** <the one experiment or reframe to run next>
 **For the founder:** <why it ranks above/below its neighbours; what evidence would move it up or down>
+
+<!-- Advance ideas only -->
+**Ready for P/S Fit**
+- **Persona:** <who exactly; where to find the first 10>
+- **Edge:** <one line, vs the closest competitor>
+- **Assumptions to test (riskiest first):**
+  1. <assumption> — <desirability|viability|feasibility> — <why uncertain> — <cheapest test>
+  2. <…>

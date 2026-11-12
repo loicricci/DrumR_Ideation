@@ -118,12 +118,16 @@ separate checklist in `.claude/agents/governance.md`:
 - G1: no thesis kill rule fires.
 - G2: founder–target distance, 0 (inside) to 3 (far); 3 blocks Advance.
 - G3: the riskiest assumption is testable in ≤ 4 weeks.
-- G4: composite ≥ 7.5 for Advance; < 6.0 means Park.
+- H1: market exists (Desirability ≥ 7).
+- H2: money can work (Monetization ≥ 6, K4 passes).
+- H3: a named, plausible edge vs the closest competitor (proof not required).
 
-Advance needs G1, distance ≤ 2, G3 and composite ≥ 7.5. Park is a kill rule or a composite
-< 6.0. Everything else is Iterate. The thresholds are never lowered to produce
-an Advance; instead, the founder can push any idea with `/handoff`, and the
-open boxes travel with it.
+The gate checks that **enough core hypotheses hold to justify testing**, not
+that every answer is known. Advance needs G1, distance ≤ 2, G3 and H1–H3; the
+card then includes a "Ready for P/S Fit" brief (persona, edge, assumptions to
+test). Park is a kill rule or a composite < 6.0. Everything else is Iterate.
+These bars are never lowered to produce an Advance; the founder can still push
+any idea with `/handoff`, and the open boxes travel with it.
 
 ## House style
 

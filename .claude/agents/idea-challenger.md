@@ -106,8 +106,9 @@ This section is mandatory when Section 3 contains any disagreements.
   `Composite = 0.40 × Desirability + 0.35 × Viability + 0.25 × Feasibility`
 - Re-run the gate checklist from `.claude/agents/governance.md` (G1 thesis,
   G2 founder–target distance 0–3, G3 riskiest assumption testable in
-  ≤ 4 weeks, G4 composite) and assign one gate decision:
-  - **Advance**: G1 and G3 pass, distance ≤ 2, and composite ≥ 7.5
+  ≤ 4 weeks, H1 Desirability ≥ 7, H2 Monetization ≥ 6 and K4, H3 named edge)
+  and assign one gate decision:
+  - **Advance**: G1, G3, H1, H2, H3 pass and distance ≤ 2
   - **Park**: a thesis kill rule fires, or composite < 6.0
   - **Iterate**: everything else
 - The composite is the idea score (ranking only). Never lower a score for

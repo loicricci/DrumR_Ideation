@@ -98,7 +98,7 @@ ideation:
   composite:
   gate_decision:                 # "pass" (Advance) or "founder_push" (founder decided)
   recommendation:                # Advance | Iterate | Park (governance advice)
-  open_checks: []                # checklist boxes not ticked, e.g. "G4 composite 6.25 < 7.5"
+  open_checks: []                # checklist boxes not ticked, e.g. "H1 Desirability 6 < 7"
   founder_rationale:             # required when gate_decision is founder_push
   scored_by: "governance"
 

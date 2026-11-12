@@ -4,7 +4,7 @@ description: >
   Use last, after ideas and market research exist, to score and rank every idea
   on Desirability, Viability, and Feasibility using the DrumR rubric. Produces a
   ranking by idea score (composite, used for sorting only) and, separately, a
-  gate decision (Advance / Iterate / Park) from an explicit checklist G1–G4. Reads output/ideas.md and
+  gate decision (Advance / Iterate / Park) from an explicit checklist (G1–G3, H1–H3). Reads output/ideas.md and
   output/market-research.md, writes output/scorecard.md.
 tools: Read, Write
 model: claude-opus-4-8
@@ -208,19 +208,28 @@ line of reason:
 - **G3 — Riskiest assumption is testable:** the single riskiest assumption is
   named, and either evidence already supports it or the founder can test it in
   **≤ 4 weeks** within their stated budget and time.
-- **G4 — Idea strength:** composite **≥ 7.5** for Advance; composite
-  **< 6.0** is a Park signal.
+The gate validates **enough core hypotheses to justify testing**. It doesn't
+require all the answers; moat, timing and payment proof are what P/S Fit and
+the market answer. The composite ranks ideas and is **not** a gate threshold
+(except the Park floor below).
+
+- **H1 — Market exists:** demand evidence converges, i.e. Desirability **≥ 7**.
+- **H2 — Money can work:** a plausible model with margin, i.e. Monetization &
+  unit economics **≥ 6**, and K4 passes.
+- **H3 — Named edge:** a stated, plausible difference from the closest
+  competitor (or a credible reason no one serves this yet). Proof that the
+  edge holds is **not** required; that's a P/S Fit question.
 
 Then decide:
 
 - **Park**: G1 fails (reason "thesis kill: K<n> — <why>", whatever the score),
-  **or** composite < 6.0.
-- **Advance**: G1 passes, G2 distance ≤ 2, G3 passes **and** composite ≥ 7.5. Greenlight to
+  **or** composite < 6.0 (the floor for clearly weak ideas).
+- **Advance**: G1, G3, H1, H2 and H3 pass, and G2 distance ≤ 2. Greenlight to
   Problem–Solution Fit.
 - **Iterate**: everything else. Name the failing check(s) and the one
   experiment or reframe that would flip them.
 
-The thresholds are never lowered to get a pass.
+These bars are never lowered to get a pass.
 
 ## Output
 
@@ -232,9 +241,14 @@ Write `<run-dir>/scorecard.md` containing:
    as one word (Advance, Iterate or Park) and the Distance as a digit 0–3.
 2. A **detailed card per idea** (in ranked order) using
    `templates/scorecard.md`: the three dimension scores with sub-scores and
-   rationale, the composite, the checklist G1–G4, the recommendation, the
-   biggest unknown, and a **"For the founder"** note: why this idea ranks above
-   or below its neighbours, and what evidence would move it.
+   rationale, the composite, the checklist (G1–G3, H1–H3), the recommendation,
+   the biggest unknown, and a **"For the founder"** note: why this idea ranks
+   above or below its neighbours, and what evidence would move it.
+   For every **Advance** idea, add a **"Ready for P/S Fit"** brief: the target
+   persona (who, where to find the first 10), the edge in one line, and the
+   **assumptions to test**, riskiest first (each with category
+   desirability/viability/feasibility, why it's uncertain, and the cheapest
+   test). This is the bridge into `/handoff`.
 3. A **Top 3 recommendation**: which ideas to pursue first and the single
    highest-priority validation step for each.
 
