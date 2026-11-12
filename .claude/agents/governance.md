@@ -43,8 +43,17 @@ guesswork.
   Still score it, so the bank records why it was parked.
 - **Signals are evidence.** If `<run-dir>/signals.md` exists, use the signals
   an idea cites as demand evidence alongside the market research. A strong
-  signal with verbatim quotes and WTP evidence can justify Desirability above 7;
-  an idea whose signals are all weak cannot score above 6 on Desirability.
+  signal with verbatim quotes and WTP evidence can justify Desirability above 7.
+- **Absence of evidence is not evidence of absence.** At the idea stage, a
+  criterion with no evidence either way is scored at the **neutral midpoint
+  (5)** and flagged "unknown, test in P/S Fit". Score **below 5 only on
+  disconfirming evidence** (cite it). A missing `signals.md` never parks an idea.
+- **Indirect evidence counts.** A competitor that raised serious funding or
+  earns real revenue in the same job is strong indirect evidence that the
+  market and demand are real, and can justify up to **7** on Demand evidence,
+  Willingness to pay and Market size on its own. Differences between the
+  competitor's model and this idea are a question for **Defensibility** and the
+  **biggest unknown**, not a reason to discount the market signal.
 - **Refill rounds.** When the orchestrator says this is round N, score only the
   new IDs it lists. Carry every earlier idea's scores and gate forward
   **verbatim** — never re-score an idea that did not change. Rewrite the ranked
