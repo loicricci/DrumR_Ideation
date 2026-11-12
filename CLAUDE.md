@@ -4,6 +4,23 @@ This repo is a Claude Code agent kit that turns a rough prompt into a ranked,
 evidence-backed shortlist of product ideas. It mirrors the first stage of the
 DrumR innovation platform (Idea → Problem–Solution Fit → Product–Market Fit).
 
+## What this tool is (and isn't)
+
+This is **not** a source of absolute truth. It's an evidence-based process that
+gathers information and gives the founder:
+
+1. A **relative ranking**: based on what we know, this idea is stronger than
+   that one, judged on coherence with market signals and with the founder profile.
+2. A **readiness checklist** for P/S Fit: which boxes an idea ticks, and which
+   are still open.
+3. **Reasons the founder can learn from**: why an idea ranks where it does and
+   what would change it.
+
+**The founder decides.** Agents recommend; they never tell the founder what
+to do. Any idea can go to P/S Fit when the founder chooses (`/handoff` records
+it as a founder push, listing the open boxes). Missing evidence at the idea
+stage means "unknown, to test in P/S Fit", never "bad".
+
 ## The pipeline
 
 The **orchestrator** (the top-level agent running `/ideate` or `/ideate-fast`)
@@ -33,8 +50,9 @@ the `ideator` needs a `founder-profile.md` to exist first (run the interview via
   `/report` (optionally `/report <run-id>`). It only reformats existing
   artifacts — it never re-scores or re-researches.
   → `output/<run-id>/summary.html`
-- **`handoff`** — on demand, exports an idea that **passed the gate** (Advance)
-  to P/S Fitter, following the handoff requirements v1. Run with
+- **`handoff`** — on demand, exports an idea to P/S Fitter: an Advance idea, or
+  any idea the founder decides to push (recorded as `founder_push` with the open
+  checklist boxes and the founder's reason), following the handoff requirements v1. Run with
   `/handoff <IDEA-ID | all> [run-id]`. The agent mines verbatim customer quotes
   and competitor data and writes the YAML; `scripts/handoff.py` runs the
   self-check and renders the Markdown from the YAML.
@@ -92,10 +110,10 @@ Composite = 0.40 × Desirability + 0.35 × Viability + 0.25 × Feasibility
 To change the emphasis, edit these weights here and tell the governance agent to
 use them.
 
-**Idea score vs gate decision.** The composite is the **idea score**. It ranks
+**Idea score vs recommendation.** The composite is the **idea score**. It ranks
 ideas against each other and nothing else. It measures the idea on evidence,
 never the founder's current situation, and **missing traction is never
-penalized** at the idea stage. The **gate** (Advance / Iterate / Park) is a
+penalized** at the idea stage. The **recommendation** (Advance / Iterate / Park) is a
 separate checklist in `.claude/agents/governance.md`:
 - G1: no thesis kill rule fires.
 - G2: founder–target distance, 0 (inside) to 3 (far); 3 blocks Advance.
@@ -103,7 +121,9 @@ separate checklist in `.claude/agents/governance.md`:
 - G4: composite ≥ 7.5 for Advance; < 6.0 means Park.
 
 Advance needs G1, distance ≤ 2, G3 and composite ≥ 7.5. Park is a kill rule or a composite
-< 6.0. Everything else is Iterate.
+< 6.0. Everything else is Iterate. The thresholds are never lowered to produce
+an Advance; instead, the founder can push any idea with `/handoff`, and the
+open boxes travel with it.
 
 ## House style
 

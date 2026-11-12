@@ -132,8 +132,10 @@ def check(data, evidence, yaml_path):
 
     # gate
     gate = str(g("ideation", "gate_decision") or "").lower()
-    if gate != "pass":
-        f(f'ideation.gate_decision must be "pass" (got "{gate or "empty"}"); failed ideas are not exported')
+    if gate not in ("pass", "founder_push"):
+        f(f'ideation.gate_decision must be "pass" or "founder_push" (got "{gate or "empty"}")')
+    if gate == "founder_push" and blank(g("ideation", "founder_rationale")):
+        f("ideation.founder_rationale is required when gate_decision is founder_push")
 
     # project: one country, one language
     for k in ("name", "one_liner", "country", "language"):
@@ -406,6 +408,12 @@ def render(data, evidence, yaml_path):
     scores = ", ".join(f"{k} {v}" for k, v in (ide.get("scores") or {}).items())
     w(f"Rank {ide.get('rank')} · {scores} · composite {ide.get('composite')} · "
       f"gate {ide.get('gate_decision')} · scored by {ide.get('scored_by')}")
+    if str(ide.get("gate_decision") or "").lower() == "founder_push":
+        w("")
+        w(f"**Pushed by founder decision** (governance recommendation: "
+          f"{ide.get('recommendation') or '—'}). Reason: {ide.get('founder_rationale')}")
+        if ide.get("open_checks"):
+            w("Open checklist boxes for P/S Fit to test: " + "; ".join(map(str, ide["open_checks"])))
 
     if g("notes"):
         w("\n## Notes (opinions, not inputs)\n")

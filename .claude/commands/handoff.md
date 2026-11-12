@@ -11,8 +11,8 @@ model: claude-opus-4-8
 
 **Arguments:** $ARGUMENTS
 
-- **TARGET** — an idea ID (e.g. `IDEA-03`), or `all` for every idea whose gate
-  is **Advance**. Required; if missing, ask.
+- **TARGET** — an idea ID (e.g. `IDEA-03`), or `all` for every idea whose
+  recommendation is **Advance**. Required; if missing, ask.
 - **RUN_ID** — optional; defaults to the most recently created subfolder of
   `output/`. `RUN_DIR` is `output/<RUN_ID>`.
 
@@ -20,12 +20,18 @@ model: claude-opus-4-8
 
 - `RUN_DIR` must contain `founder-profile.md`, `ideas.md`, `market-research.md`
   and `scorecard.md`. If not, say which are missing and what to run, then stop.
-- Only ideas that **passed the gate** are exported. Read the ranked table in
-  `scorecard.md`:
-  - If TARGET is an idea with gate Iterate or Park, tell the user it can't be
-    exported, give its composite and gate reason, and suggest `/boost` or
-    `/challenge`. Stop for that idea.
-  - If TARGET is `all`, collect the Advance ideas. If none, say so and stop.
+- Read the ranked table and the idea's card in `scorecard.md`. **The founder
+  decides**; the recommendation is advice.
+  - **Advance** → export with `gate_decision: "pass"`.
+  - **Iterate or Park** → show the founder the idea's rank, composite and
+    checklist (which boxes are ticked and which are open, and why), then ask
+    with `AskUserQuestion` whether to push it to P/S Fit anyway. Offer:
+    "Push to P/S Fit", "Run /boost or /challenge first", "Not now". If they push,
+    ask for a one-line reason (offer 2–3 options drawn from the card plus
+    "Other") and export with `gate_decision: "founder_push"`, passing the
+    open boxes and the reason to the agent. Never refuse a founder push.
+  - If TARGET is `all`, collect the Advance ideas; if there are none, list the
+    top-ranked ideas and offer the push question above.
 
 ## Step 2 — Country and language
 

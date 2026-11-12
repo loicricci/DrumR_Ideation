@@ -2,7 +2,7 @@
 name: handoff
 description: >
   Use on demand, after governance has scored a run, to export ONE idea that
-  passed the gate (Advance) for P/S Fitter. Mines real, verbatim customer
+  passed the gate (Advance), or that the founder decided to push, for P/S Fitter. Mines real, verbatim customer
   language and competitor data from the web, then writes
   <run-dir>/project-start-<IDEA-ID>.yaml (the machine input, schema in
   templates/project-start.yaml) and, if more than 20 evidence items,
@@ -30,8 +30,10 @@ alpha-2) and **language** (ISO 639-1). Read:
    `<run-dir>/market-research.md`, `<run-dir>/scorecard.md`.
 2. `templates/project-start.yaml` — the exact shape to fill.
 
-If the idea's gate in `scorecard.md` is not **Advance**, stop: failed ideas are
-not exported.
+Export when the orchestrator says the idea is **Advance** (`gate_decision:
+"pass"`) or a **founder push** (`gate_decision: "founder_push"`, with the open
+checklist boxes and the founder's reason). For a founder push, put each open
+box into `risks` (riskiest first) so P/S Fitter tests it.
 
 ## Step 1 — Mine evidence (most of your effort goes here)
 
@@ -92,7 +94,11 @@ Follow `templates/project-start.yaml` exactly, and use the quality bars:
 - `risks`: 3–7, **riskiest first**, each with a category and evidence ids.
   Start from the scorecard's biggest unknown.
 - `ideation`: copy rank, D/V/F scores and composite from `scorecard.md`;
-  `gate_decision: "pass"`, `scored_by: "governance"`. If
+  `gate_decision`: `"pass"` or `"founder_push"` as the orchestrator says;
+  `recommendation`: Advance / Iterate / Park from the scorecard;
+  `open_checks`: the checklist boxes not ticked (empty for pass);
+  `founder_rationale`: the founder's reason (required for founder_push);
+  `scored_by: "governance"`. If
   `<run-dir>/challenge-<IDEA-ID>.md` exists, its final verdict is the one that
   counts: use its scores and composite, and note the governance scores in
   `notes`.

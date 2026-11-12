@@ -29,6 +29,7 @@
 - G3 — Riskiest assumption testable in ≤ 4 weeks: <pass / fail> — <assumption + test>
 - G4 — Idea strength (≥ 7.5 Advance, < 6.0 Park): <value> — <band>
 
-**Gate decision:** <Advance / Iterate / Park> — <one-line reason naming the deciding check(s)>
+**Recommendation:** <Advance / Iterate / Park> — <one-line reason naming the deciding check(s). Advisory: the founder decides>
 **Biggest unknown:** <the single question that would most move this score>
 **De-risking step:** <the one experiment or reframe to run next>
+**For the founder:** <why it ranks above/below its neighbours; what evidence would move it up or down>
