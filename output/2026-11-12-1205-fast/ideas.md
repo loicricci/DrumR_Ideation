@@ -94,8 +94,8 @@
   contribution = subscription − fees − that subscriber's metered model cost;
   50% goes to creators, split by that subscriber's usage across agents, so the
   most-used agents earn most. Per-agent subscriptions (Delphi's model) are
-  rejected as too complex for users. For P/S Fit: test plan tiers and expert
-  acceptance of usage-share payouts, not the per-agent vs platform choice.
+  rejected as too complex for users. The payout split is a parameter
+  to calibrate in P/S Fit and PM Fit, not a hypothesis (founder decision).
 - **Solution wedge:** The product exists (Avee V2, v0.6.0): create an agent,
   feed it documents/links/updates (auto-ingested into RAG + semantic memory),
   publish it publicly or privately, with human escalation. The wedge under test
