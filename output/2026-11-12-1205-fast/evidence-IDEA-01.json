@@ -94,7 +94,7 @@
       "date": "2024-06-26",
       "persona_match": "likely",
       "supports": "problem",
-      "strength": "strong"
+      "strength": "weak"
     },
     {
       "id": "E09",
@@ -106,7 +106,7 @@
       "date": "2024-06-26",
       "persona_match": "likely",
       "supports": "problem",
-      "strength": "medium"
+      "strength": "weak"
     },
     {
       "id": "E10",
@@ -118,7 +118,7 @@
       "date": "2024-06-26",
       "persona_match": "likely",
       "supports": "trigger:1",
-      "strength": "medium"
+      "strength": "weak"
     },
     {
       "id": "E11",
@@ -238,7 +238,7 @@
       "date": "2024-10-01",
       "persona_match": "likely",
       "supports": "wtp",
-      "strength": "medium"
+      "strength": "weak"
     },
     {
       "id": "E21",
@@ -262,7 +262,7 @@
       "date": "2026-01-01",
       "persona_match": "likely",
       "supports": "counter",
-      "strength": "medium"
+      "strength": "weak"
     },
     {
       "id": "E23",
@@ -274,7 +274,7 @@
       "date": "2024-01-01",
       "persona_match": "unclear",
       "supports": "counter",
-      "strength": "medium"
+      "strength": "weak"
     },
     {
       "id": "E24",
@@ -286,7 +286,79 @@
       "date": "2024-05-05",
       "persona_match": "likely",
       "supports": "trigger:2",
-      "strength": "medium"
+      "strength": "weak"
+    },
+    {
+      "id": "E25",
+      "type": "customer_quote",
+      "quote": "80%+ de mon temps passé en prestation revenait à répéter le même type de missions, et je me lassais.",
+      "translation": "80%+ of the time I spent on client work came down to repeating the same type of assignments, and I was getting tired of it.",
+      "source_name": "Substack – De freelance à solopreneur (bilan 1 an)",
+      "url": "https://lauer.substack.com/p/de-freelance-a-solopreneur-bilan",
+      "date": "2025-07-02",
+      "persona_match": "yes",
+      "supports": "problem",
+      "strength": "strong"
+    },
+    {
+      "id": "E26",
+      "type": "customer_quote",
+      "quote": "J'avais envie de créer un actif, plutôt que de revenir à zéro à chaque fois.",
+      "translation": "I wanted to create an asset, rather than starting from scratch every time.",
+      "source_name": "Substack – De freelance à solopreneur (bilan 1 an)",
+      "url": "https://lauer.substack.com/p/de-freelance-a-solopreneur-bilan",
+      "date": "2025-07-02",
+      "persona_match": "yes",
+      "supports": "problem",
+      "strength": "strong"
+    },
+    {
+      "id": "E27",
+      "type": "customer_quote",
+      "quote": "Weekends, vacances, il m'arrive assez fréquemment de travailler quand les autres ne le font pas",
+      "translation": "Weekends, holidays, I quite often end up working when others aren't",
+      "source_name": "Welcome to the Jungle",
+      "url": "https://www.welcometothejungle.com/fr/articles/freelance-liberte-contraintes-salariat",
+      "date": "2022-04-14",
+      "persona_match": "likely",
+      "supports": "problem",
+      "strength": "weak"
+    },
+    {
+      "id": "E28",
+      "type": "customer_quote",
+      "quote": "Le freelancing a été mon meilleur alibi pour travailler tous les jours",
+      "translation": "Freelancing was my best excuse to work every single day",
+      "source_name": "Welcome to the Jungle",
+      "url": "https://www.welcometothejungle.com/fr/articles/freelance-burnout-solution-charge-de-travail",
+      "date": "2022-09-28",
+      "persona_match": "likely",
+      "supports": "problem",
+      "strength": "weak"
+    },
+    {
+      "id": "E29",
+      "type": "customer_quote",
+      "quote": "Je travaillais tout le temps. J'étais dans un état de fatigue permanente",
+      "translation": "I worked all the time. I was in a state of permanent exhaustion",
+      "source_name": "Welcome to the Jungle",
+      "url": "https://www.welcometothejungle.com/fr/articles/freelance-burnout-solution-charge-de-travail",
+      "date": "2022-09-28",
+      "persona_match": "likely",
+      "supports": "problem",
+      "strength": "weak"
+    },
+    {
+      "id": "E30",
+      "type": "customer_quote",
+      "quote": "Ce qui me met en difficulté, c'est tout le côté « prospection », presque marketing de soi-même.",
+      "translation": "What I struggle with is the whole 'prospecting' side, almost marketing yourself.",
+      "source_name": "Espace Autoentrepreneur – interview coach",
+      "url": "https://espace-autoentrepreneur.com/blog/marion-brousse-coach-en-psychologie-positive-lauto-entreprise-cest-etre-a-son-compte-sans-lancer-une-machine-de-guerre",
+      "date": "2024-09-10",
+      "persona_match": "likely",
+      "supports": "problem",
+      "strength": "weak"
     }
   ]
 }

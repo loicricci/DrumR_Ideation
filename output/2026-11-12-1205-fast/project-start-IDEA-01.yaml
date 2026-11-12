@@ -7,7 +7,8 @@ meta:
   parent_idea_id: ""
   warnings:
     - "TWO SIDES, ONE PERSONA EXPORTED. This idea is a two-sided marketplace. The persona below is the SUPPLY side (credentialed solo consultants) because that is who the founder must recruit first; the DEMAND side (their audiences) is described in persona.context and notes. Do not merge them — P/S Fit should test supply recruitment and audience WTP as two steps of one pre-sell."
-    - "French first-hand customer verbatims are thin. Direct Reddit FR / freelance-forum threads could not be fetched (reddit.com and old.reddit.com fetches are blocked this run, per signals.md). The pain evidence leans on French business podcasts (Le Board, Business Infini) and a Qonto blog (type: article), plus English-language first-hand signals (Trustpilot, Substack). Several WTP/competitor items (JustAnswer FR billing, avocat.fr) are search-summary paraphrases, not pages fetched verbatim — marked strength: weak."
+    - "Evidence quality: 10 verbatim customer quotes from 5 distinct sources were reached, but only 4 are strength: strong (E02, E25, E26 on the supply-side pain; the rest are older than 24 months or second-hand and marked weak). Several pain items are from French business podcasts/blogs (type: article) rather than first-person customer quotes, because direct French customer verbatims from Reddit FR / freelance forums were unfetchable this run (reddit.com/old.reddit.com blocked; site:reddit.com returned no threads, per signals.md)."
+    - "A few WTP/competitor items (JustAnswer FR billing E19, JustAnswer credential model E18, GPT Store E23, audience-distrust E22) are search-summary paraphrases, not pages fetched verbatim — all marked strength: weak."
     - "Market size_signal for the French persona is unsourced — no reliable public count of independent management/strategy consultants in France was found. Left empty rather than invented."
     - "Expert payout acceptance was deliberately REMOVED as a risk per founder decision 2026-11-12 (the payout split is a parameter to calibrate in P/S Fit and PM Fit, not a hypothesis). It is not listed under risks."
 
@@ -42,15 +43,15 @@ problem:
   what_it_costs_them: "Revenue is hard-capped by billable days (plateau ~100-150k EUR/year); qualified demand is turned away; unbilled repeat Q&A and overwork lead toward burnout."
   severity_signals:
     - "Revenue plateau explicitly tied to 'selling your time' (E01, E03, E04, E06)"
-    - "Burnout / 'about to crack' from being overbooked (E08)"
-    - "Capacity cap — only one or two coaching slots left (E10)"
-  evidence_ids: ["E01", "E02", "E03", "E04", "E06", "E08", "E09"]
+    - "80%+ of client work is repeating the same type of assignments (E25)"
+    - "Burnout / 'about to crack' from being overbooked (E08); capacity cap — one or two slots left (E10)"
+  evidence_ids: ["E01", "E02", "E03", "E04", "E06", "E08", "E09", "E25", "E26"]
 
 triggers:
   - text: "The calendar is full: a qualified prospect arrives but there is no billable day left to give them."
     evidence_ids: ["E05", "E07", "E10"]
-  - text: "The nth already-answered question arrives by DM/email/comment from the audience."
-    evidence_ids: ["E24", "E09"]
+  - text: "The nth already-answered question / same type of assignment arrives again from the audience or a client."
+    evidence_ids: ["E25", "E24", "E09"]
   - text: "Revenue plateaus (around 100-150k EUR) because everything depends on days sold."
     evidence_ids: ["E01", "E03", "E04", "E06"]
 
@@ -58,7 +59,7 @@ alternatives:
   - name: "do nothing"
     type: do_nothing
     why_insufficient: "Keep trading days for money and answering repeat questions manually — revenue stays capped by the calendar and overwork risks burnout."
-    evidence_ids: ["E02", "E04", "E08"]
+    evidence_ids: ["E02", "E04", "E08", "E25"]
   - name: "DIY (FAQ, newsletter, self-built chatbot)"
     type: diy
     why_insufficient: "Static FAQs and content don't answer the audience's specific question in the expert's voice and carry no native way to get paid for it."
@@ -68,7 +69,7 @@ alternatives:
     why_insufficient: "French expert AI clones, but premium and celebrity/founder-led (27 named profiles incl. BlaBlaCar/Ledger/Lemlist founders); priced high and gated behind fame, not an automated verified-credential frame open to any credentialed consultant; creator revenue split undisclosed."
     price: "399 EUR HT / 6 months; 699 EUR HT / 12 months"
     url: "https://aiweekly.co/fr/alerts/frdric-mazzella-lance-fred24-son-clone-ia-factur-399"
-    evidence_ids: ["E11", "E12", "E13"]
+    evidence_ids: ["E11", "E13"]
   - name: "Delphi"
     type: competitor
     why_insufficient: "Expert clones, but monetization is not built in (the creator must bolt on their own checkout), US-first with free sign-ups limited to CA/UK/US and no EU posture, and undertrained clones draw 'just like a normal ChatGPT chat' complaints."
@@ -141,7 +142,7 @@ solution:
   not_doing:
     - "Regulated advice categories (health, finance, legal) in the wedge"
     - "Per-agent subscriptions (platform subscription with usage limits only — founder decision)"
-    - "Price, max CAC, budget, thresholds, CTA and landing-page copy (P/S Fitter decides)"
+    - "Price, max acquisition cost, budget, thresholds, call-to-action and landing-page copy (P/S Fitter decides)"
 
 evidence:
   - id: "E01"
@@ -223,7 +224,7 @@ evidence:
     date: "2024-06-26"
     persona_match: "likely"
     supports: "problem"
-    strength: "strong"
+    strength: "weak"
   - id: "E09"
     type: "customer_quote"
     quote: "Je dois accueillir tous les nouveaux clients, je dois satisfaire tout le monde."
@@ -233,7 +234,7 @@ evidence:
     date: "2024-06-26"
     persona_match: "likely"
     supports: "problem"
-    strength: "medium"
+    strength: "weak"
   - id: "E10"
     type: "customer_quote"
     quote: "là, il me reste juste une place ou deux en accompagnement pour cet hiver."
@@ -243,7 +244,7 @@ evidence:
     date: "2024-06-26"
     persona_match: "likely"
     supports: "trigger:1"
-    strength: "medium"
+    strength: "weak"
   - id: "E11"
     type: "competitor_page"
     quote: "L'abonnement est fixé à 399 euros hors taxes pour six mois ou 699 euros hors taxes pour douze mois"
@@ -314,6 +315,16 @@ evidence:
     persona_match: "unclear"
     supports: "alternative:JustAnswer"
     strength: "weak"
+  - id: "E19"
+    type: "paraphrase"
+    quote: "Ils ont réclamé 5€ remboursable... et on prélevé 5€ puis 60€ !"
+    translation: "They advertised a refundable 5€... and they charged 5€ then 60€!"
+    source_name: "Signal Arnaques – JustAnswer (via search summary; page returned HTTP 403, not fetched verbatim)"
+    url: "https://www.signal-arnaques.com/scam/view/901753"
+    date: "2026-01-01"
+    persona_match: "unclear"
+    supports: "counter"
+    strength: "weak"
   - id: "E20"
     type: "article"
     quote: "Intro's one-on-one structure seems to be something users are willing to pay a premium for."
@@ -323,7 +334,7 @@ evidence:
     date: "2024-10-01"
     persona_match: "likely"
     supports: "wtp"
-    strength: "medium"
+    strength: "weak"
   - id: "E21"
     type: "article"
     quote: "I view the relationship between a writer and his audience as one founded on trust. This business proposal is instead founded on predation."
@@ -343,12 +354,32 @@ evidence:
     date: "2024-01-01"
     persona_match: "unclear"
     supports: "counter"
-    strength: "medium"
+    strength: "weak"
+  - id: "E25"
+    type: "customer_quote"
+    quote: "80%+ de mon temps passé en prestation revenait à répéter le même type de missions, et je me lassais."
+    translation: "80%+ of the time I spent on client work came down to repeating the same type of assignments, and I was getting tired of it."
+    source_name: "Substack – De freelance à solopreneur (bilan 1 an)"
+    url: "https://lauer.substack.com/p/de-freelance-a-solopreneur-bilan"
+    date: "2025-07-02"
+    persona_match: "yes"
+    supports: "problem"
+    strength: "strong"
+  - id: "E26"
+    type: "customer_quote"
+    quote: "J'avais envie de créer un actif, plutôt que de revenir à zéro à chaque fois."
+    translation: "I wanted to create an asset, rather than starting from scratch every time."
+    source_name: "Substack – De freelance à solopreneur (bilan 1 an)"
+    url: "https://lauer.substack.com/p/de-freelance-a-solopreneur-bilan"
+    date: "2025-07-02"
+    persona_match: "yes"
+    supports: "problem"
+    strength: "strong"
 evidence_file: "output/2026-11-12-1205-fast/evidence-IDEA-01.json"
 evidence_gaps:
   - "Direct French customer verbatims from Reddit (r/freelance, r/conseil, r/entrepreneur FR) and freelance forums could not be captured: reddit.com/old.reddit.com fetches are blocked this run and site:reddit.com searches returned no threads (consistent with signals.md)."
+  - "No French Trustpilot/Avis Vérifiés reviews of Malt, Comet or fr.justanswer.com were retrievable: brand searches on fr.trustpilot.com returned unrelated shops only, and the Signal Arnaques JustAnswer page returned HTTP 403 (E19 recorded as paraphrase/weak)."
   - "No reliable public count of independent management/strategy consultants in France was found — market.size_signal left empty."
-  - "JustAnswer FR billing complaint (Signal Arnaques) returned HTTP 403 and could not be fetched verbatim; recorded as paraphrase/weak (E19, in the JSON file). Test-Achats and avocat.fr paid-Q&A pricing were seen only as search summaries, not fetched verbatim."
   - "No standalone public market-size figure exists for the 'AI expert agent / digital clone' sub-market (consistent with market-research.md section 1)."
   - "Miria and Delphi do not disclose their creator revenue split, so the competitive payout bar is unverified."
   - "No independent French user reviews/tests of Miria or Delphi were found — French coverage is press or vendor pages only."
@@ -397,7 +428,7 @@ notes: |
   Opinions for P/S Fitter (not inputs):
   - This is genuinely a TWO-SIDED marketplace exported as one supply-side persona. The single pre-sell test the scorecard proposes (recruit 3-5 credentialed consultants, pre-sell their audiences) exercises both sides at once; treat supply recruitment and audience WTP as two measured steps, not one.
   - Lead the creator pitch with the corrected own-audience economics (~8-9.55 EUR per engaged subscriber at a 20 EUR price, no monthly fee, infra + deliverables included) and the small-expert wedge where Avee beats Delphi outright (E14, E16). Do NOT pitch 'Europe-based, nothing like this in France' — that is refuted with high confidence (Miria FR, Pickmybrain EE, Coachvox UK, Delphi reachable from the EU). The real edge is the credential-verification + usage-payout + deliverables combination.
-  - Start with ONE named niche (independent management/strategy consultants) before widening to coaches/advisors — the French pain evidence (E01-E10) clusters on time-capped solo consultants/coaches.
+  - Start with ONE named niche (independent management/strategy consultants) before widening to coaches/advisors — the French pain evidence (E01-E10, E25-E26) clusters on time-capped solo consultants/coaches who are tired of repeating the same assignments.
   - Governance scored under the v6.1 checklist (composite ranks only; Advance decided by G1-G3 + H1-H3, G2 distance 2). No challenge-IDEA-01.md was found in the run directory, so the governance scores stand as the final verdict.
 
 experiment:
