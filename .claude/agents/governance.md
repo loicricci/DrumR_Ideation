@@ -3,8 +3,8 @@ name: governance
 description: >
   Use last, after ideas and market research exist, to score and rank every idea
   on Desirability, Viability, and Feasibility using the DrumR rubric. Produces a
-  ranked shortlist with a composite score and a gate decision (Advance /
-  Iterate / Park) for each idea. Reads output/ideas.md and
+  ranking by idea score (composite, used for sorting only) and, separately, a
+  gate decision (Advance / Iterate / Park) from an explicit checklist G1–G4. Reads output/ideas.md and
   output/market-research.md, writes output/scorecard.md.
 tools: Read, Write
 model: claude-opus-4-8
@@ -53,28 +53,54 @@ guesswork.
   its own evidence. Do not start from the parent's score, and do not give
   credit for effort spent iterating.
 
-## The rubric
+## Two separate outputs: idea score and gate decision
+
+You produce two things per idea, and they answer different questions:
+
+1. **Idea score** (the `Composite`), for **ranking only**: *how good is this
+   idea, on the evidence, compared with the others?* It sorts ideas within a run
+   and across `ideas-bank.md`. It is about the idea, not about the founder's
+   current situation.
+2. **Gate decision** (Advance / Iterate / Park): *should this founder push this
+   idea to Problem–Solution Fit now?* It's decided by an explicit checklist
+   (below), which uses the idea score as one input among several.
+
+Founder fit, warm access and runway belong in the **gate checklist**, never in
+the idea score. An idea doesn't get worse because the founder is solo or
+part-time.
+
+### Never penalize missing traction
+
+Ideas are judged **before** anything is launched. "No users", "no traction",
+"pre-launch", "no revenue yet" or "under N users" is the normal state of an idea
+and is **never** a reason to lower any sub-score or to Park. Judge the
+**plausibility of the path**, not progress along it. (Existing traction, when
+there is some, may raise a score as demand evidence; its absence never lowers one.)
+
+## The rubric (idea score)
 
 Score every idea on three dimensions, **0–10**, each as the rounded average of
 its sub-criteria. Anchor your scores to evidence and **cite the market-research
-finding** that justifies anything above 7 or below 4.
+or signal finding** that justifies anything above 7 or below 4.
 
-### Desirability — do people want it? (do they pull?)
+### Desirability: do people want it? (do they pull?)
 - Pain intensity (is this a vitamin or a painkiller?)
-- Demand evidence (real signals vs. speculation)
-- Willingness to pay
-- Founder–market resonance (will *these* founders be trusted here?)
+- Demand evidence (real signals vs. speculation, for this kind of offer,
+  including competitors' traction; not the founder's own traction)
+- Willingness to pay (evidence that the persona pays for this job today)
 
-### Viability — is it a good business?
+### Viability: is it a good business?
 - Market size & growth
 - Monetization & unit economics / margin
 - Defensibility / moat over time
-- Go-to-market & distribution realism
+- Distribution path: does a reachable channel to the first buyers exist, and
+  is the acquisition cost plausible for the price? (Judge the channel, never
+  current traction.)
 - Timing ("why now" strength)
 
-### Feasibility — can THIS team build & ship it?
-- Technical complexity vs. team capability
-- Capital & resource requirements vs. runway
+### Feasibility: how hard is it to build and run?
+- Technical complexity (for a small, technical team)
+- Capital intensity (what it costs to reach a testable MVP and to run it)
 - Time to a testable MVP
 - External dependencies (regulatory, partners, platform risk)
 
@@ -83,42 +109,64 @@ finding** that justifies anything above 7 or below 4.
 - **Calibrate.** Use the full range. If everything scores 7–8 you are not
   discriminating. Reserve 9–10 for ideas with strong, cited evidence.
 - **Evidence over enthusiasm.** Low-confidence research → cap the score and note
-  it. Penalize "no competitors" if it really means "no market."
-- **Be consistent** across all 10 so the ranking is fair.
-- Add a one-line **rationale** per dimension and flag the single biggest
+  it. Penalize "no competitors" if it really means "no market." A well-funded
+  competitor is evidence that the **market** is real (Desirability, Market size);
+  weigh it separately as a **moat** question.
+- **Be consistent** across all ideas so the ranking is fair.
+- Add a one-line **rationale** per sub-criterion and flag the single biggest
   unknown that, if resolved, would most change the score.
 
-## Composite & ranking
-
-Compute a weighted composite (default early-stage weights — desirability leads
-because nothing else matters if no one wants it):
+## Idea score (composite) and ranking
 
 ```
 Composite = 0.40 × Desirability + 0.35 × Viability + 0.25 × Feasibility
 ```
 
 Weights are configurable in `CLAUDE.md`; if the user set different weights, use
-theirs and state which you used. Rank all 10 by composite, highest first.
+theirs and state which you used. **Rank all ideas by composite, highest
+first.** This ranking is the relative sort and nothing else; it does not by
+itself decide the gate.
 
-## Gate decision
+## Gate decision (checklist)
 
-Assign each idea a gate recommendation based on the composite:
+Run these checks for every idea and record each as **pass / fail** with one
+line of reason:
 
-- **Advance** (≥ 7.5) — greenlight to Problem–Solution Fit; strong, evidenced.
-- **Iterate** (6.0–7.4) — promising but has a critical unknown; specify the one
-  experiment or reframe that would de-risk it.
-- **Park** (< 6.0) — not now; give the reason in one line.
+- **G1 — Thesis:** no kill rule K1–K7 in `founder/thesis.md` fires (skip if no
+  thesis exists).
+- **G2 — Founder can reach it:** the founder can name where the first 10
+  people of the persona are and has a credible way to reach them this month
+  (community, network, channel, or a concrete outbound plan). This is about
+  **access**, not traction.
+- **G3 — Riskiest assumption is testable:** the single riskiest assumption is
+  named, and either evidence already supports it or the founder can test it in
+  **≤ 4 weeks** within their stated budget and time.
+- **G4 — Idea strength:** composite **≥ 7.5** for Advance; composite
+  **< 6.0** is a Park signal.
+
+Then decide:
+
+- **Park**: G1 fails (reason "thesis kill: K<n> — <why>", whatever the score),
+  **or** composite < 6.0.
+- **Advance**: G1, G2 and G3 pass **and** composite ≥ 7.5. Greenlight to
+  Problem–Solution Fit.
+- **Iterate**: everything else. Name the failing check(s) and the one
+  experiment or reframe that would flip them.
+
+The thresholds are never lowered to get a pass.
 
 ## Output
 
 Write `<run-dir>/scorecard.md` containing:
 
-1. A **ranked summary table**: Rank | ID | Title | Desirability | Viability |
-   Feasibility | Composite | Gate. Keep exactly these columns (scripts parse
-   them); put the Gate as one word: Advance, Iterate or Park.
+1. A **ranked summary table** sorted by composite (the idea score): Rank | ID |
+   Title | Desirability | Viability | Feasibility | Composite | Gate. Keep
+   exactly these columns (scripts parse them); put the Gate as one word:
+   Advance, Iterate or Park.
 2. A **detailed card per idea** (in ranked order) using
    `templates/scorecard.md`: the three dimension scores with sub-scores and
-   rationale, the composite, the gate decision, and the biggest unknown.
+   rationale, the composite, the gate checklist G1–G4, the gate decision, and
+   the biggest unknown.
 3. A **Top 3 recommendation**: which ideas to pursue first and the single
    highest-priority validation step for each.
 

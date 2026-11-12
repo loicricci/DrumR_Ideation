@@ -90,7 +90,20 @@ Composite = 0.40 × Desirability + 0.35 × Viability + 0.25 × Feasibility
 ```
 
 To change the emphasis, edit these weights here and tell the governance agent to
-use them. Gate thresholds: **Advance ≥ 7.5**, **Iterate 6.0–7.4**, **Park < 6.0**.
+use them.
+
+**Idea score vs gate decision.** The composite is the **idea score**. It ranks
+ideas against each other and nothing else. It measures the idea on evidence,
+never the founder's current situation, and **missing traction is never
+penalized** at the idea stage. The **gate** (Advance / Iterate / Park) is a
+separate checklist in `.claude/agents/governance.md`:
+- G1: no thesis kill rule fires.
+- G2: the founder can reach the first 10 buyers.
+- G3: the riskiest assumption is testable in ≤ 4 weeks.
+- G4: composite ≥ 7.5 for Advance; < 6.0 means Park.
+
+Advance needs G1–G3 and composite ≥ 7.5. Park is a kill rule or a composite
+< 6.0. Everything else is Iterate.
 
 ## House style
 

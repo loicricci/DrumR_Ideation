@@ -104,10 +104,14 @@ This section is mandatory when Section 3 contains any disagreements.
   (some confirmed, some revised).
 - Recompute the composite:
   `Composite = 0.40 × Desirability + 0.35 × Viability + 0.25 × Feasibility`
-- Assign one gate decision based on the revised composite:
-  - **Advance** ≥ 7.5
-  - **Iterate** 6.0–7.4
-  - **Park** < 6.0
+- Re-run the gate checklist from `.claude/agents/governance.md` (G1 thesis,
+  G2 founder can reach the first 10, G3 riskiest assumption testable in
+  ≤ 4 weeks, G4 composite) and assign one gate decision:
+  - **Advance**: G1–G3 pass and composite ≥ 7.5
+  - **Park**: a thesis kill rule fires, or composite < 6.0
+  - **Iterate**: everything else
+- The composite is the idea score (ranking only). Never lower a score for
+  missing traction.
 - If the gate decision changes from the original, state clearly: "Gate revised
   from [original] to [new]."
 - If the gate decision stays the same despite score changes, state: "Gate
