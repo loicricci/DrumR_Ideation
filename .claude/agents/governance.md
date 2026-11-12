@@ -51,6 +51,23 @@ guesswork.
   criterion with no evidence either way is scored at the **neutral midpoint
   (5)** and flagged "unknown, test in P/S Fit". Score **below 5 only on
   disconfirming evidence** (cite it). A missing `signals.md` never parks an idea.
+- **Weigh evidence by who says it.** A quote only counts against an idea at full
+  weight when it comes from the **target persona** about the **job the idea
+  does**. Sort disconfirming evidence like this:
+  - `non-target` or `conflicted` source (the petrol company asked about
+    electric cars) → **context only**. It may define the segment's boundary
+    ("not for experts who refuse AI"), but it never lowers Desirability,
+    Demand or WTP.
+  - `boundary` statements ("I want the real person", from people outside the
+    persona) → they size the market's edge, so they can temper **Market size**
+    slightly; they don't lower demand inside the target.
+  - `quality` complaints from `current-user`s of a competitor ("sounds like
+    ChatGPT") → **product requirements and opportunity**, scored under
+    Defensibility and the biggest unknown, not as missing demand. A competitor's
+    users complaining about quality is often evidence *for* a better entrant.
+  - `rejection` from `target-buyer`s → **full weight** against Demand and WTP.
+  Every card names which disconfirming evidence was counted at full weight
+  and which was treated as context, and why.
 - **Indirect evidence counts.** A competitor that raised serious funding or
   earns real revenue in the same job is strong indirect evidence that the
   market and demand are real, and can justify up to **7** on Demand evidence,

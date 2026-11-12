@@ -47,6 +47,14 @@ A signal is **one pain, held by one specific persona**, backed by evidence:
   complaints, "I'd pay for…"). Never invent a price.
 - **Why now**, if there is a dated shift (platform policy, regulation, new
   model capability, price change of an incumbent).
+- **Source role** of the people quoted, so evidence can be weighted by who
+  says it: `target-buyer`, `target-supplier` (the other side of a
+  marketplace), `current-user` (of a competing product), `non-target` (people
+  outside the persona), `conflicted` (incumbents or people whose income or
+  identity the idea threatens), or `observer` (journalists, analysts).
+- For **disconfirming** quotes, also note what kind they are: `rejection`
+  ("I don't want this"), `quality` ("it doesn't work well"), or `boundary`
+  ("not for people like me").
 
 ## Where to look
 
