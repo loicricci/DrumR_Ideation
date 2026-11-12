@@ -60,6 +60,18 @@
   Risks: employer policy for current employees, and K7 liability if
   verification is weak. Closest precedent to check: JustAnswer (verified
   professionals shown by credential).
+- **Delphi home page as observed (founder screenshot, 2026-11-12):** headline
+  "Find people who've been there — Describe your situation. Get their
+  perspective." Category chips (Career, Startups, Productivity, Health,
+  Relationships, Marketing, Sales, Business, Design) and cards framed by
+  **lived experience or group**: "Ask short-form video creators…", "Ask
+  marathoners…", "Ask Stanford alums whether it was worth it". **No individual
+  credentials** (degree, years, employer) are shown. Delphi positions on
+  personal-growth, life-advice "lived experience"; Avee's opening is
+  **individually verified professional credentials** for professional
+  questions. Note: Delphi already does group-by-background discovery
+  ("Stanford alums"), so the differentiator is verification and professional
+  depth, not grouping itself.
 - **Solution wedge:** The product exists (Avee V2, v0.6.0): create an agent,
   feed it documents/links/updates (auto-ingested into RAG + semantic memory),
   publish it publicly or privately, with human escalation. The wedge under test
