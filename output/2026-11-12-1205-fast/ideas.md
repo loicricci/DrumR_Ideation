@@ -25,6 +25,15 @@
   Substack, or AI "digital clone" tools they price and market themselves.
   Subscribers make do with general chatbots that lack the expert's specific
   knowledge and voice.
+- **Distribution model (founder correction, this run):** Avee is **not** a
+  bundle of unknown experts. Each expert shares **their own agent** with **their
+  own audience** (they have a direct financial interest in doing so), and every
+  conversation is **one-to-one** between one user and one agent. A subscriber who
+  joins through expert A mostly uses A's agent; other agents are optional
+  discovery. Demand therefore rests on "A's audience wants on-demand access to
+  A", the pattern Delphi evidences. If B uses only A's agent, A earns ~$7.96 of
+  B's $20 (~40% of price), or ~$9.55 with a 10% referral bonus. Delphi experts
+  reportedly keep ~85% of a price they set themselves.
 - **Solution wedge:** The product exists (Avee V2, v0.6.0): create an agent,
   feed it documents/links/updates (auto-ingested into RAG + semantic memory),
   publish it publicly or privately, with human escalation. The wedge under test
