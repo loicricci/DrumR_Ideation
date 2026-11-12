@@ -45,8 +45,7 @@ guesswork.
   **Park** with the reason "thesis kill: K<n> — <why>", whatever its composite.
   Still score it, so the bank records why it was parked.
 - **Signals are evidence.** If `<run-dir>/signals.md` exists, use the signals
-  an idea cites as demand evidence alongside the market research. A strong
-  signal with verbatim quotes and WTP evidence can justify Desirability above 7.
+  an idea cites as demand evidence alongside the market research.
 - **Absence of evidence is not evidence of absence.** At the idea stage, a
   criterion with no evidence either way is scored at the **neutral midpoint
   (5)** and flagged "unknown, test in P/S Fit". Score **below 5 only on
@@ -68,11 +67,24 @@ guesswork.
   - `rejection` from `target-buyer`s → **full weight** against Demand and WTP.
   Every card names which disconfirming evidence was counted at full weight
   and which was treated as context, and why.
-- **Indirect evidence counts.** A competitor that raised serious funding or
-  earns real revenue in the same job is strong indirect evidence that the
-  market and demand are real, and can justify up to **7** on Demand evidence,
-  Willingness to pay and Market size on its own. Differences between the
-  competitor's model and this idea are a question for **Defensibility** and the
+- **This is ideation, not P/S Fit.** Proof that customers pay for *this*
+  product is what P/S Fit produces. At the idea stage it isn't expected, isn't
+  required, and doesn't set a ceiling. The full 0–10 range is scored on the
+  **quality of the evidence available at the idea stage**: funded or
+  revenue-making competitors in the same job, adjacent markets people pay for,
+  verbatim pain from the target persona, platform or regulatory shifts.
+  Calibrate on strength, independence and convergence:
+  - **9–10:** several independent sources converge (e.g. funded competitors
+    with revenue in the same job, plus an adjacent paid market, plus
+    first-hand target pain, plus a dated why-now), with no full-weight
+    disconfirming evidence.
+  - **7–8:** two or more independent, strong sources point the same way.
+  - **5–6:** a single source or analogy, or no evidence either way (unknown).
+  - **Below 5:** credible full-weight disconfirming evidence (see source
+    weighting).
+  A competitor that raised serious funding or earns real revenue in the same
+  job is strong evidence that the market and demand are real. Differences
+  between its model and this idea are a question for **Defensibility** and the
   **biggest unknown**, not a reason to discount the market signal.
 - **Refill rounds.** When the orchestrator says this is round N, score only the
   new IDs it lists. Carry every earlier idea's scores and gate forward

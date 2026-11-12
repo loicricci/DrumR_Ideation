@@ -34,12 +34,12 @@ Target: **10 ideas handed off to P/S Fitter** (tracked in `ideas-bank.md`).
   finance/health advice, defamation-prone content) unless the risk is
   structurally removed in the wedge.
 
-## Evidence flag (recorded, never a kill)
-- **Direct:** first-hand, dated customer language or payments for this job.
-- **Indirect:** funded or revenue-making competitors, adjacent products people
-  pay for, platform shifts. A competitor that raised serious money is strong
-  indirect evidence that the market is real.
-- **Unknown:** nothing found yet. That's a question for P/S Fit, not a verdict.
+## Evidence at the idea stage (recorded, never a kill)
+Evidence at ideation is market evidence: funded or revenue-making competitors,
+adjacent products people pay for, verbatim pain from the persona, platform or
+regulatory shifts. Proof that customers pay for this product is P/S Fit's job,
+not a requirement here. Where nothing is found, the status is **unknown, to test
+in P/S Fit**, which is a question, not a verdict.
 
 ## Preferences (raise scores, never override kill rules)
 - Leans on the founder's edge: agent/LLM systems, cheap infra, agent design.
