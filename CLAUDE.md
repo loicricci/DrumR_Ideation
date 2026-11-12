@@ -98,11 +98,11 @@ never the founder's current situation, and **missing traction is never
 penalized** at the idea stage. The **gate** (Advance / Iterate / Park) is a
 separate checklist in `.claude/agents/governance.md`:
 - G1: no thesis kill rule fires.
-- G2: the founder can reach the first 10 buyers.
+- G2: founder–target distance, 0 (inside) to 3 (far); 3 blocks Advance.
 - G3: the riskiest assumption is testable in ≤ 4 weeks.
 - G4: composite ≥ 7.5 for Advance; < 6.0 means Park.
 
-Advance needs G1–G3 and composite ≥ 7.5. Park is a kill rule or a composite
+Advance needs G1, distance ≤ 2, G3 and composite ≥ 7.5. Park is a kill rule or a composite
 < 6.0. Everything else is Iterate.
 
 ## House style

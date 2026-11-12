@@ -134,10 +134,20 @@ line of reason:
 
 - **G1 — Thesis:** no kill rule K1–K7 in `founder/thesis.md` fires (skip if no
   thesis exists).
-- **G2 — Founder can reach it:** the founder can name where the first 10
-  people of the persona are and has a credible way to reach them this month
-  (community, network, channel, or a concrete outbound plan). This is about
-  **access**, not traction.
+- **G2 — Founder–target distance (0–3):** almost anyone can be reached, so
+  this is not a yes/no. Measure how far the founder's profile and network are
+  from the persona:
+  - **0 — Inside:** the founder is the persona, or has a warm network in it.
+  - **1 — Adjacent:** one step away; a shared community, overlapping skills or
+    warm intros are available.
+  - **2 — Cold but mapped:** no network, but known public channels where the
+    persona gathers (subreddits, groups, marketplaces, events).
+  - **3 — Far:** no network and closed or unclear channels (gatekeepers,
+    foreign market, regulated or procurement-led buyers).
+  Record the distance and the route. Distance 0–2 does not block Advance, but
+  the G3 test must be runnable at that distance (e.g. distance 2 needs a
+  cold-outreach plan that fits the 4 weeks). **Distance 3 blocks Advance**
+  until a bridge exists (partner, co-founder, first champion).
 - **G3 — Riskiest assumption is testable:** the single riskiest assumption is
   named, and either evidence already supports it or the founder can test it in
   **≤ 4 weeks** within their stated budget and time.
@@ -148,7 +158,7 @@ Then decide:
 
 - **Park**: G1 fails (reason "thesis kill: K<n> — <why>", whatever the score),
   **or** composite < 6.0.
-- **Advance**: G1, G2 and G3 pass **and** composite ≥ 7.5. Greenlight to
+- **Advance**: G1 passes, G2 distance ≤ 2, G3 passes **and** composite ≥ 7.5. Greenlight to
   Problem–Solution Fit.
 - **Iterate**: everything else. Name the failing check(s) and the one
   experiment or reframe that would flip them.
@@ -160,9 +170,9 @@ The thresholds are never lowered to get a pass.
 Write `<run-dir>/scorecard.md` containing:
 
 1. A **ranked summary table** sorted by composite (the idea score): Rank | ID |
-   Title | Desirability | Viability | Feasibility | Composite | Gate. Keep
-   exactly these columns (scripts parse them); put the Gate as one word:
-   Advance, Iterate or Park.
+   Title | Desirability | Viability | Feasibility | Composite | Gate | Distance.
+   Keep exactly these columns in this order (scripts parse them); put the Gate
+   as one word (Advance, Iterate or Park) and the Distance as a digit 0–3.
 2. A **detailed card per idea** (in ranked order) using
    `templates/scorecard.md`: the three dimension scores with sub-scores and
    rationale, the composite, the gate checklist G1–G4, the gate decision, and

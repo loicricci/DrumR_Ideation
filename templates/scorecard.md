@@ -25,7 +25,7 @@
 
 **Gate checklist**
 - G1 — Thesis (no kill rule fires): <pass / fail> — <reason>
-- G2 — Founder can reach the first 10: <pass / fail> — <reason>
+- G2 — Founder–target distance: <0 Inside / 1 Adjacent / 2 Cold but mapped / 3 Far> — <route to the first 10>
 - G3 — Riskiest assumption testable in ≤ 4 weeks: <pass / fail> — <assumption + test>
 - G4 — Idea strength (≥ 7.5 Advance, < 6.0 Park): <value> — <band>
 

@@ -12,7 +12,7 @@ model: claude-opus-4-8
 
 **Focus:** $ARGUMENTS (empty means `open`: no domain, let the signals decide)
 
-The aim of every session: **one idea that passes the gate (Advance: checklist G1–G3 pass and composite ≥ 7.5),
+The aim of every session: **one idea that passes the gate (Advance: G1 and G3 pass, distance ≤ 2, composite ≥ 7.5),
 survives an independent challenge, and is exported to P/S Fitter.** The bar is
 never lowered to hit the aim. If the loop runs out, say so plainly and record
 what was learned in the bank.
