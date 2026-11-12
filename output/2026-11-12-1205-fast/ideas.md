@@ -34,6 +34,19 @@
   A", the pattern Delphi evidences. If B uses only A's agent, A earns ~$7.96 of
   B's $20 (~40% of price), or ~$9.55 with a 10% referral bonus. Delphi experts
   reportedly keep ~85% of a price they set themselves.
+- **Differentiation vs Delphi.ai (founder input, this run):** Delphi
+  ($18.7M raised; $16M Series A June 2025 led by Sequoia, per founder; being
+  verified) validates the category and is the direct competitor. Avee's claimed
+  edges: (1) **Credential-first trust.** Each agent prominently displays the
+  expert's verified résumé and background ("ask a Harvard-trained marketer with
+  20 years at P&G, not a random chatbot"); the founder states Delphi doesn't
+  surface this on its home page (to be verified). Credentials must be verified
+  automatically, or the trust asset is hollow and adds K7 liability.
+  (2) **Europe-based:** GDPR, EU data hosting, EU AI Act transparency
+  compliance, and multilingual European experts and audiences. (3) **Lower
+  barrier for small experts:** no monthly fee and model costs covered, so Avee
+  pays more than Delphi's estimated "85% minus $79/mo" below ~9 paying
+  subscribers (estimate, orchestrator calculation).
 - **Solution wedge:** The product exists (Avee V2, v0.6.0): create an agent,
   feed it documents/links/updates (auto-ingested into RAG + semantic memory),
   publish it publicly or privately, with human escalation. The wedge under test
