@@ -62,6 +62,12 @@ the `ideator` needs a `founder-profile.md` to exist first (run the interview via
   evidence items. It never includes prices, max CAC, budgets, thresholds, CTAs
   or copy — P/S Fitter decides those — and leaves `experiment.total_budget` empty.
 
+- **`/psfit`**: produces the P/S Fitter `project-start-<IDEA-ID>.yaml` for
+  **every validated idea** (final verdict Advance) across all runs that hasn't
+  been exported yet (`/psfit all` re-exports, `/psfit <IDEA-ID>` does one). It
+  lists them with `scripts/bank.py validated` and runs the `handoff` flow per idea,
+  seeded with the scorecard's "Ready for P/S Fit" brief.
+
 ### The idea engine (`/engine`)
 
 The goal: **every session ships one idea worth pushing to P/S Fit**, feeding a

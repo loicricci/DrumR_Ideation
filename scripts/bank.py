@@ -3,6 +3,8 @@
 
   bank.py sync              Rebuild ideas-bank.md from every run in output/.
   bank.py status <run-dir>  Print the loop state of one run as JSON.
+  bank.py validated [--all] List validated ideas (final verdict Advance) as JSON.
+                            Without --all, only those not yet handed off.
 
 The bank is regenerated from the run artifacts (scorecard.md, challenge-*.md,
 project-start-*.yaml, ideas.md), so it never drifts from them. Anything below
@@ -173,11 +175,31 @@ def status(run_dir: str):
     print(json.dumps(state, indent=2))
 
 
+def validated(include_handed: bool):
+    """Ideas whose final verdict is Advance (challenge verdict wins if present)."""
+    runs = sorted(p for p in OUTPUT.iterdir() if p.is_dir()) if OUTPUT.exists() else []
+    out = []
+    for run in runs:
+        for i in run_state(run):
+            ch = i["challenge"]
+            gate = ch["gate"] if ch else i["gate"]
+            if gate != "Advance" or (i["handed_off"] and not include_handed):
+                continue
+            out.append({
+                "run": run.name, "id": i["id"], "title": i["title"],
+                "composite": ch["composite"] if ch else i["composite"],
+                "challenged": bool(ch), "handed_off": i["handed_off"],
+            })
+    print(json.dumps(out, indent=2))
+
+
 if __name__ == "__main__":
     if len(sys.argv) >= 2 and sys.argv[1] == "sync":
         sync()
     elif len(sys.argv) >= 3 and sys.argv[1] == "status":
         status(sys.argv[2])
+    elif len(sys.argv) >= 2 and sys.argv[1] == "validated":
+        validated("--all" in sys.argv[2:])
     else:
         print(__doc__)
         sys.exit(2)
