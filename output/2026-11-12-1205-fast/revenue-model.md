@@ -128,6 +128,16 @@ pooled model.**
 - **Payout ops (K2).** Stripe Connect automates KYC and payouts, so this stays
   solo-operable if thresholds and holds are automated from day one.
 
+## 6b. Founder decision: platform subscription with usage limits (2026-11-12)
+
+Users subscribe to **the platform**, not to individual agents, in tiers with
+usage limits (Claude / ChatGPT style). The plan allowance **is** the fair-use
+cap in section 3, so model cost per subscriber is bounded by plan design.
+Deliverables (decks, images, video, voice) run on credits. Payouts follow the
+user-centric net contribution split in section 3, reconciled monthly, so the
+agents each subscriber uses most earn most. Per-agent subscriptions are not
+part of the model.
+
 ## 7. Recommended spec, v1
 
 1. **$24.99/month All-Access** (tax-exclusive, web checkout), or $20 if you

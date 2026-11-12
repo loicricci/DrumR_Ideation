@@ -86,6 +86,16 @@
   slides, so the moat is the expert's judgment, not the renderer; and honesty
   of the claim (an AI deck "from a VC" must be framed as built with that
   expert's agent, with an optional paid human review via escalation).
+- **Pricing structure (founder decision, 2026-11-12):** **platform
+  subscription, not per-agent.** Users subscribe to Avee (tiered plans with
+  usage limits, like Claude or ChatGPT: each tier has a monthly allowance of
+  tier-weighted messages; deliverables and media run on credits). Experts don't
+  set prices. Creator payouts are reconciled monthly per subscriber:
+  contribution = subscription − fees − that subscriber's metered model cost;
+  50% goes to creators, split by that subscriber's usage across agents, so the
+  most-used agents earn most. Per-agent subscriptions (Delphi's model) are
+  rejected as too complex for users. For P/S Fit: test plan tiers and expert
+  acceptance of usage-share payouts, not the per-agent vs platform choice.
 - **Solution wedge:** The product exists (Avee V2, v0.6.0): create an agent,
   feed it documents/links/updates (auto-ingested into RAG + semantic memory),
   publish it publicly or privately, with human escalation. The wedge under test
